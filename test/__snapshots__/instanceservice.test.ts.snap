@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot 1`] = `
+Object {
+  "Resources": Object {
+    "instanceServiceinstanceRoleinstanceProfile95F55675": Object {
+      "Properties": Object {
+        "Roles": Array [
+          Object {
+            "Ref": "instanceServiceinstanceRoleroleC95CA18D",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::InstanceProfile",
+    },
+    "instanceServiceinstanceRoleroleC95CA18D": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "ec2.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Ref": "instanceServiceloggingPolicy5CD2F985",
+          },
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/AmazonSSMManagedInstanceCore",
+              ],
+            ],
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "instanceServiceloggingPolicy5CD2F985": Object {
+      "Properties": Object {
+        "Description": "Allow instance to log system logs to Cloudwatch",
+        "Path": "/",
+        "PolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": Array [
+                "logs:PutLogEvents",
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+              ],
+              "Effect": "Allow",
+              "Resource": Array [
+                "arn:aws:logs:us-east-1:123456789012:log-group:/windows/logs",
+                "arn:aws:logs:us-east-1:123456789012:log-group:/windows/logs/*",
+              ],
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+      },
+      "Type": "AWS::IAM::ManagedPolicy",
+    },
+  },
+}
+`;
