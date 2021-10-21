@@ -29,7 +29,7 @@ Object {
         },
         "ManagedPolicyArns": Array [
           Object {
-            "Ref": "instanceServiceloggingPolicy5CD2F985",
+            "Ref": "instanceServiceloggingPolicyA64D3A45",
           },
           Object {
             "Fn::Join": Array [
@@ -47,7 +47,7 @@ Object {
       },
       "Type": "AWS::IAM::Role",
     },
-    "instanceServiceloggingPolicy5CD2F985": Object {
+    "instanceServiceloggingPolicyA64D3A45": Object {
       "Properties": Object {
         "Description": "Allow instance to log system logs to Cloudwatch",
         "Path": "/",

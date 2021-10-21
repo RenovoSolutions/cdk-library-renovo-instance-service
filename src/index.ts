@@ -19,8 +19,52 @@ export interface IInstanceServiceProps {
   // Add SSM
 }
 
-export class InstanceService extends cdk.Construct {
+export interface IManagedLoggingPolicyProps {
+  /**
+   * The OS of the instance this policy is for
+   */
+  os: string;
+}
 
+export function ec2ImageToOsString(stack:cdk.Construct, image:ec2.IMachineImage) {
+  return ec2.OperatingSystemType[image.getImage(stack).osType].toLowerCase();
+}
+
+export class ManagedLoggingPolicy extends cdk.Construct {
+
+  public readonly policy: iam.ManagedPolicy;
+
+  constructor(scope: cdk.Construct, id: string, props: IManagedLoggingPolicyProps) {
+    super(scope, id);
+
+    let logResources:string[] = [];
+    console.log(props.os);
+    const logGroups:string[] = [
+      `/${ props.os }/logs`,
+      `/${ props.os }/logs/*`,
+    ];
+    logGroups.forEach( (g) => {
+      logResources.push(`arn:aws:logs:${ cdk.Stack.of(this).region }:${ cdk.Stack.of(this).account }:log-group:${ g }`);
+    });
+
+    this.policy = new iam.ManagedPolicy(this, 'loggingPolicy', {
+      description: 'Allow instance to log system logs to Cloudwatch',
+      statements: [
+        new iam.PolicyStatement({
+          effect: iam.Effect.ALLOW,
+          actions: [
+            'logs:PutLogEvents',
+            'logs:CreateLogGroup',
+            'logs:CreateLogStream',
+          ],
+          resources: logResources,
+        }),
+      ],
+    });
+  }
+}
+
+export class InstanceService extends cdk.Construct {
   // public readonly instance: ec2.Instance
 
   constructor(scope: cdk.Construct, id: string, props: IInstanceServiceProps) {
@@ -32,31 +76,9 @@ export class InstanceService extends cdk.Construct {
     props.enableCloudwatchLogs = (props.enableCloudwatchLogs === undefined) ? true : props.enableCloudwatchLogs;
 
     if (props.enableCloudwatchLogs) {
-      let logResources:string[] = [];
-      let os:string = ec2.OperatingSystemType[props.ami.getImage(this).osType].toLowerCase();
-      console.log(os);
-      const logGroups:string[] = [
-        `/${ os }/logs`,
-        `/${ os }/logs/*`,
-      ];
-      logGroups.forEach( (g) => {
-        logResources.push(`arn:aws:logs:${ cdk.Stack.of(this).region }:${ cdk.Stack.of(this).account }:log-group:${ g }`);
-      });
-
-      managedPolicies.push(new iam.ManagedPolicy(this, 'loggingPolicy', {
-        description: 'Allow instance to log system logs to Cloudwatch',
-        statements: [
-          new iam.PolicyStatement({
-            effect: iam.Effect.ALLOW,
-            actions: [
-              'logs:PutLogEvents',
-              'logs:CreateLogGroup',
-              'logs:CreateLogStream',
-            ],
-            resources: logResources,
-          }),
-        ],
-      }));
+      managedPolicies.push(new ManagedLoggingPolicy(this, 'loggingPolicy', {
+        os: ec2ImageToOsString(this, props.ami),
+      }).policy);
     }
 
     new ManagedInstanceRole(this, 'instanceRole', {
