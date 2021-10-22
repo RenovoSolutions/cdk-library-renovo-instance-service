@@ -21,7 +21,7 @@ export interface IInstanceServiceProps {
 
 export interface IManagedLoggingPolicyProps {
   /**
-   * The OS of the instance this policy is for
+   * The OS of the instance this policy is for.
    */
   os: string;
 }
@@ -37,12 +37,17 @@ export class ManagedLoggingPolicy extends cdk.Construct {
   constructor(scope: cdk.Construct, id: string, props: IManagedLoggingPolicyProps) {
     super(scope, id);
 
+    if (!(props.os.toLowerCase() == 'windows') && !(props.os.toLowerCase() == 'linux')) {
+      throw new Error(`The os property for ManagedLoggingPolicy must be windows or linux and you gave: ${ props.os.toLowerCase() }`);
+    }
+
     let logResources:string[] = [];
-    console.log(props.os);
+
     const logGroups:string[] = [
       `/${ props.os }/logs`,
       `/${ props.os }/logs/*`,
     ];
+
     logGroups.forEach( (g) => {
       logResources.push(`arn:aws:logs:${ cdk.Stack.of(this).region }:${ cdk.Stack.of(this).account }:log-group:${ g }`);
     });
