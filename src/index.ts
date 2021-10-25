@@ -5,6 +5,21 @@ import { ManagedInstanceRole } from '@renovosolutions/aws-cdk-managed-instance-r
 
 export interface IInstanceServiceProps {
   /**
+   * The name of the service this instance service will host
+   */
+  name: string;
+  /**
+   * The VPC to launch this service in
+   */
+  vpc: ec2.Vpc;
+  /**
+   * The subnet type to launch this service in
+   *
+   *
+   * @default ec2.SubnetType.PRIVATE
+   */
+  subnetType?: ec2.SubnetType;
+  /**
    * The Amazon Machine Image (AMI) to launch the target instance with
    */
   ami: ec2.IMachineImage;
@@ -15,6 +30,27 @@ export interface IInstanceServiceProps {
    * @default true
    */
   enableCloudwatchLogs?: boolean;
+  /**
+   * Allow all outbound traffic for the instances security group
+   *
+   *
+   * @default true
+   */
+  allowAllOutbound?: boolean;
+  /**
+   * Whether to disable inline ingress and egress rule optimization for the instances security group.
+   *
+   * If this is set to true, ingress and egress rules will not be declared under the SecurityGroup in cloudformation, but will be separate elements.
+   *
+   * Inlining rules is an optimization for producing smaller stack templates.
+   * Sometimes this is not desirable, for example when security group access is managed via tags.
+   *
+   * The default value can be overriden globally by setting the context variable '@aws-cdk/aws-ec2.securityGroupDisableInlineRules'.
+   *
+   *
+   * @default false
+   */
+  disableInlineRules?: boolean;
   // Add domain join
   // Add SSM
 }
@@ -24,6 +60,21 @@ export interface IManagedLoggingPolicyProps {
    * The OS of the instance this policy is for.
    */
   os: string;
+}
+
+export interface IAmiLookup {
+  /**
+   * The name string to use for AMI lookup
+   */
+  name: string;
+  /**
+   * The owners to use for AMI lookup
+   */
+  owners?: string[];
+  /**
+   * Is this AMI expected to be windows?
+   */
+  windows?: boolean;
 }
 
 export function ec2ImageToOsString(stack:cdk.Construct, image:ec2.IMachineImage) {
@@ -70,7 +121,10 @@ export class ManagedLoggingPolicy extends cdk.Construct {
 }
 
 export class InstanceService extends cdk.Construct {
-  // public readonly instance: ec2.Instance
+
+  public readonly instanceProfile: ManagedInstanceRole;
+
+  public readonly securityGroup: ec2.SecurityGroup;
 
   constructor(scope: cdk.Construct, id: string, props: IInstanceServiceProps) {
     super(scope, id);
@@ -86,10 +140,20 @@ export class InstanceService extends cdk.Construct {
       }).policy);
     }
 
-    new ManagedInstanceRole(this, 'instanceRole', {
+    this.instanceProfile = new ManagedInstanceRole(this, 'instanceRole', {
       domainJoinEnabled: false,
       ssmManagementEnabled: true,
       managedPolicies,
+    });
+
+    props.allowAllOutbound = (props.allowAllOutbound === undefined) ? true : props.allowAllOutbound;
+    props.disableInlineRules = (props.disableInlineRules === undefined) ? false : props.disableInlineRules;
+
+    this.securityGroup = new ec2.SecurityGroup(this, 'securityGroup', {
+      allowAllOutbound: props.allowAllOutbound,
+      vpc: props.vpc,
+      description: `The security group applied to the instance service for ${ props.name }`,
+      disableInlineRules: props.disableInlineRules,
     });
   }
 }
