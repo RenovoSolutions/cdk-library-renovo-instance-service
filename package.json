@@ -49,7 +49,7 @@
     "jest-junit": "^12",
     "jsii": "^1.41.0",
     "jsii-diff": "^1.41.0",
-    "jsii-docgen": "^3.8.10",
+    "jsii-docgen": "^3.8.12",
     "jsii-pacmak": "^1.41.0",
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
@@ -68,7 +68,8 @@
     "@aws-cdk/aws-ec2": "^1.129.0",
     "@aws-cdk/aws-iam": "^1.129.0",
     "@aws-cdk/core": "^1.129.0",
-    "@renovosolutions/aws-cdk-managed-instance-role": "^0.0.14"
+    "@renovosolutions/cdk-aspects-library-security-group": "^0.1.0",
+    "@renovosolutions/cdk-library-managed-instance-role": "^0.0.16"
   },
   "bundledDependencies": [],
   "keywords": [

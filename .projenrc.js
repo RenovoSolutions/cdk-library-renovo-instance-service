@@ -13,7 +13,8 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/aws-ec2',
   ],
   deps: [
-    '@renovosolutions/aws-cdk-managed-instance-role',
+    '@renovosolutions/cdk-library-managed-instance-role',
+    '@renovosolutions/cdk-aspects-library-security-group',
   ],
   keywords: [
     'cdk',

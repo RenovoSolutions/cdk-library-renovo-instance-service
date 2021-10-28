@@ -1,7 +1,12 @@
 import * as ec2 from '@aws-cdk/aws-ec2';
 import * as iam from '@aws-cdk/aws-iam';
 import * as cdk from '@aws-cdk/core';
-import { ManagedInstanceRole } from '@renovosolutions/aws-cdk-managed-instance-role';
+import {
+  NoIngressCommonManagementPortsAspect,
+  NoPublicIngressAspect,
+  NoIngressCommonRelationalDBPortsAspect,
+} from '@renovosolutions/cdk-aspects-library-security-group';
+import { ManagedInstanceRole } from '@renovosolutions/cdk-library-managed-instance-role';
 
 export interface IInstanceServiceProps {
   /**
@@ -51,8 +56,33 @@ export interface IInstanceServiceProps {
    * @default false
    */
   disableInlineRules?: boolean;
-  // Add domain join
-  // Add SSM
+  /**
+   * Whether or not to prevent security group from containing rules that allow access to remote management ports:
+   * SSH, RDP, WinRM, WinRM over HTTPs
+   *
+   * If these ports are opened when this is enabled an error will be added to CDK metadata and deployment and synth will fail.
+   *
+   *
+   * @default true
+   */
+  enableNoRemoteManagementPortsAspect?: boolean;
+  /**
+   * Whether or not to prevent security group from containing rules that allow access to relational DB ports:
+   * MySQL, PostgreSQL, MariaDB, Oracle, SQL Server
+   *
+   * If these ports are opened when this is enabled an error will be added to CDK metadata and deployment and synth will fail.
+   *
+   *
+   * @default true
+   */
+  enableNoDBPortsAspect?: boolean;
+  /**
+   * Whether or not to prevent security group from containing rules that allow access from the public internet:
+   * Any rule with a source from 0.0.0.0/0 or ::/0
+   *
+   * If these sources are used when this is enabled and error will be added to CDK metadata and deployment and synth will fail.
+   */
+  enabledNoPublicIngressAspect?: boolean;
 }
 
 export interface IManagedLoggingPolicyProps {
@@ -128,6 +158,14 @@ export class InstanceService extends cdk.Construct {
 
   constructor(scope: cdk.Construct, id: string, props: IInstanceServiceProps) {
     super(scope, id);
+
+    props.enableNoRemoteManagementPortsAspect = props.enableNoRemoteManagementPortsAspect ?? true;
+    props.enableNoDBPortsAspect = props.enableNoDBPortsAspect ?? true;
+    props.enabledNoPublicIngressAspect = props.enabledNoPublicIngressAspect ?? true;
+
+    if (props.enableNoRemoteManagementPortsAspect) cdk.Aspects.of(this).add(new NoIngressCommonManagementPortsAspect());
+    if (props.enableNoDBPortsAspect) cdk.Aspects.of(this).add(new NoIngressCommonRelationalDBPortsAspect());
+    if (props.enabledNoPublicIngressAspect) cdk.Aspects.of(this).add(new NoPublicIngressAspect());
 
     let managedPolicies = [];
 

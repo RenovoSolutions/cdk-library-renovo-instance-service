@@ -125,7 +125,11 @@
       "type": "runtime"
     },
     {
-      "name": "@renovosolutions/aws-cdk-managed-instance-role",
+      "name": "@renovosolutions/cdk-aspects-library-security-group",
+      "type": "runtime"
+    },
+    {
+      "name": "@renovosolutions/cdk-library-managed-instance-role",
       "type": "runtime"
     }
   ],

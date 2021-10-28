@@ -40,7 +40,7 @@ new InstanceService(scope: Construct, id: string, props: IInstanceServiceProps)
 public readonly instanceProfile: ManagedInstanceRole;
 ```
 
-- *Type:* [`@renovosolutions/aws-cdk-managed-instance-role.ManagedInstanceRole`](#@renovosolutions/aws-cdk-managed-instance-role.ManagedInstanceRole)
+- *Type:* [`@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole`](#@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole)
 
 ---
 
@@ -231,6 +231,50 @@ public readonly enableCloudwatchLogs: boolean;
 - *Default:* true
 
 Whether or not to enable logging to Cloudwatch Logs.
+
+---
+
+##### `enabledNoPublicIngressAspect`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps.property.enabledNoPublicIngressAspect"></a>
+
+```typescript
+public readonly enabledNoPublicIngressAspect: boolean;
+```
+
+- *Type:* `boolean`
+
+Whether or not to prevent security group from containing rules that allow access from the public internet: Any rule with a source from 0.0.0.0/0 or ::/0.
+
+If these sources are used when this is enabled and error will be added to CDK metadata and deployment and synth will fail.
+
+---
+
+##### `enableNoDBPortsAspect`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps.property.enableNoDBPortsAspect"></a>
+
+```typescript
+public readonly enableNoDBPortsAspect: boolean;
+```
+
+- *Type:* `boolean`
+- *Default:* true
+
+Whether or not to prevent security group from containing rules that allow access to relational DB ports: MySQL, PostgreSQL, MariaDB, Oracle, SQL Server.
+
+If these ports are opened when this is enabled an error will be added to CDK metadata and deployment and synth will fail.
+
+---
+
+##### `enableNoRemoteManagementPortsAspect`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps.property.enableNoRemoteManagementPortsAspect"></a>
+
+```typescript
+public readonly enableNoRemoteManagementPortsAspect: boolean;
+```
+
+- *Type:* `boolean`
+- *Default:* true
+
+Whether or not to prevent security group from containing rules that allow access to remote management ports: SSH, RDP, WinRM, WinRM over HTTPs.
+
+If these ports are opened when this is enabled an error will be added to CDK metadata and deployment and synth will fail.
 
 ---
 
