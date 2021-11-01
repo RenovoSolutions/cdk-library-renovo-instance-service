@@ -30,7 +30,7 @@
     "@aws-cdk/core" "1.130.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-ec2@^1.129.0", "@aws-cdk/aws-ec2@^1.130.0":
+"@aws-cdk/aws-ec2@^1.130.0":
   version "1.130.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-ec2/-/aws-ec2-1.130.0.tgz#f35128b0326dec253940132680d77f48e812eae9"
   integrity sha512-8ogjE02XaHD05nE3i6xz7mCbUz7+IftEwbvwyLGUQX+qxSvFd7ImKJAh+3kpWrYGvmP6HFcYXRpza+FKvvveDg==
@@ -57,7 +57,7 @@
     "@aws-cdk/core" "1.130.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-iam@1.130.0", "@aws-cdk/aws-iam@^1.129.0", "@aws-cdk/aws-iam@^1.130.0":
+"@aws-cdk/aws-iam@1.130.0", "@aws-cdk/aws-iam@^1.130.0":
   version "1.130.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-iam/-/aws-iam-1.130.0.tgz#c4dfe3772f2381527b3fd49331c214562fb3c044"
   integrity sha512-tksJnHdFvlhWmjQzEUWEQuqgC1VZTaDdhBLX99P9y8h0tq1fwq8IzOWXlq1hrs8gDtuAVf4UsksO6pUuvXd0Wg==
@@ -154,7 +154,7 @@
     string-width "^4.2.3"
     table "^6.7.2"
 
-"@aws-cdk/core@1.130.0", "@aws-cdk/core@^1.129.0", "@aws-cdk/core@^1.130.0":
+"@aws-cdk/core@1.130.0", "@aws-cdk/core@^1.130.0":
   version "1.130.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/core/-/core-1.130.0.tgz#a3e0825d056e7a4d3cd3fe4a3b1ebc3f4d6f48bf"
   integrity sha512-AGTIC25bcRtRdF2ttPSfZOgUCTI3hJ5OgyF6jt3pPajQ+uEgdvkRQuJKYXd9dmEX+CxlaXcKl+mA5O+RSRVQ/A==
@@ -840,21 +840,21 @@
   resolved "https://registry.yarnpkg.com/@oozcitak/util/-/util-8.3.8.tgz#10f65fe1891fd8cde4957360835e78fd1936bfdd"
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
-"@renovosolutions/cdk-aspects-library-security-group@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.1.1.tgz#3943c812416461f04b7f49b778c224e775622168"
-  integrity sha512-5FWfio1Oppb+Wsu7y7DN3m5UVMybw8MGJVlmYXTxPQLbefsn3985U51QmfcNzqZrpteIQuYkmzdcfOHddLGP9g==
+"@renovosolutions/cdk-aspects-library-security-group@^0.1.3":
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.1.3.tgz#dff2747684e08a8eaf026f34d47e168d3031ea78"
+  integrity sha512-dFR5eFxmhs67ZHtX5egIm0jUnc/GfkgR1FmZT6rBArYsfgzOWZFBb9msSqQh5M104K88Y2vNjFiXxET3ZUSSig==
   dependencies:
-    "@aws-cdk/aws-ec2" "^1.129.0"
-    "@aws-cdk/core" "^1.129.0"
+    "@aws-cdk/aws-ec2" "^1.130.0"
+    "@aws-cdk/core" "^1.130.0"
 
-"@renovosolutions/cdk-library-managed-instance-role@^0.0.17":
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-0.0.17.tgz#760da65b68a08a81150d93d70de691dadb0ecdd8"
-  integrity sha512-na+1DekNPbezIkjrW+ZvPYQ1Pw9bIBtSKEHAtQId2XhtyszFJqSOvMPfYAiYL4os3XOVgzVDQIChNa9vTyeHVg==
+"@renovosolutions/cdk-library-managed-instance-role@^0.0.19":
+  version "0.0.19"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-0.0.19.tgz#7cd4d86ec423043e506778dc68a8a17762591c4e"
+  integrity sha512-EpSTEjtSNU6F3YMAub4ClFd2kNjajf+NeWPzWVIBko52tc1T/cr5F4HL3TQL/5GxEASIwZZi8Y5kMQ+sO3kgvg==
   dependencies:
-    "@aws-cdk/aws-iam" "^1.129.0"
-    "@aws-cdk/core" "^1.129.0"
+    "@aws-cdk/aws-iam" "^1.130.0"
+    "@aws-cdk/core" "^1.130.0"
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
@@ -4100,10 +4100,10 @@ jsii-diff@^1.41.0:
     typescript "~3.9.10"
     yargs "^16.2.0"
 
-jsii-docgen@^3.8.14:
-  version "3.8.14"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-3.8.14.tgz#b1e5b731118f43da1e7f29daf0765ecc99f45b24"
-  integrity sha512-DkVCpZrMofMtrm7jdBJ85XuXZjFCiuuMLHrQWSjnQg3CHqy8qtMquyC5O8qPg+VSkhJeTN8+rwM1MU20Ln7W7A==
+jsii-docgen@^3.8.15:
+  version "3.8.15"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-3.8.15.tgz#affeba0cc4540e967cf14cc6a5d87ddda8978a21"
+  integrity sha512-53sJjbl8QxITyxLTyGrM83zfKaagWuEW7d9yl37Q5tjBzGayk3Lp2ScLtkO137sdsiFt/oq/vnjaWLUVU9TJRw==
   dependencies:
     "@jsii/spec" "^1.41.0"
     case "^1.6.3"
