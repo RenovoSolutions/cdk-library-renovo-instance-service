@@ -47,10 +47,10 @@
     "eslint-plugin-import": "^2.25.2",
     "jest": "^27.3.1",
     "jest-junit": "^12",
-    "jsii": "^1.41.0",
-    "jsii-diff": "^1.41.0",
-    "jsii-docgen": "^3.8.16",
-    "jsii-pacmak": "^1.41.0",
+    "jsii": "^1.42.0",
+    "jsii-diff": "^1.42.0",
+    "jsii-docgen": "^3.8.17",
+    "jsii-pacmak": "^1.42.0",
     "json-schema": "^0.3.0",
     "npm-check-updates": "^11",
     "projen": "^0.30.3",
@@ -68,8 +68,8 @@
     "@aws-cdk/aws-ec2": "^1.130.0",
     "@aws-cdk/aws-iam": "^1.130.0",
     "@aws-cdk/core": "^1.130.0",
-    "@renovosolutions/cdk-aspects-library-security-group": "^0.1.4",
-    "@renovosolutions/cdk-library-managed-instance-role": "^0.0.20"
+    "@renovosolutions/cdk-aspects-library-security-group": "^0.1.5",
+    "@renovosolutions/cdk-library-managed-instance-role": "^0.0.21"
   },
   "bundledDependencies": [],
   "keywords": [
