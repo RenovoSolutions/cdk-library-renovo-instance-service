@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@aws-cdk/assert@^1.130.0":
+"@aws-cdk/assert@^1.131.0":
   version "1.131.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/assert/-/assert-1.131.0.tgz#a10a81add5b2db320542f5bb6dd695ee00f2c1f1"
   integrity sha512-wGEV9VAsLGrSoryD4Twv5Lxyt1n0cOVcXtW3+pq0Xd89k61ZXKK20/G0iZNbtpsw0n0lNAcXG5KmiJ/3IKAUow==
@@ -30,7 +30,7 @@
     "@aws-cdk/core" "1.131.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-ec2@^1.130.0":
+"@aws-cdk/aws-ec2@^1.131.0":
   version "1.131.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-ec2/-/aws-ec2-1.131.0.tgz#54efa6dd2c031102b1bb363cb6c25bcfb8c0d320"
   integrity sha512-les6UcYAJsqTJgZeMrmdIIJ8J+Obsa8h3uwW/w20UAhI640qRlLkQmAiZu04v/VNXGQ13VWdOWe3STN/C/hfLA==
@@ -57,7 +57,7 @@
     "@aws-cdk/core" "1.131.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-iam@1.131.0", "@aws-cdk/aws-iam@^1.130.0":
+"@aws-cdk/aws-iam@1.131.0", "@aws-cdk/aws-iam@^1.130.0", "@aws-cdk/aws-iam@^1.131.0":
   version "1.131.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-iam/-/aws-iam-1.131.0.tgz#b7a59e8a4f7f5aa47b59537be6548726ea0328ca"
   integrity sha512-DvqfbdtSy1K2/+ga5X1CTdPv9EzPR5/eNYxrwugcCJZW/Ll7DeF5TKAlfA9e0/bev00T9aWQYSDipVji60fS9g==
@@ -154,7 +154,7 @@
     string-width "^4.2.3"
     table "^6.7.2"
 
-"@aws-cdk/core@1.131.0", "@aws-cdk/core@^1.130.0":
+"@aws-cdk/core@1.131.0", "@aws-cdk/core@^1.130.0", "@aws-cdk/core@^1.131.0":
   version "1.131.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/core/-/core-1.131.0.tgz#e1cb68ae09adee01012061800498669a69abc7c4"
   integrity sha512-X48H0yvF1fBeL8Dz6pR8rqCHCB8aI7xXTrYWbHnR9J7xwf4r1Tkotx9PNUqseSjzsm0Z8vTUkxiuwYPI17XtSQ==
@@ -841,12 +841,12 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@renovosolutions/cdk-aspects-library-security-group@^0.1.10":
-  version "0.1.10"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.1.10.tgz#3d98a4413f031a28100216f159013b3410ce313b"
-  integrity sha512-t9B0sCl1nr7hvmt/Nco3V+y15b2IZjw7Rxj0goiL4DMUKfzvDgsxKa07RiNTtCk5SxRj8RKdHakncsTWxtD+uA==
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.1.13.tgz#9b1c5a0ceb3134bf98ca537129f030c88d809f4d"
+  integrity sha512-WP1jfbU6EO0z0u2LbE2QQLENBIMmgU/qtrtlJ295vYNk+Bdq25zRipq4HZHLtu0CyZwderG0hQPYBNdYl7zvdw==
   dependencies:
-    "@aws-cdk/aws-ec2" "^1.130.0"
-    "@aws-cdk/core" "^1.130.0"
+    "@aws-cdk/aws-ec2" "^1.131.0"
+    "@aws-cdk/core" "^1.131.0"
 
 "@renovosolutions/cdk-library-managed-instance-role@^0.0.26":
   version "0.0.26"
@@ -2084,11 +2084,6 @@ decamelize@^1.1.0:
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-1.2.0.tgz#f6534d15148269b20352e7bee26f501f9a191290"
   integrity sha1-9lNNFRSCabIDUue+4m9QH5oZEpA=
 
-decamelize@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-4.0.0.tgz#aa472d7bf660eb15f3494efd531cab7f2a709837"
-  integrity sha512-9iE1PgSik9HeIIw2JO94IidnE3eBoQrFJ3w7sFuzSX4DpmZ3v5sZpUiV5Swcf6mQEF+Y0ru8Neo+p+nyh2J+hQ==
-
 decamelize@^5.0.1:
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/decamelize/-/decamelize-5.0.1.tgz#db11a92e58c741ef339fb0a2868d8a06a9a7b1e9"
@@ -2480,9 +2475,9 @@ eslint-visitor-keys@^2.0.0:
   integrity sha512-0rSmRBzXgDzIsD6mGdJgevzgezI534Cer5L/vyMX0kHzT/jiB43jRhd9YUlMGYLQy2zprNmoT8qasCGtY+QaKw==
 
 eslint-visitor-keys@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-3.0.0.tgz#e32e99c6cdc2eb063f204eda5db67bfe58bb4186"
-  integrity sha512-mJOZa35trBTb3IyRmo8xmKBZlxf+N7OnUl4+ZhJHs/r+0770Wh/LEACE2pqMGMe27G/4y8P2bYGk4J70IC5k1Q==
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-3.1.0.tgz#eee4acea891814cda67a7d8812d9647dd0179af2"
+  integrity sha512-yWJFpu4DtjsWKkt5GeNBBuZMlNcYVs6vRCLoCVEJrTjaSB6LC98gFipNK/erM2Heg/E8mIK+hXG/pJMLK+eRZA==
 
 eslint@^8.2.0:
   version "8.2.0"
@@ -4101,9 +4096,9 @@ jsii-diff@^1.42.0:
     yargs "^16.2.0"
 
 jsii-docgen@^3.8.22:
-  version "3.8.22"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-3.8.22.tgz#1a2391d45e391098a89082e20cb2a27d22af02f0"
-  integrity sha512-LqTM+ziXLwstt8EN3nKwfTm85FNT/HWd0EfRmmAp1nI3GFWCQeSEhpg83ILLvKq9cz7rfFzZncs5AfSk8j09Hw==
+  version "3.8.23"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-3.8.23.tgz#f3b2eb1e3755ab2b3e695a82c7083ab4af4bc300"
+  integrity sha512-Qe8p3WY5grkfZ/xRfme4hExpVPJQvla4BDRnAnzBscq4fH0oBidAOlPcmJmAbsMEXUYzXFlQv62jMWCXWH6YQg==
   dependencies:
     "@jsii/spec" "^1.42.0"
     case "^1.6.3"
@@ -5231,14 +5226,14 @@ progress@^2.0.0, progress@^2.0.3:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-projen@^0.30.3:
-  version "0.30.5"
-  resolved "https://registry.yarnpkg.com/projen/-/projen-0.30.5.tgz#beada4307fc068ac0087673c5d6e3e5d25fc5eca"
-  integrity sha512-EQURKgYO1lgmkZfVTBNVA2ZRuiT8R3eh3SbyfRFzZDr2Ypea0WeaCy0YfcrNNaJkrjuq4v/a6tRZl2vJ+35SXA==
+projen@^0.33.1:
+  version "0.33.1"
+  resolved "https://registry.yarnpkg.com/projen/-/projen-0.33.1.tgz#c247d213b50d032ca4e1bb04f58b4fadc73186ba"
+  integrity sha512-q4qJ3YMMONhlPxJUCSo+n9Yl2/mVe9eS8zyCNFiFAnpRkKRmSyPkKGUsnfdSliCTTfE2wdfKQY0/aYsouoyoMA==
   dependencies:
     "@iarna/toml" "^2.2.5"
+    case "^1.6.3"
     chalk "^4.1.2"
-    decamelize "^4.0.0"
     fs-extra "^9.1.0"
     glob "^7"
     ini "^2.0.0"
