@@ -2,7 +2,7 @@ const { AwsCdkConstructLibrary, NpmAccess } = require('projen');
 const project = new AwsCdkConstructLibrary({
   author: 'Renovo Solutions',
   authorAddress: 'webmaster+cdk@renovo1.com',
-  cdkVersion: '1.131.0',
+  cdkVersion: '1.132.0',
   defaultReleaseBranch: 'master',
   name: '@renovosolutions/cdk-library-renovo-instance-service',
   description: 'CDK Construct Library to create instance based services utilizing default configurations for Renovo Solutions.',
@@ -11,6 +11,7 @@ const project = new AwsCdkConstructLibrary({
     '@aws-cdk/core',
     '@aws-cdk/aws-iam',
     '@aws-cdk/aws-ec2',
+    '@aws-cdk/cloud-assembly-schema',
   ],
   deps: [
     '@renovosolutions/cdk-library-managed-instance-role',
