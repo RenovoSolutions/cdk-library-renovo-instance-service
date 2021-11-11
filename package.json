@@ -45,12 +45,12 @@
     "eslint": "^8.2.0",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-typescript": "^2.5.0",
-    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-import": "^2.25.3",
     "jest": "^27.3.1",
     "jest-junit": "^12",
     "jsii": "^1.43.0",
     "jsii-diff": "^1.43.0",
-    "jsii-docgen": "^3.8.24",
+    "jsii-docgen": "^3.8.25",
     "jsii-pacmak": "^1.43.0",
     "json-schema": "^0.4.0",
     "npm-check-updates": "^11",
@@ -71,8 +71,8 @@
     "@aws-cdk/aws-iam": "^1.132.0",
     "@aws-cdk/cloud-assembly-schema": "^1.132.0",
     "@aws-cdk/core": "^1.132.0",
-    "@renovosolutions/cdk-aspects-library-security-group": "^0.1.16",
-    "@renovosolutions/cdk-library-managed-instance-role": "^0.0.32"
+    "@renovosolutions/cdk-aspects-library-security-group": "^0.1.17",
+    "@renovosolutions/cdk-library-managed-instance-role": "^0.0.33"
   },
   "bundledDependencies": [],
   "keywords": [
