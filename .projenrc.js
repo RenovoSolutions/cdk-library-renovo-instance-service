@@ -23,6 +23,18 @@ const project = new AwsCdkConstructLibrary({
     'aws-cdk-construct',
     'projen',
   ],
+  depsUpgrade: true,
+  depsUpgradeOptions: {
+    workflowOptions: {
+      lebles: ['auto-approve'],
+    },
+  },
+  autoApproveUpgrades: true,
+  autoApproveOptions: {
+    secret: 'GITHUB_TOKEN',
+    allowedUsernames: ['github-actions'],
+    label: 'auto-approve',
+  },
   releaseToNpm: true,
   releaseWorkflow: true,
   npmAccess: NpmAccess.PUBLIC,
