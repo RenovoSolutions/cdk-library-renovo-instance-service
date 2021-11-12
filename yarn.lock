@@ -840,18 +840,18 @@
   resolved "https://registry.yarnpkg.com/@oozcitak/util/-/util-8.3.8.tgz#10f65fe1891fd8cde4957360835e78fd1936bfdd"
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
-"@renovosolutions/cdk-aspects-library-security-group@^0.1.18":
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.1.18.tgz#2bc4cd0fcb064cf143440963e1f0c532c7521d62"
-  integrity sha512-Z820mRBy2eKPR1/0LqamYyZvL6YQCl/cpIduW7EiJgwdIdBvwRSABd9sSBEZyPmZiLTCoAD8VPezGeF8sssjIA==
+"@renovosolutions/cdk-aspects-library-security-group@^0.1.19":
+  version "0.1.19"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.1.19.tgz#3abca69efd31d6e933b89be9b945b59a9bcb401e"
+  integrity sha512-lyLzswzik9/ygPualsoY27m8IQtRMFQRh7j+bZylBVgQmh4iUyxdn+zceSAzGRmVEqmyZk/AN3xj+vtw0kHe/w==
   dependencies:
     "@aws-cdk/aws-ec2" "^1.132.0"
     "@aws-cdk/core" "^1.132.0"
 
-"@renovosolutions/cdk-library-managed-instance-role@^0.0.34":
-  version "0.0.34"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-0.0.34.tgz#8e1223c07a31b298d5bf52420f3fbb4c7829ca97"
-  integrity sha512-9XXtvpi7VTVA1st81FISZs839MxywmHXqjEow9P6CvAlyNP9ZDhd4V0NKFnegiW3949De+Bci6ADtBuZZqpbaw==
+"@renovosolutions/cdk-library-managed-instance-role@^0.0.35":
+  version "0.0.35"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-0.0.35.tgz#db97b66cb0203f3b57bc59cd0ee38b139e288bac"
+  integrity sha512-reDwSgOuQoxuG8xyjYRL+xoubyW3IRd3jzQY7zS823VBGLzgm6EU+VnCQMPZ2CCjiM2azxAFQrQWAsGFQYF+Iw==
   dependencies:
     "@aws-cdk/aws-iam" "^1.132.0"
     "@aws-cdk/core" "^1.132.0"
@@ -1569,9 +1569,9 @@ camelcase@^6.2.0:
   integrity sha512-c7wVvbw3f37nuobQNtgsgG9POC9qMbNuMQmTCqZv23b6MIz0fcYpBiOlv9gEN/hdLdnZTDQhg6e9Dq5M1vKvfg==
 
 caniuse-lite@^1.0.30001274:
-  version "1.0.30001279"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001279.tgz#eb06818da481ef5096a3b3760f43e5382ed6b0ce"
-  integrity sha512-VfEHpzHEXj6/CxggTwSFoZBBYGQfQv9Cf42KPlO79sWXCD1QNKWKsKzFeWL7QpZHJQYAvocqV6Rty1yJMkqWLQ==
+  version "1.0.30001280"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001280.tgz#066a506046ba4be34cde5f74a08db7a396718fb7"
+  integrity sha512-kFXwYvHe5rix25uwueBxC569o53J6TpnGu0BEEn+6Lhl2vsnAumRFWEBhDft1fwyo6m1r4i+RqA4+163FpeFcA==
 
 case@^1.6.3:
   version "1.6.3"
@@ -4095,10 +4095,10 @@ jsii-diff@^1.43.0:
     typescript "~3.9.10"
     yargs "^16.2.0"
 
-jsii-docgen@^3.8.26:
-  version "3.8.26"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-3.8.26.tgz#763599f88bd4d887a1f1d5108f663481653f6004"
-  integrity sha512-YBcEBAkOKzNzEaxKzmeQ4+wPByxkcs7gtWzsm3M1/e3XbOpEFLnTVFfwJ/yYC/sficiRfy8cxsOWIOtWgGkgLw==
+jsii-docgen@^3.8.27:
+  version "3.8.27"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-3.8.27.tgz#1726e37cbabc6191328f2a9085d97bf62238aeca"
+  integrity sha512-aLidJ12c5dXA/ih4iP1JwhY9gIDHQ0tDbEJ/2N9j40hcc3aMrzC9Gj/wSzvUKHee4X+uuHGJQGgP3TcwCwIwPg==
   dependencies:
     "@jsii/spec" "^1.43.0"
     case "^1.6.3"
