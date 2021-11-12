@@ -26,7 +26,7 @@ const project = new AwsCdkConstructLibrary({
   depsUpgrade: true,
   depsUpgradeOptions: {
     workflowOptions: {
-      lebles: ['auto-approve'],
+      labels: ['auto-approve'],
     },
   },
   autoApproveUpgrades: true,
