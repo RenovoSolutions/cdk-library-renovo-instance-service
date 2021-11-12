@@ -53,28 +53,6 @@ const project = new AwsCdkConstructLibrary({
             'title="chore(deps): upgrade dependencies"',
           ],
         },
-        {
-          name: 'Conventional Commit',
-          conditions: [
-            'title~=^(fix|feat|docs|style|refactor|perf|test|build|ci|chore|revert|release)(?:\\(.+\\))?:',
-          ],
-          actions: {
-            post_check: {
-              title: [
-                '{% if check_succeed %}',
-                'Title follows Conventional Commit',
-                '{% else %}',
-                'Title does not follow Conventional Commit',
-                '{% endif %}',
-              ].join('\n'),
-              summary: [
-                '{% if not check_succeed %}',
-                'Your pull request title must follow [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/).',
-                '{% endif %}',
-              ].join('\n'),
-            },
-          },
-        },
       ],
     },
   },
