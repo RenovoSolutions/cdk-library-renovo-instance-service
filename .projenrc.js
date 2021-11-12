@@ -32,8 +32,6 @@ const project = new AwsCdkConstructLibrary({
   autoApproveUpgrades: true,
   autoApproveOptions: {
     secret: 'GITHUB_TOKEN',
-    allowedUsernames: ['github-actions'],
-    label: 'auto-approve',
   },
   releaseToNpm: true,
   releaseWorkflow: true,
