@@ -840,18 +840,18 @@
   resolved "https://registry.yarnpkg.com/@oozcitak/util/-/util-8.3.8.tgz#10f65fe1891fd8cde4957360835e78fd1936bfdd"
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
-"@renovosolutions/cdk-aspects-library-security-group@^0.1.19":
-  version "0.1.19"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.1.19.tgz#3abca69efd31d6e933b89be9b945b59a9bcb401e"
-  integrity sha512-lyLzswzik9/ygPualsoY27m8IQtRMFQRh7j+bZylBVgQmh4iUyxdn+zceSAzGRmVEqmyZk/AN3xj+vtw0kHe/w==
+"@renovosolutions/cdk-aspects-library-security-group@^0.1.21":
+  version "0.1.21"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.1.21.tgz#a6eaa86a21cba7a285783ae54753aa92a633eb1d"
+  integrity sha512-aA0imnvKaJvqT/XHsweDA9s6o4enkFD64peFbkTvr5VWwOQl5DjdL5MSH1YEiFBdPxNhEIkcc6BqlucGdXnYgw==
   dependencies:
     "@aws-cdk/aws-ec2" "^1.132.0"
     "@aws-cdk/core" "^1.132.0"
 
-"@renovosolutions/cdk-library-managed-instance-role@^0.0.35":
-  version "0.0.35"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-0.0.35.tgz#db97b66cb0203f3b57bc59cd0ee38b139e288bac"
-  integrity sha512-reDwSgOuQoxuG8xyjYRL+xoubyW3IRd3jzQY7zS823VBGLzgm6EU+VnCQMPZ2CCjiM2azxAFQrQWAsGFQYF+Iw==
+"@renovosolutions/cdk-library-managed-instance-role@^0.0.37":
+  version "0.0.37"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-0.0.37.tgz#5fe6c0903838e2d2b4c45f645168a69b8c6d3e5e"
+  integrity sha512-UdTliQoQQYsFCUy2M50d2pUbLDd0NhS22rjrqhjY3sXOVKgVGTmWs+JxWrER1gYkaarrBk0H+2kVuuwIRczDtA==
   dependencies:
     "@aws-cdk/aws-iam" "^1.132.0"
     "@aws-cdk/core" "^1.132.0"
@@ -1003,9 +1003,9 @@
   integrity sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==
 
 "@types/prettier@^2.1.5":
-  version "2.4.1"
-  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.4.1.tgz#e1303048d5389563e130f5bdd89d37a99acb75eb"
-  integrity sha512-Fo79ojj3vdEZOHg3wR9ksAMRz4P3S5fDB5e/YWZiFnyFQI1WY2Vftu9XoXVVtJfxB7Bpce/QTqWSSntkz2Znrw==
+  version "2.4.2"
+  resolved "https://registry.yarnpkg.com/@types/prettier/-/prettier-2.4.2.tgz#4c62fae93eb479660c3bd93f9d24d561597a8281"
+  integrity sha512-ekoj4qOQYp7CvjX8ZDBgN86w3MqQhLE1hczEJbEIjgFEumDy+na/4AJAbLXfgEWFNB2pKadM5rPFtuSGMWK7xA==
 
 "@types/stack-utils@^2.0.0":
   version "2.0.1"
@@ -1185,9 +1185,9 @@ ajv@^6.10.0, ajv@^6.12.3, ajv@^6.12.4:
     uri-js "^4.2.2"
 
 ajv@^8.0.1:
-  version "8.7.1"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.7.1.tgz#52be6f1736b076074798124293618f132ad07a7e"
-  integrity sha512-gPpOObTO1QjbnN1sVMjJcp1TF9nggMfO4MBR5uQl6ZVTOaEPq5i4oq/6R9q2alMMPB3eg53wFv1RuJBLuxf3Hw==
+  version "8.8.0"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-8.8.0.tgz#c501f10df72914bb77a458919e79fc73e4a2f9ef"
+  integrity sha512-L+cJ/+pkdICMueKR6wIx3VP2fjIx3yAhuvadUv/osv9yFD7OVZy442xFF+Oeu3ZvmhBGQzoF6mTSt+LUWBmGQg==
   dependencies:
     fast-deep-equal "^3.1.1"
     json-schema-traverse "^1.0.0"
@@ -4095,10 +4095,10 @@ jsii-diff@^1.43.0:
     typescript "~3.9.10"
     yargs "^16.2.0"
 
-jsii-docgen@^3.8.27:
-  version "3.8.27"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-3.8.27.tgz#1726e37cbabc6191328f2a9085d97bf62238aeca"
-  integrity sha512-aLidJ12c5dXA/ih4iP1JwhY9gIDHQ0tDbEJ/2N9j40hcc3aMrzC9Gj/wSzvUKHee4X+uuHGJQGgP3TcwCwIwPg==
+jsii-docgen@^3.8.28:
+  version "3.8.28"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-3.8.28.tgz#b4bb46d6a0556745304a06c73c77b0acd3dc3cc6"
+  integrity sha512-XlCjZImmSZ0kshuTzYRHYnSbFTaExpHCkTBrCk25HyV9GeReefyC3JNtjzwOel+4EDDRQk3lTKgIu71b9qTD4A==
   dependencies:
     "@jsii/spec" "^1.43.0"
     case "^1.6.3"
