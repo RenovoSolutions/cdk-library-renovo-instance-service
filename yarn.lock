@@ -840,18 +840,18 @@
   resolved "https://registry.yarnpkg.com/@oozcitak/util/-/util-8.3.8.tgz#10f65fe1891fd8cde4957360835e78fd1936bfdd"
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
-"@renovosolutions/cdk-aspects-library-security-group@^0.1.25":
-  version "0.1.25"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.1.25.tgz#3c31e0c64775503ae0ced5df5d9220cfbadc6701"
-  integrity sha512-9mv7oWsI+ipEKr4dLIvvvE0iXgWlpWRFvBq7hx8yGMDG4VB8BRrwn89+auTjYJWzKswPrNOC2OXYTp0uUjPYcw==
+"@renovosolutions/cdk-aspects-library-security-group@^0.1.26":
+  version "0.1.26"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.1.26.tgz#a2656257d653bb46f2ab817ec5fe19d60c739d75"
+  integrity sha512-uaOLNYAJ4j5Y2rPEDcOzfTvJ0jECKKB2D/R4a0ZFwZUhOnuGmP+lxcfmN4Fno3doYKKXrhratWRULmeK84sz7A==
   dependencies:
     "@aws-cdk/aws-ec2" "^1.132.0"
     "@aws-cdk/core" "^1.132.0"
 
-"@renovosolutions/cdk-library-managed-instance-role@^0.0.41":
-  version "0.0.41"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-0.0.41.tgz#61534f66f2c80b348a870e005e4bae79bd78d993"
-  integrity sha512-92Z801awQXNUYtC4tu58tCE6lq1AyKw9azIIXvPRlSrd0Np6e98vYmIxkjGdRDibX19vkh9dcUDoBxMgbijyUA==
+"@renovosolutions/cdk-library-managed-instance-role@^0.0.42":
+  version "0.0.42"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-0.0.42.tgz#fd1093feeecc73961da56907fa9ac1c2930452b1"
+  integrity sha512-/TnanYVnSvTC1hvMSXnQOLStY0AeEv0idL6nlr1WS0/rIsIB3JgaI8gyge32ZVmZEk4bPjb430z+vcNsyXkwWg==
   dependencies:
     "@aws-cdk/aws-iam" "^1.132.0"
     "@aws-cdk/core" "^1.132.0"
@@ -1141,9 +1141,9 @@ acorn@^7.1.1:
   integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
 
 acorn@^8.2.4, acorn@^8.5.0:
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.5.0.tgz#4512ccb99b3698c752591e9bb4472e38ad43cee2"
-  integrity sha512-yXbYeFy+jUuYd3/CDcg2NkIYE991XYX/bje7LmjJigUciaeO1JR4XxXgCIV1/Zc/dRuFEyw1L0pbA+qynJkW5Q==
+  version "8.6.0"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.6.0.tgz#e3692ba0eb1a0c83eaa4f37f5fa7368dd7142895"
+  integrity sha512-U1riIR+lBSNi3IbxtaHOIKdH8sLFv3NYfNv8sg7ZsNhcfl4HF2++BfqqrNAxoCLQW1iiylOj76ecnaUxz+z9yw==
 
 add-stream@^1.0.0:
   version "1.0.0"
@@ -5652,9 +5652,9 @@ side-channel@^1.0.3, side-channel@^1.0.4:
     object-inspect "^1.9.0"
 
 signal-exit@^3.0.0, signal-exit@^3.0.2, signal-exit@^3.0.3:
-  version "3.0.5"
-  resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.5.tgz#9e3e8cc0c75a99472b44321033a7702e7738252f"
-  integrity sha512-KWcOiKeQj6ZyXx7zq4YxSMgHRlod4czeBQZrPb8OKcohcqAXShm7E20kEMle9WBt26hFcAf0qLOcp5zmY7kOqQ==
+  version "3.0.6"
+  resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.6.tgz#24e630c4b0f03fea446a2bd299e62b4a6ca8d0af"
+  integrity sha512-sDl4qMFpijcGw22U5w63KmD3cZJfBuFlVNbVMKje2keoKML7X2UzWbc4XrmEbDwg0NXJc3yv4/ox7b+JWb57kQ==
 
 sisteransi@^1.0.5:
   version "1.0.5"
