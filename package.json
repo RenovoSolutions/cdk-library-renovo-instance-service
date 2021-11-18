@@ -57,7 +57,7 @@
     "projen": "^0.33.1",
     "standard-version": "^9",
     "ts-jest": "^27.0.7",
-    "typescript": "^4.4.4"
+    "typescript": "^4.5.2"
   },
   "peerDependencies": {
     "@aws-cdk/aws-ec2": "^1.132.0",
@@ -71,8 +71,8 @@
     "@aws-cdk/aws-iam": "^1.132.0",
     "@aws-cdk/cloud-assembly-schema": "^1.132.0",
     "@aws-cdk/core": "^1.132.0",
-    "@renovosolutions/cdk-aspects-library-security-group": "^0.1.24",
-    "@renovosolutions/cdk-library-managed-instance-role": "^0.0.40"
+    "@renovosolutions/cdk-aspects-library-security-group": "^0.1.25",
+    "@renovosolutions/cdk-library-managed-instance-role": "^0.0.41"
   },
   "bundledDependencies": [],
   "keywords": [

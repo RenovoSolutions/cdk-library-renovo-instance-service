@@ -840,18 +840,18 @@
   resolved "https://registry.yarnpkg.com/@oozcitak/util/-/util-8.3.8.tgz#10f65fe1891fd8cde4957360835e78fd1936bfdd"
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
-"@renovosolutions/cdk-aspects-library-security-group@^0.1.24":
-  version "0.1.24"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.1.24.tgz#4dc943cd681da88bf20191f75c41424fbe2027d4"
-  integrity sha512-J+sSpx0M+PPCsP4PYLwYufN5V5GGs/aOxKaPtld+O1+TOr/sJvPm6D8uwR1/oFomQCYOV7LHjWUzsp+6EeYFZg==
+"@renovosolutions/cdk-aspects-library-security-group@^0.1.25":
+  version "0.1.25"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.1.25.tgz#3c31e0c64775503ae0ced5df5d9220cfbadc6701"
+  integrity sha512-9mv7oWsI+ipEKr4dLIvvvE0iXgWlpWRFvBq7hx8yGMDG4VB8BRrwn89+auTjYJWzKswPrNOC2OXYTp0uUjPYcw==
   dependencies:
     "@aws-cdk/aws-ec2" "^1.132.0"
     "@aws-cdk/core" "^1.132.0"
 
-"@renovosolutions/cdk-library-managed-instance-role@^0.0.40":
-  version "0.0.40"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-0.0.40.tgz#1658f18fb00ae74b0737d375c29668d70555fd29"
-  integrity sha512-nl1shOn79/kOhFnV6q6LOwHyWOMWcegX6BAHOmfFAsSZ4fNZ/KRm2f3i8dwk1NRHikJfKoWYjn+aKnMNk4MinQ==
+"@renovosolutions/cdk-library-managed-instance-role@^0.0.41":
+  version "0.0.41"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-0.0.41.tgz#61534f66f2c80b348a870e005e4bae79bd78d993"
+  integrity sha512-92Z801awQXNUYtC4tu58tCE6lq1AyKw9azIIXvPRlSrd0Np6e98vYmIxkjGdRDibX19vkh9dcUDoBxMgbijyUA==
   dependencies:
     "@aws-cdk/aws-iam" "^1.132.0"
     "@aws-cdk/core" "^1.132.0"
@@ -1569,9 +1569,9 @@ camelcase@^6.2.0:
   integrity sha512-tVI4q5jjFV5CavAU8DXfza/TJcZutVKo/5Foskmsqcm0MsL91moHvwiGNnqaa2o6PF/7yT5ikDRcVcl8Rj6LCA==
 
 caniuse-lite@^1.0.30001280:
-  version "1.0.30001280"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001280.tgz#066a506046ba4be34cde5f74a08db7a396718fb7"
-  integrity sha512-kFXwYvHe5rix25uwueBxC569o53J6TpnGu0BEEn+6Lhl2vsnAumRFWEBhDft1fwyo6m1r4i+RqA4+163FpeFcA==
+  version "1.0.30001282"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001282.tgz#38c781ee0a90ccfe1fe7fefd00e43f5ffdcb96fd"
+  integrity sha512-YhF/hG6nqBEllymSIjLtR2iWDDnChvhnVJqp+vloyt2tEHFG1yBR+ac2B/rOw0qOK0m0lEXU2dv4E/sMk5P9Kg==
 
 case@^1.6.3:
   version "1.6.3"
@@ -1646,11 +1646,12 @@ cli-boxes@^2.2.1:
   integrity sha512-y4coMcylgSCdVinjiDBuR8PCC2bLjyGTwEmPb9NHR/QaNU6EUOXcTY/s6VjGMD6ENSEaeQYHCY0GNGS5jfMwPw==
 
 cli-table@^0.3.6:
-  version "0.3.6"
-  resolved "https://registry.yarnpkg.com/cli-table/-/cli-table-0.3.6.tgz#e9d6aa859c7fe636981fd3787378c2a20bce92fc"
-  integrity sha512-ZkNZbnZjKERTY5NwC2SeMeLeifSPq/pubeRoTpdr3WchLlnZg6hEgvHkK5zL7KNFdd9PmHN8lxrENUwI3cE8vQ==
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/cli-table/-/cli-table-0.3.7.tgz#23613a801a313254270e5dbe80446129e6aaf01a"
+  integrity sha512-ADKScujxlVFQhcea3OW7MmQRhUW3VDhaVRLx/77FjIME04K/BrguPa+p8DaXYSSlxDTO1f4ykf71a6WG0OB2/A==
   dependencies:
     colors "1.0.3"
+    strip-ansi "^6.0.1"
 
 cliui@^7.0.2:
   version "7.0.4"
@@ -2256,9 +2257,9 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 electron-to-chromium@^1.3.896:
-  version "1.3.899"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.899.tgz#4d7d040e73def3d5f5bd6b8a21049025dce6fce0"
-  integrity sha512-w16Dtd2zl7VZ4N4Db+FIa7n36sgPGCKjrKvUUmp5ialsikvcQLjcJR9RWnlYNxIyEHLdHaoIZEqKsPxU9MdyBg==
+  version "1.3.901"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.901.tgz#ce2c3157d61bce9f42f1e83225c17358ae9f4918"
+  integrity sha512-ToJdV2vzwT2jeAsw8zIggTFllJ4Kxvwghk39AhJEHHlIxor10wsFI3wo69p8nFc0s/ATWBqugPv/k3nW4Y9Mww==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -6225,10 +6226,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^4.4.4:
-  version "4.4.4"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.4.4.tgz#2cd01a1a1f160704d3101fd5a58ff0f9fcb8030c"
-  integrity sha512-DqGhF5IKoBl8WNf8C1gu8q0xZSInh9j1kJJMqT3a94w1JzVaBU4EXOSMrz9yDqMT0xt3selp83fuFMQ0uzv6qA==
+typescript@^4.5.2:
+  version "4.5.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.2.tgz#8ac1fba9f52256fdb06fb89e4122fa6a346c2998"
+  integrity sha512-5BlMof9H1yGt0P8/WF+wPNw6GfctgGjXp5hkblpyT+8rkASSmkUKMXrxR0Xg8ThVCi/JnHQiKXeBaEwCeQwMFw==
 
 typescript@~3.9.10:
   version "3.9.10"
