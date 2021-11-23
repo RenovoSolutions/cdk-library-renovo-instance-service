@@ -212,12 +212,7 @@ public readonly disableInlineRules: boolean;
 
 Whether to disable inline ingress and egress rule optimization for the instances security group.
 
-If this is set to true, ingress and egress rules will not be declared under the SecurityGroup in cloudformation, but will be separate elements.
-
-Inlining rules is an optimization for producing smaller stack templates.
-Sometimes this is not desirable, for example when security group access is managed via tags.
-
-The default value can be overriden globally by setting the context variable '@aws-cdk/aws-ec2.securityGroupDisableInlineRules'.
+If this is set to true, ingress and egress rules will not be declared under the SecurityGroup in cloudformation, but will be separate elements.  Inlining rules is an optimization for producing smaller stack templates. Sometimes this is not desirable, for example when security group access is managed via tags.  The default value can be overriden globally by setting the context variable '@aws-cdk/aws-ec2.securityGroupDisableInlineRules'.
 
 ---
 
