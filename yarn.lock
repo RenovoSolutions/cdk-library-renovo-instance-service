@@ -841,18 +841,18 @@
   resolved "https://registry.yarnpkg.com/@oozcitak/util/-/util-8.3.8.tgz#10f65fe1891fd8cde4957360835e78fd1936bfdd"
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
-"@renovosolutions/cdk-aspects-library-security-group@^0.1.30":
-  version "0.1.30"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.1.30.tgz#be3dd35a1faefba6ff5492eea2c2545e4c3a44d7"
-  integrity sha512-+jm2byLltK63pS9Bmbg9VC6SFCzfYSKnwzMrS9liAwCg7SQfF37s6JjJ23bAR6YY90Xt/uS1haa6tOx22Ohuvw==
+"@renovosolutions/cdk-aspects-library-security-group@^0.1.31":
+  version "0.1.31"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.1.31.tgz#b2fa11d44d422071bf3d9cf81091b90eb14672f9"
+  integrity sha512-5A0iuTB1e/6mCEnTIiNOwEI2fyVRsqcWk0U/XoFiDHNGA9kJyv2yR4BosAxSSdaayx2KJgekYIgQ5SLswruCFw==
   dependencies:
     "@aws-cdk/aws-ec2" "^1.132.0"
     "@aws-cdk/core" "^1.132.0"
 
-"@renovosolutions/cdk-library-managed-instance-role@^0.0.46":
-  version "0.0.46"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-0.0.46.tgz#ebd638aba67864a0081223a6e337012c644ccd16"
-  integrity sha512-DAYDJ6eGvb4r2MHeG7eyOKG5nvgNceEOneHprJZ9dR71nQngLkEEGmoruEhvhkcgxalXt+tUN/c5DCC5nhaaLA==
+"@renovosolutions/cdk-library-managed-instance-role@^0.0.48":
+  version "0.0.48"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-0.0.48.tgz#442f1f43309b1b1fda7e996d2e4a0666e1002e12"
+  integrity sha512-aXJsII8bKu68FGqkFDhu+8f6M1YB7K4IqPXhExmZj3V08eGVVvn1z3xFOgyKT1vzrKCvkU7UcXtm7qIvsvND2Q==
   dependencies:
     "@aws-cdk/aws-iam" "^1.132.0"
     "@aws-cdk/core" "^1.132.0"
@@ -2258,9 +2258,9 @@ ecc-jsbn@~0.1.1:
     safer-buffer "^2.1.0"
 
 electron-to-chromium@^1.3.896:
-  version "1.3.904"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.904.tgz#52a353994faeb0f2a9fab3606b4e0614d1af7b58"
-  integrity sha512-x5uZWXcVNYkTh4JubD7KSC1VMKz0vZwJUqVwY3ihsW0bst1BXDe494Uqbg3Y0fDGVjJqA8vEeGuvO5foyH2+qw==
+  version "1.3.905"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.905.tgz#3c18f17f71f73013c5252af556aab213740c477f"
+  integrity sha512-jTjkycBMCCMk86PAucHtqicZ6dKlgPw+gAXMI9xxH5ua0+60dH+PVR7efwQMqCOQxmhHSo4aF4f37Idb5XBAcA==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -5683,9 +5683,9 @@ smart-buffer@^4.1.0:
   integrity sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==
 
 socks-proxy-agent@^6.0.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/socks-proxy-agent/-/socks-proxy-agent-6.1.0.tgz#869cf2d7bd10fea96c7ad3111e81726855e285c3"
-  integrity sha512-57e7lwCN4Tzt3mXz25VxOErJKXlPfXmkMLnk310v/jwW20jWRVcgsOit+xNkN3eIEdB47GwnfAEBLacZ/wVIKg==
+  version "6.1.1"
+  resolved "https://registry.yarnpkg.com/socks-proxy-agent/-/socks-proxy-agent-6.1.1.tgz#e664e8f1aaf4e1fb3df945f09e3d94f911137f87"
+  integrity sha512-t8J0kG3csjA4g6FTbsMOWws+7R7vuRC8aQ/wy3/1OWmsgwA68zs/+cExQ0koSitUDXqhufF/YJr9wtNMZHw5Ew==
   dependencies:
     agent-base "^6.0.2"
     debug "^4.3.1"
