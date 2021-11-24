@@ -71,8 +71,8 @@
     "@aws-cdk/aws-iam": "^1.134.0",
     "@aws-cdk/cloud-assembly-schema": "^1.134.0",
     "@aws-cdk/core": "^1.134.0",
-    "@renovosolutions/cdk-aspects-library-security-group": "^0.1.33",
-    "@renovosolutions/cdk-library-managed-instance-role": "^0.0.50"
+    "@renovosolutions/cdk-aspects-library-security-group": "^0.1.34",
+    "@renovosolutions/cdk-library-managed-instance-role": "^0.0.51"
   },
   "bundledDependencies": [],
   "keywords": [

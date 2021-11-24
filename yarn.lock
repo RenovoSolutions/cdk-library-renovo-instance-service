@@ -841,18 +841,18 @@
   resolved "https://registry.yarnpkg.com/@oozcitak/util/-/util-8.3.8.tgz#10f65fe1891fd8cde4957360835e78fd1936bfdd"
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
-"@renovosolutions/cdk-aspects-library-security-group@^0.1.33":
-  version "0.1.33"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.1.33.tgz#6c5101614f443da329bf5128c155d2d74fb2521c"
-  integrity sha512-KKVm08Af5IM6QkLoQHrd4cvKWCiDhYchlorAvJLuWaNZVqRkggy3hVHm3oqO5lF+zyzWrVnfdydvszmpfPU/xA==
+"@renovosolutions/cdk-aspects-library-security-group@^0.1.34":
+  version "0.1.34"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.1.34.tgz#ef871e4b2b813b7cfab09bdf841bf5cca7d4c562"
+  integrity sha512-UHzSph3tPxTezt1xDLjYZDKDcCB0lwg7qmGL0peMryUl+0uzDPJY3FRcgjfXs3bFyq74IJov5LGGQYLOgicWvA==
   dependencies:
     "@aws-cdk/aws-ec2" "^1.134.0"
     "@aws-cdk/core" "^1.134.0"
 
-"@renovosolutions/cdk-library-managed-instance-role@^0.0.50":
-  version "0.0.50"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-0.0.50.tgz#da039a00c2b3c58da7ba02d89c8dad4e6a418006"
-  integrity sha512-2F4tMtkZdyA+lYAhT7WtfJlUB1tbzaJX586dWRZkpwDCwZFQXafr3O04jWQUgTSoR+dROVpW39pGMToc0yL4uQ==
+"@renovosolutions/cdk-library-managed-instance-role@^0.0.51":
+  version "0.0.51"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-0.0.51.tgz#aac7bc6362215a28cafc7b541d61c42aab3177e2"
+  integrity sha512-0pLo668j/qx+VTNAe8qjMWvKFcn/QpdKE9+VLgsJF9GkC4cbKeNlCeF8SUZrfYYxA+kec2CzfDoLQDf2+EUk9A==
   dependencies:
     "@aws-cdk/aws-iam" "^1.134.0"
     "@aws-cdk/core" "^1.134.0"
@@ -1647,9 +1647,9 @@ cli-boxes@^2.2.1:
   integrity sha512-y4coMcylgSCdVinjiDBuR8PCC2bLjyGTwEmPb9NHR/QaNU6EUOXcTY/s6VjGMD6ENSEaeQYHCY0GNGS5jfMwPw==
 
 cli-table@^0.3.6:
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/cli-table/-/cli-table-0.3.8.tgz#d3629cbf893459a8ad99671554e702a1c6d48a01"
-  integrity sha512-5IO15fJRzgM+hHZjvQlqD6UPRuVGWR4Ny5ZzaM5VJxJEQqSIEVyVh9dMAUN6CBAVfMc4/6CFEzbhnRftLRCyug==
+  version "0.3.9"
+  resolved "https://registry.yarnpkg.com/cli-table/-/cli-table-0.3.9.tgz#c0570b079296608a31761a67d9af9841dbee8300"
+  integrity sha512-7eA6hFtAZwVx3dWAGoaBqTrzWko5jRUFKpHT64ZHkJpaA3y5wf5NlLjguqTRmqycatJZiwftODYYyGNLbQ7MuA==
   dependencies:
     colors "1.0.3"
     strip-ansi "^6.0.1"
