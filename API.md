@@ -9,7 +9,7 @@
 ```typescript
 import { InstanceService } from '@renovosolutions/cdk-library-renovo-instance-service'
 
-new InstanceService(scope: Construct, id: string, props: IInstanceServiceProps)
+new InstanceService(scope: Construct, id: string, props: InstanceServiceProps)
 ```
 
 ##### `scope`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceService.parameter.scope"></a>
@@ -26,7 +26,7 @@ new InstanceService(scope: Construct, id: string, props: IInstanceServiceProps)
 
 ##### `props`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceService.parameter.props"></a>
 
-- *Type:* [`@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps`](#@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps)
+- *Type:* [`@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps`](#@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps)
 
 ---
 
@@ -62,7 +62,7 @@ public readonly securityGroup: SecurityGroup;
 ```typescript
 import { ManagedLoggingPolicy } from '@renovosolutions/cdk-library-renovo-instance-service'
 
-new ManagedLoggingPolicy(scope: Construct, id: string, props: IManagedLoggingPolicyProps)
+new ManagedLoggingPolicy(scope: Construct, id: string, props: ManagedLoggingPolicyProps)
 ```
 
 ##### `scope`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.ManagedLoggingPolicy.parameter.scope"></a>
@@ -79,7 +79,7 @@ new ManagedLoggingPolicy(scope: Construct, id: string, props: IManagedLoggingPol
 
 ##### `props`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.ManagedLoggingPolicy.parameter.props"></a>
 
-- *Type:* [`@renovosolutions/cdk-library-renovo-instance-service.IManagedLoggingPolicyProps`](#@renovosolutions/cdk-library-renovo-instance-service.IManagedLoggingPolicyProps)
+- *Type:* [`@renovosolutions/cdk-library-renovo-instance-service.ManagedLoggingPolicyProps`](#@renovosolutions/cdk-library-renovo-instance-service.ManagedLoggingPolicyProps)
 
 ---
 
@@ -98,18 +98,19 @@ public readonly policy: ManagedPolicy;
 ---
 
 
+## Structs <a name="Structs"></a>
 
+### AmiLookup <a name="@renovosolutions/cdk-library-renovo-instance-service.AmiLookup"></a>
 
-## Protocols <a name="Protocols"></a>
+#### Initializer <a name="[object Object].Initializer"></a>
 
-### IAmiLookup <a name="@renovosolutions/cdk-library-renovo-instance-service.IAmiLookup"></a>
+```typescript
+import { AmiLookup } from '@renovosolutions/cdk-library-renovo-instance-service'
 
-- *Implemented By:* [`@renovosolutions/cdk-library-renovo-instance-service.IAmiLookup`](#@renovosolutions/cdk-library-renovo-instance-service.IAmiLookup)
+const amiLookup: AmiLookup = { ... }
+```
 
-
-#### Properties <a name="Properties"></a>
-
-##### `name`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IAmiLookup.property.name"></a>
+##### `name`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.AmiLookup.property.name"></a>
 
 ```typescript
 public readonly name: string;
@@ -121,7 +122,7 @@ The name string to use for AMI lookup.
 
 ---
 
-##### `owners`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IAmiLookup.property.owners"></a>
+##### `owners`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.AmiLookup.property.owners"></a>
 
 ```typescript
 public readonly owners: string[];
@@ -133,7 +134,7 @@ The owners to use for AMI lookup.
 
 ---
 
-##### `windows`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IAmiLookup.property.windows"></a>
+##### `windows`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.AmiLookup.property.windows"></a>
 
 ```typescript
 public readonly windows: boolean;
@@ -145,14 +146,17 @@ Is this AMI expected to be windows?
 
 ---
 
-### IInstanceServiceProps <a name="@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps"></a>
+### InstanceServiceProps <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps"></a>
 
-- *Implemented By:* [`@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps`](#@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps)
+#### Initializer <a name="[object Object].Initializer"></a>
 
+```typescript
+import { InstanceServiceProps } from '@renovosolutions/cdk-library-renovo-instance-service'
 
-#### Properties <a name="Properties"></a>
+const instanceServiceProps: InstanceServiceProps = { ... }
+```
 
-##### `ami`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps.property.ami"></a>
+##### `ami`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.ami"></a>
 
 ```typescript
 public readonly ami: IMachineImage;
@@ -164,7 +168,7 @@ The Amazon Machine Image (AMI) to launch the target instance with.
 
 ---
 
-##### `name`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps.property.name"></a>
+##### `name`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.name"></a>
 
 ```typescript
 public readonly name: string;
@@ -176,7 +180,7 @@ The name of the service this instance service will host.
 
 ---
 
-##### `vpc`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps.property.vpc"></a>
+##### `vpc`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.vpc"></a>
 
 ```typescript
 public readonly vpc: Vpc;
@@ -188,7 +192,7 @@ The VPC to launch this service in.
 
 ---
 
-##### `allowAllOutbound`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps.property.allowAllOutbound"></a>
+##### `allowAllOutbound`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.allowAllOutbound"></a>
 
 ```typescript
 public readonly allowAllOutbound: boolean;
@@ -201,7 +205,7 @@ Allow all outbound traffic for the instances security group.
 
 ---
 
-##### `disableInlineRules`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps.property.disableInlineRules"></a>
+##### `disableInlineRules`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.disableInlineRules"></a>
 
 ```typescript
 public readonly disableInlineRules: boolean;
@@ -216,7 +220,7 @@ If this is set to true, ingress and egress rules will not be declared under the 
 
 ---
 
-##### `enableCloudwatchLogs`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps.property.enableCloudwatchLogs"></a>
+##### `enableCloudwatchLogs`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.enableCloudwatchLogs"></a>
 
 ```typescript
 public readonly enableCloudwatchLogs: boolean;
@@ -229,7 +233,7 @@ Whether or not to enable logging to Cloudwatch Logs.
 
 ---
 
-##### `enabledNoPublicIngressAspect`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps.property.enabledNoPublicIngressAspect"></a>
+##### `enabledNoPublicIngressAspect`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.enabledNoPublicIngressAspect"></a>
 
 ```typescript
 public readonly enabledNoPublicIngressAspect: boolean;
@@ -243,7 +247,7 @@ If these sources are used when this is enabled and error will be added to CDK me
 
 ---
 
-##### `enableNoDBPortsAspect`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps.property.enableNoDBPortsAspect"></a>
+##### `enableNoDBPortsAspect`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.enableNoDBPortsAspect"></a>
 
 ```typescript
 public readonly enableNoDBPortsAspect: boolean;
@@ -258,7 +262,7 @@ If these ports are opened when this is enabled an error will be added to CDK met
 
 ---
 
-##### `enableNoRemoteManagementPortsAspect`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps.property.enableNoRemoteManagementPortsAspect"></a>
+##### `enableNoRemoteManagementPortsAspect`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.enableNoRemoteManagementPortsAspect"></a>
 
 ```typescript
 public readonly enableNoRemoteManagementPortsAspect: boolean;
@@ -273,7 +277,7 @@ If these ports are opened when this is enabled an error will be added to CDK met
 
 ---
 
-##### `subnetType`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IInstanceServiceProps.property.subnetType"></a>
+##### `subnetType`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.subnetType"></a>
 
 ```typescript
 public readonly subnetType: SubnetType;
@@ -286,14 +290,17 @@ The subnet type to launch this service in.
 
 ---
 
-### IManagedLoggingPolicyProps <a name="@renovosolutions/cdk-library-renovo-instance-service.IManagedLoggingPolicyProps"></a>
+### ManagedLoggingPolicyProps <a name="@renovosolutions/cdk-library-renovo-instance-service.ManagedLoggingPolicyProps"></a>
 
-- *Implemented By:* [`@renovosolutions/cdk-library-renovo-instance-service.IManagedLoggingPolicyProps`](#@renovosolutions/cdk-library-renovo-instance-service.IManagedLoggingPolicyProps)
+#### Initializer <a name="[object Object].Initializer"></a>
 
+```typescript
+import { ManagedLoggingPolicyProps } from '@renovosolutions/cdk-library-renovo-instance-service'
 
-#### Properties <a name="Properties"></a>
+const managedLoggingPolicyProps: ManagedLoggingPolicyProps = { ... }
+```
 
-##### `os`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.IManagedLoggingPolicyProps.property.os"></a>
+##### `os`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.ManagedLoggingPolicyProps.property.os"></a>
 
 ```typescript
 public readonly os: string;
@@ -304,4 +311,6 @@ public readonly os: string;
 The OS of the instance this policy is for.
 
 ---
+
+
 
