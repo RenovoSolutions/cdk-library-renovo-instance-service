@@ -8,40 +8,40 @@ import {
 } from '@renovosolutions/cdk-aspects-library-security-group';
 import { ManagedInstanceRole } from '@renovosolutions/cdk-library-managed-instance-role';
 
-export interface IInstanceServiceProps {
+export interface InstanceServiceProps {
   /**
    * The name of the service this instance service will host
    */
-  name: string;
+  readonly name: string;
   /**
    * The VPC to launch this service in
    */
-  vpc: ec2.Vpc;
+  readonly vpc: ec2.Vpc;
   /**
    * The subnet type to launch this service in
    *
    *
    * @default ec2.SubnetType.PRIVATE
    */
-  subnetType?: ec2.SubnetType;
+  readonly subnetType?: ec2.SubnetType;
   /**
    * The Amazon Machine Image (AMI) to launch the target instance with
    */
-  ami: ec2.IMachineImage;
+  readonly ami: ec2.IMachineImage;
   /**
    * Whether or not to enable logging to Cloudwatch Logs
    *
    *
    * @default true
    */
-  enableCloudwatchLogs?: boolean;
+  readonly enableCloudwatchLogs?: boolean;
   /**
    * Allow all outbound traffic for the instances security group
    *
    *
    * @default true
    */
-  allowAllOutbound?: boolean;
+  readonly allowAllOutbound?: boolean;
   /**
    * Whether to disable inline ingress and egress rule optimization for the instances security group.
    *
@@ -55,7 +55,7 @@ export interface IInstanceServiceProps {
    *
    * @default false
    */
-  disableInlineRules?: boolean;
+  readonly disableInlineRules?: boolean;
   /**
    * Whether or not to prevent security group from containing rules that allow access to remote management ports:
    * SSH, RDP, WinRM, WinRM over HTTPs
@@ -65,7 +65,7 @@ export interface IInstanceServiceProps {
    *
    * @default true
    */
-  enableNoRemoteManagementPortsAspect?: boolean;
+  readonly enableNoRemoteManagementPortsAspect?: boolean;
   /**
    * Whether or not to prevent security group from containing rules that allow access to relational DB ports:
    * MySQL, PostgreSQL, MariaDB, Oracle, SQL Server
@@ -75,36 +75,36 @@ export interface IInstanceServiceProps {
    *
    * @default true
    */
-  enableNoDBPortsAspect?: boolean;
+  readonly enableNoDBPortsAspect?: boolean;
   /**
    * Whether or not to prevent security group from containing rules that allow access from the public internet:
    * Any rule with a source from 0.0.0.0/0 or ::/0
    *
    * If these sources are used when this is enabled and error will be added to CDK metadata and deployment and synth will fail.
    */
-  enabledNoPublicIngressAspect?: boolean;
+  readonly enabledNoPublicIngressAspect?: boolean;
 }
 
-export interface IManagedLoggingPolicyProps {
+export interface ManagedLoggingPolicyProps {
   /**
    * The OS of the instance this policy is for.
    */
-  os: string;
+  readonly os: string;
 }
 
-export interface IAmiLookup {
+export interface AmiLookup {
   /**
    * The name string to use for AMI lookup
    */
-  name: string;
+  readonly name: string;
   /**
    * The owners to use for AMI lookup
    */
-  owners?: string[];
+  readonly owners?: string[];
   /**
    * Is this AMI expected to be windows?
    */
-  windows?: boolean;
+  readonly windows?: boolean;
 }
 
 export function ec2ImageToOsString(stack:cdk.Construct, image:ec2.IMachineImage) {
@@ -115,7 +115,7 @@ export class ManagedLoggingPolicy extends cdk.Construct {
 
   public readonly policy: iam.ManagedPolicy;
 
-  constructor(scope: cdk.Construct, id: string, props: IManagedLoggingPolicyProps) {
+  constructor(scope: cdk.Construct, id: string, props: ManagedLoggingPolicyProps) {
     super(scope, id);
 
     if (!(props.os.toLowerCase() == 'windows') && !(props.os.toLowerCase() == 'linux')) {
@@ -156,23 +156,23 @@ export class InstanceService extends cdk.Construct {
 
   public readonly securityGroup: ec2.SecurityGroup;
 
-  constructor(scope: cdk.Construct, id: string, props: IInstanceServiceProps) {
+  constructor(scope: cdk.Construct, id: string, props: InstanceServiceProps) {
     super(scope, id);
 
-    props.enableNoRemoteManagementPortsAspect = props.enableNoRemoteManagementPortsAspect ?? true;
-    props.enableNoDBPortsAspect = props.enableNoDBPortsAspect ?? true;
-    props.enabledNoPublicIngressAspect = props.enabledNoPublicIngressAspect ?? true;
+    let enableNoRemoteManagementPortsAspect: boolean = props.enableNoRemoteManagementPortsAspect ?? true;
+    let enableNoDBPortsAspect: boolean = props.enableNoDBPortsAspect ?? true;
+    let enabledNoPublicIngressAspect: boolean = props.enabledNoPublicIngressAspect ?? true;
 
-    if (props.enableNoRemoteManagementPortsAspect) cdk.Aspects.of(this).add(new NoIngressCommonManagementPortsAspect());
-    if (props.enableNoDBPortsAspect) cdk.Aspects.of(this).add(new NoIngressCommonRelationalDBPortsAspect());
-    if (props.enabledNoPublicIngressAspect) cdk.Aspects.of(this).add(new NoPublicIngressAspect());
+    if (enableNoRemoteManagementPortsAspect) cdk.Aspects.of(this).add(new NoIngressCommonManagementPortsAspect());
+    if (enableNoDBPortsAspect) cdk.Aspects.of(this).add(new NoIngressCommonRelationalDBPortsAspect());
+    if (enabledNoPublicIngressAspect) cdk.Aspects.of(this).add(new NoPublicIngressAspect());
 
     let managedPolicies = [];
 
     // Logging configuration
-    props.enableCloudwatchLogs = (props.enableCloudwatchLogs === undefined) ? true : props.enableCloudwatchLogs;
+    let enableCloudwatchLogs: boolean = (props.enableCloudwatchLogs === undefined) ? true : props.enableCloudwatchLogs;
 
-    if (props.enableCloudwatchLogs) {
+    if (enableCloudwatchLogs) {
       managedPolicies.push(new ManagedLoggingPolicy(this, 'loggingPolicy', {
         os: ec2ImageToOsString(this, props.ami),
       }).policy);
@@ -184,14 +184,14 @@ export class InstanceService extends cdk.Construct {
       managedPolicies,
     });
 
-    props.allowAllOutbound = (props.allowAllOutbound === undefined) ? true : props.allowAllOutbound;
-    props.disableInlineRules = (props.disableInlineRules === undefined) ? false : props.disableInlineRules;
+    let allowAllOutbound: boolean = (props.allowAllOutbound === undefined) ? true : props.allowAllOutbound;
+    let disableInlineRules: boolean = (props.disableInlineRules === undefined) ? false : props.disableInlineRules;
 
     this.securityGroup = new ec2.SecurityGroup(this, 'securityGroup', {
-      allowAllOutbound: props.allowAllOutbound,
+      allowAllOutbound: allowAllOutbound,
       vpc: props.vpc,
       description: `The security group applied to the instance service for ${ props.name }`,
-      disableInlineRules: props.disableInlineRules,
+      disableInlineRules: disableInlineRules,
     });
   }
 }
