@@ -841,18 +841,18 @@
   resolved "https://registry.yarnpkg.com/@oozcitak/util/-/util-8.3.8.tgz#10f65fe1891fd8cde4957360835e78fd1936bfdd"
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
-"@renovosolutions/cdk-aspects-library-security-group@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.2.4.tgz#73fb648a9c687db053dd65730d73a06758602c87"
-  integrity sha512-4asy938NJA5O2kx19ijZyrXBLsz4eU8ZqcDyLxxfk+suRYZPKmKjfTELj0HLzcOD4GhHd2ajrBKxOX3W1g5nIg==
+"@renovosolutions/cdk-aspects-library-security-group@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-0.2.5.tgz#35f1fcca94960c254c8571dc968710921323ba65"
+  integrity sha512-dro4oO3/kO3OO9eeAPOr02jcXJXEiLgsjpV63ridGuP13b2tpvS97okumFRMbvqZ1kS+3pFB4OTB14f1dnvkmg==
   dependencies:
     "@aws-cdk/aws-ec2" "^1.134.0"
     "@aws-cdk/core" "^1.134.0"
 
-"@renovosolutions/cdk-library-managed-instance-role@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-0.1.4.tgz#66d77bd73272fc4fffd51ba31b260620e62c64bf"
-  integrity sha512-tyCFNVHvlZxeOE4gMNi1QGBW6Mq0HrfoEHUrFMhq3kqBV2KwqvjpFgawLy57KlcLP835VNhbvQrYh/0UyncduQ==
+"@renovosolutions/cdk-library-managed-instance-role@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-0.1.5.tgz#a3ccf92a1762b9a545f7d98d160f7578a068cd3b"
+  integrity sha512-1NUEHTgDrsTo0gf7oJT0wG9lGkeDn2QXkN8DfjPSsHVZFN5pabajOOpx6YR5w+J9tCAeROqP8j3bqYlRJvuJtg==
   dependencies:
     "@aws-cdk/aws-iam" "^1.134.0"
     "@aws-cdk/core" "^1.134.0"
