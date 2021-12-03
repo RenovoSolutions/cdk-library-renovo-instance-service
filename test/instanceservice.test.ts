@@ -1,12 +1,11 @@
 import { countResources, expect as expectCDK, haveResourceLike, SynthUtils } from '@aws-cdk/assert';
-import * as ec2 from '@aws-cdk/aws-ec2';
-import * as cdk from '@aws-cdk/core';
+import { App, Stack, aws_ec2 as ec2 } from 'aws-cdk-lib';
 import { ec2ImageToOsString, InstanceService, ManagedLoggingPolicy } from '../src/index';
 
 
 function setupStack() {
-  const app = new cdk.App();
-  const stack = new cdk.Stack(app, 'TestStack', {
+  const app = new App();
+  const stack = new Stack(app, 'TestStack', {
     env: {
       account: '123456789012', // not a real account
       region: 'us-east-1',

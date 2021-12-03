@@ -38,7 +38,7 @@
     "organization": false
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.134.0",
+    "@aws-cdk/assert": "^2.0.0",
     "@types/jest": "*",
     "@types/node": "^14.17.0",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
@@ -61,19 +61,14 @@
     "typescript": "^4.5.2"
   },
   "peerDependencies": {
-    "@aws-cdk/aws-ec2": "^1.134.0",
-    "@aws-cdk/aws-iam": "^1.134.0",
-    "@aws-cdk/cloud-assembly-schema": "^1.134.0",
-    "@aws-cdk/core": "^1.134.0",
-    "constructs": "^3.2.27"
+    "aws-cdk-lib": "^2.0.0",
+    "constructs": "^10.0.5"
   },
   "dependencies": {
-    "@aws-cdk/aws-ec2": "^1.134.0",
-    "@aws-cdk/aws-iam": "^1.134.0",
-    "@aws-cdk/cloud-assembly-schema": "^1.134.0",
-    "@aws-cdk/core": "^1.134.0",
-    "@renovosolutions/cdk-aspects-library-security-group": "^0.2.5",
-    "@renovosolutions/cdk-library-managed-instance-role": "^0.1.5"
+    "@renovosolutions/cdk-aspects-library-security-group": "^2.0.1",
+    "@renovosolutions/cdk-library-managed-instance-role": "^2.1.0",
+    "aws-cdk-lib": "^2.0.0",
+    "constructs": "^10.0.0"
   },
   "bundledDependencies": [],
   "keywords": [

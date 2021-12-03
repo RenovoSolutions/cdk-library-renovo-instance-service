@@ -1,12 +1,11 @@
-import * as ec2 from '@aws-cdk/aws-ec2';
-import * as iam from '@aws-cdk/aws-iam';
-import * as cdk from '@aws-cdk/core';
 import {
   NoIngressCommonManagementPortsAspect,
   NoPublicIngressAspect,
   NoIngressCommonRelationalDBPortsAspect,
 } from '@renovosolutions/cdk-aspects-library-security-group';
 import { ManagedInstanceRole } from '@renovosolutions/cdk-library-managed-instance-role';
+import { aws_ec2 as ec2, aws_iam as iam, Stack, Aspects } from 'aws-cdk-lib';
+import { Construct } from 'constructs';
 
 export interface InstanceServiceProps {
   /**
@@ -107,15 +106,15 @@ export interface AmiLookup {
   readonly windows?: boolean;
 }
 
-export function ec2ImageToOsString(stack:cdk.Construct, image:ec2.IMachineImage) {
+export function ec2ImageToOsString(stack:Construct, image:ec2.IMachineImage) {
   return ec2.OperatingSystemType[image.getImage(stack).osType].toLowerCase();
 }
 
-export class ManagedLoggingPolicy extends cdk.Construct {
+export class ManagedLoggingPolicy extends Construct {
 
   public readonly policy: iam.ManagedPolicy;
 
-  constructor(scope: cdk.Construct, id: string, props: ManagedLoggingPolicyProps) {
+  constructor(scope: Construct, id: string, props: ManagedLoggingPolicyProps) {
     super(scope, id);
 
     if (!(props.os.toLowerCase() == 'windows') && !(props.os.toLowerCase() == 'linux')) {
@@ -130,7 +129,7 @@ export class ManagedLoggingPolicy extends cdk.Construct {
     ];
 
     logGroups.forEach( (g) => {
-      logResources.push(`arn:aws:logs:${ cdk.Stack.of(this).region }:${ cdk.Stack.of(this).account }:log-group:${ g }`);
+      logResources.push(`arn:aws:logs:${ Stack.of(this).region }:${ Stack.of(this).account }:log-group:${ g }`);
     });
 
     this.policy = new iam.ManagedPolicy(this, 'loggingPolicy', {
@@ -150,22 +149,22 @@ export class ManagedLoggingPolicy extends cdk.Construct {
   }
 }
 
-export class InstanceService extends cdk.Construct {
+export class InstanceService extends Construct {
 
   public readonly instanceProfile: ManagedInstanceRole;
 
   public readonly securityGroup: ec2.SecurityGroup;
 
-  constructor(scope: cdk.Construct, id: string, props: InstanceServiceProps) {
+  constructor(scope: Construct, id: string, props: InstanceServiceProps) {
     super(scope, id);
 
     let enableNoRemoteManagementPortsAspect: boolean = props.enableNoRemoteManagementPortsAspect ?? true;
     let enableNoDBPortsAspect: boolean = props.enableNoDBPortsAspect ?? true;
     let enabledNoPublicIngressAspect: boolean = props.enabledNoPublicIngressAspect ?? true;
 
-    if (enableNoRemoteManagementPortsAspect) cdk.Aspects.of(this).add(new NoIngressCommonManagementPortsAspect());
-    if (enableNoDBPortsAspect) cdk.Aspects.of(this).add(new NoIngressCommonRelationalDBPortsAspect());
-    if (enabledNoPublicIngressAspect) cdk.Aspects.of(this).add(new NoPublicIngressAspect());
+    if (enableNoRemoteManagementPortsAspect) Aspects.of(this).add(new NoIngressCommonManagementPortsAspect());
+    if (enableNoDBPortsAspect) Aspects.of(this).add(new NoIngressCommonRelationalDBPortsAspect());
+    if (enabledNoPublicIngressAspect) Aspects.of(this).add(new NoPublicIngressAspect());
 
     let managedPolicies = [];
 
