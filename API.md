@@ -14,7 +14,7 @@ new InstanceService(scope: Construct, id: string, props: InstanceServiceProps)
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`scope`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceserviceparameterscope)<span title="Required">*</span> | [`@aws-cdk/core.Construct`](#@aws-cdk/core.Construct) | *No description.* |
+| [`scope`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceserviceparameterscope)<span title="Required">*</span> | [`constructs.Construct`](#constructs.Construct) | *No description.* |
 | [`id`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceserviceparameterid)<span title="Required">*</span> | `string` | *No description.* |
 | [`props`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceserviceparameterprops)<span title="Required">*</span> | [`@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps`](#@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps) | *No description.* |
 
@@ -22,7 +22,7 @@ new InstanceService(scope: Construct, id: string, props: InstanceServiceProps)
 
 ##### `scope`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceService.parameter.scope" id="renovosolutionscdklibraryrenovoinstanceserviceinstanceserviceparameterscope"></a>
 
-- *Type:* [`@aws-cdk/core.Construct`](#@aws-cdk/core.Construct)
+- *Type:* [`constructs.Construct`](#constructs.Construct)
 
 ---
 
@@ -45,7 +45,7 @@ new InstanceService(scope: Construct, id: string, props: InstanceServiceProps)
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
 | [`instanceProfile`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstanceprofile)<span title="Required">*</span> | [`@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole`](#@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole) | *No description.* |
-| [`securityGroup`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertysecuritygroup)<span title="Required">*</span> | [`@aws-cdk/aws-ec2.SecurityGroup`](#@aws-cdk/aws-ec2.SecurityGroup) | *No description.* |
+| [`securityGroup`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertysecuritygroup)<span title="Required">*</span> | [`aws-cdk-lib.aws_ec2.SecurityGroup`](#aws-cdk-lib.aws_ec2.SecurityGroup) | *No description.* |
 
 ---
 
@@ -65,7 +65,7 @@ public readonly instanceProfile: ManagedInstanceRole;
 public readonly securityGroup: SecurityGroup;
 ```
 
-- *Type:* [`@aws-cdk/aws-ec2.SecurityGroup`](#@aws-cdk/aws-ec2.SecurityGroup)
+- *Type:* [`aws-cdk-lib.aws_ec2.SecurityGroup`](#aws-cdk-lib.aws_ec2.SecurityGroup)
 
 ---
 
@@ -82,7 +82,7 @@ new ManagedLoggingPolicy(scope: Construct, id: string, props: ManagedLoggingPoli
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`scope`](#renovosolutionscdklibraryrenovoinstanceservicemanagedloggingpolicyparameterscope)<span title="Required">*</span> | [`@aws-cdk/core.Construct`](#@aws-cdk/core.Construct) | *No description.* |
+| [`scope`](#renovosolutionscdklibraryrenovoinstanceservicemanagedloggingpolicyparameterscope)<span title="Required">*</span> | [`constructs.Construct`](#constructs.Construct) | *No description.* |
 | [`id`](#renovosolutionscdklibraryrenovoinstanceservicemanagedloggingpolicyparameterid)<span title="Required">*</span> | `string` | *No description.* |
 | [`props`](#renovosolutionscdklibraryrenovoinstanceservicemanagedloggingpolicyparameterprops)<span title="Required">*</span> | [`@renovosolutions/cdk-library-renovo-instance-service.ManagedLoggingPolicyProps`](#@renovosolutions/cdk-library-renovo-instance-service.ManagedLoggingPolicyProps) | *No description.* |
 
@@ -90,7 +90,7 @@ new ManagedLoggingPolicy(scope: Construct, id: string, props: ManagedLoggingPoli
 
 ##### `scope`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.ManagedLoggingPolicy.parameter.scope" id="renovosolutionscdklibraryrenovoinstanceservicemanagedloggingpolicyparameterscope"></a>
 
-- *Type:* [`@aws-cdk/core.Construct`](#@aws-cdk/core.Construct)
+- *Type:* [`constructs.Construct`](#constructs.Construct)
 
 ---
 
@@ -112,7 +112,7 @@ new ManagedLoggingPolicy(scope: Construct, id: string, props: ManagedLoggingPoli
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`policy`](#renovosolutionscdklibraryrenovoinstanceservicemanagedloggingpolicypropertypolicy)<span title="Required">*</span> | [`@aws-cdk/aws-iam.ManagedPolicy`](#@aws-cdk/aws-iam.ManagedPolicy) | *No description.* |
+| [`policy`](#renovosolutionscdklibraryrenovoinstanceservicemanagedloggingpolicypropertypolicy)<span title="Required">*</span> | [`aws-cdk-lib.aws_iam.ManagedPolicy`](#aws-cdk-lib.aws_iam.ManagedPolicy) | *No description.* |
 
 ---
 
@@ -122,7 +122,7 @@ new ManagedLoggingPolicy(scope: Construct, id: string, props: ManagedLoggingPoli
 public readonly policy: ManagedPolicy;
 ```
 
-- *Type:* [`@aws-cdk/aws-iam.ManagedPolicy`](#@aws-cdk/aws-iam.ManagedPolicy)
+- *Type:* [`aws-cdk-lib.aws_iam.ManagedPolicy`](#aws-cdk-lib.aws_iam.ManagedPolicy)
 
 ---
 
@@ -199,16 +199,16 @@ const instanceServiceProps: InstanceServiceProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| [`ami`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyami)<span title="Required">*</span> | [`@aws-cdk/aws-ec2.IMachineImage`](#@aws-cdk/aws-ec2.IMachineImage) | The Amazon Machine Image (AMI) to launch the target instance with. |
+| [`ami`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyami)<span title="Required">*</span> | [`aws-cdk-lib.aws_ec2.IMachineImage`](#aws-cdk-lib.aws_ec2.IMachineImage) | The Amazon Machine Image (AMI) to launch the target instance with. |
 | [`name`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyname)<span title="Required">*</span> | `string` | The name of the service this instance service will host. |
-| [`vpc`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyvpc)<span title="Required">*</span> | [`@aws-cdk/aws-ec2.Vpc`](#@aws-cdk/aws-ec2.Vpc) | The VPC to launch this service in. |
+| [`vpc`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyvpc)<span title="Required">*</span> | [`aws-cdk-lib.aws_ec2.Vpc`](#aws-cdk-lib.aws_ec2.Vpc) | The VPC to launch this service in. |
 | [`allowAllOutbound`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyallowalloutbound) | `boolean` | Allow all outbound traffic for the instances security group. |
 | [`disableInlineRules`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertydisableinlinerules) | `boolean` | Whether to disable inline ingress and egress rule optimization for the instances security group. |
 | [`enableCloudwatchLogs`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyenablecloudwatchlogs) | `boolean` | Whether or not to enable logging to Cloudwatch Logs. |
 | [`enabledNoPublicIngressAspect`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyenablednopublicingressaspect) | `boolean` | Whether or not to prevent security group from containing rules that allow access from the public internet: Any rule with a source from 0.0.0.0/0 or ::/0. |
 | [`enableNoDBPortsAspect`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyenablenodbportsaspect) | `boolean` | Whether or not to prevent security group from containing rules that allow access to relational DB ports: MySQL, PostgreSQL, MariaDB, Oracle, SQL Server. |
 | [`enableNoRemoteManagementPortsAspect`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyenablenoremotemanagementportsaspect) | `boolean` | Whether or not to prevent security group from containing rules that allow access to remote management ports: SSH, RDP, WinRM, WinRM over HTTPs. |
-| [`subnetType`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertysubnettype) | [`@aws-cdk/aws-ec2.SubnetType`](#@aws-cdk/aws-ec2.SubnetType) | The subnet type to launch this service in. |
+| [`subnetType`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertysubnettype) | [`aws-cdk-lib.aws_ec2.SubnetType`](#aws-cdk-lib.aws_ec2.SubnetType) | The subnet type to launch this service in. |
 
 ---
 
@@ -218,7 +218,7 @@ const instanceServiceProps: InstanceServiceProps = { ... }
 public readonly ami: IMachineImage;
 ```
 
-- *Type:* [`@aws-cdk/aws-ec2.IMachineImage`](#@aws-cdk/aws-ec2.IMachineImage)
+- *Type:* [`aws-cdk-lib.aws_ec2.IMachineImage`](#aws-cdk-lib.aws_ec2.IMachineImage)
 
 The Amazon Machine Image (AMI) to launch the target instance with.
 
@@ -242,7 +242,7 @@ The name of the service this instance service will host.
 public readonly vpc: Vpc;
 ```
 
-- *Type:* [`@aws-cdk/aws-ec2.Vpc`](#@aws-cdk/aws-ec2.Vpc)
+- *Type:* [`aws-cdk-lib.aws_ec2.Vpc`](#aws-cdk-lib.aws_ec2.Vpc)
 
 The VPC to launch this service in.
 
@@ -339,7 +339,7 @@ If these ports are opened when this is enabled an error will be added to CDK met
 public readonly subnetType: SubnetType;
 ```
 
-- *Type:* [`@aws-cdk/aws-ec2.SubnetType`](#@aws-cdk/aws-ec2.SubnetType)
+- *Type:* [`aws-cdk-lib.aws_ec2.SubnetType`](#aws-cdk-lib.aws_ec2.SubnetType)
 - *Default:* ec2.SubnetType.PRIVATE
 
 The subnet type to launch this service in.
