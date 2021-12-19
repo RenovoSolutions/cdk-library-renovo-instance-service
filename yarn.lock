@@ -674,17 +674,17 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@renovosolutions/cdk-aspects-library-security-group@^2.0.1":
-  version "2.0.13"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.13.tgz#026bcf77cda984e7ec20afc13b8dd3b057d4d294"
-  integrity sha512-MS+lILfHE+gRq0CREs5OD71H6lNdGPeBeKU6c9JX1ezMNfy2tSAqrE992jepmJnaAowCYO3l9FsWuFIEV9vPOg==
+  version "2.0.14"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.14.tgz#98176c95b36d77917453cdecb296acfee35b4fd4"
+  integrity sha512-39rKXodle99k122bkUwX06Hcjzk1E9m1NcSvyW+TtqFdIffoiTU8ypZMlTHqGQYGON8Tv4/DlzixrgnGEi4CXw==
   dependencies:
     aws-cdk-lib "^2.0.0"
     constructs "^10.0.0"
 
 "@renovosolutions/cdk-library-managed-instance-role@^2.1.0":
-  version "2.1.11"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.1.11.tgz#d17757fc8db59d404b16158f9b2a46539a897638"
-  integrity sha512-U5Ej+jeHwjXKseNOv/jvttmt2qM6qA48iGh2gZJC3AL5ha6IuJ66CrzLDIR38qsND8RFTtWsVlRRl1EpuZ0jTA==
+  version "2.1.12"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.1.12.tgz#535b8ad0d52b5be7821925f6bd4f100c41c55294"
+  integrity sha512-ScNxuhkp2KpKu2moDyZJzq927YzoLosQQ4q/nlFROCOZv+FFG1w4jMqqMnJn+6pkB+oHT6huHe9DDB09V71X9A==
   dependencies:
     aws-cdk-lib "^2.0.0"
     constructs "^10.0.0"
@@ -1417,9 +1417,9 @@ camelcase@^6.2.0, camelcase@^6.2.1:
   integrity sha512-tVI4q5jjFV5CavAU8DXfza/TJcZutVKo/5Foskmsqcm0MsL91moHvwiGNnqaa2o6PF/7yT5ikDRcVcl8Rj6LCA==
 
 caniuse-lite@^1.0.30001286:
-  version "1.0.30001287"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001287.tgz#5fab6a46ab9e47146d5dd35abfe47beaf8073c71"
-  integrity sha512-4udbs9bc0hfNrcje++AxBuc6PfLNHwh3PO9kbwnfCQWyqtlzg3py0YgFu8jyRTTo85VAz4U+VLxSlID09vNtWA==
+  version "1.0.30001291"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001291.tgz#08a8d2cfea0b2cf2e1d94dd795942d0daef6108c"
+  integrity sha512-roMV5V0HNGgJ88s42eE70sstqGW/gwFndosYrikHthw98N5tLnOTxFqMLQjZVRxTWFlJ4rn+MsgXrR7MDPY4jA==
 
 case@1.6.3, case@^1.6.3:
   version "1.6.3"
@@ -4731,9 +4731,9 @@ object-assign@^4.1.0:
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
 
 object-inspect@^1.11.0, object-inspect@^1.9.0:
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.11.1.tgz#d4bd7d7de54b9a75599f59a00bd698c1f1c6549b"
-  integrity sha512-If7BjFlpkzzBeV1cqgT3OSWT3azyoxDGajR+iGnFBfVV2EWyDyWaZZW2ERDjUaY2QM8i5jI3Sj7mhsM4DDAqWA==
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/object-inspect/-/object-inspect-1.12.0.tgz#6e2c120e868fd1fd18cb4f18c31741d0d6e776f0"
+  integrity sha512-Ho2z80bVIvJloH+YzRmpZVQe87+qASmBUKZDWgx9cu+KDrX2ZDH/3tMy+gXbZETVGs2M8YdxObOh7XAtim9Y0g==
 
 object-is@^1.1.4:
   version "1.1.5"
