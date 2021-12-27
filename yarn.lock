@@ -674,17 +674,17 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@renovosolutions/cdk-aspects-library-security-group@^2.0.1":
-  version "2.0.21"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.21.tgz#531d51681f5e39832962716cf48751c2116f595b"
-  integrity sha512-Lh1I1asywfCBmai9syZOgxoYtunMPNwpty4HijtgKNI98FSG8yeQ4m8FmCN7a7f3OjCmMW0uMDszcxzNrwotlQ==
+  version "2.0.22"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.22.tgz#1226960197089290def4acda9ef1ba1dc644ffbe"
+  integrity sha512-muCrdlSDBenJ11Ck8+3N0sELFuAJMpBj7JjI+hqxWj5wtj7kryCZxDishl1LeJE0kXE86tiE8nVwOLyv8E5POQ==
   dependencies:
     aws-cdk-lib "^2.0.0"
     constructs "^10.0.0"
 
 "@renovosolutions/cdk-library-managed-instance-role@^2.1.0":
-  version "2.1.19"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.1.19.tgz#f49843d62a0d5289e09ac757c34ce193e473b54f"
-  integrity sha512-QJ7F9To3pKo+8FVlZ4NE4fze12o14oCXW8VOi4IrdKv6M0KopcJXIDi/JRhqJRmk41PaYvfyzD3qF4q8Qggftw==
+  version "2.1.20"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.1.20.tgz#28f4a89e6dfd09f04cf686e883272765c1676507"
+  integrity sha512-5xyooxzvPiUH1WIjewftId2NHg+zS4BNoEJIalYF3bJXPKVxQt1cIG8NT7lf8ytnU2X22UGr9S8pysaFXnq7+Q==
   dependencies:
     aws-cdk-lib "^2.0.0"
     constructs "^10.0.0"
@@ -816,9 +816,9 @@
   integrity sha512-jhuKLIRrhvCPLqwPcx6INqmKeiA5EWrsCOPhrlFSrbrmU4ZMPjj5Ul/oLCMDO98XRUIwVm78xICz4EPCektzeQ==
 
 "@types/node@*":
-  version "17.0.4"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.4.tgz#fec0ce0526abb6062fd206d72a642811b887a111"
-  integrity sha512-6xwbrW4JJiJLgF+zNypN5wr2ykM9/jHcL7rQ8fZe2vuftggjzZeRSM4OwRc6Xk8qWjwJ99qVHo/JgOGmomWRog==
+  version "17.0.5"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.5.tgz#57ca67ec4e57ad9e4ef5a6bab48a15387a1c83e0"
+  integrity sha512-w3mrvNXLeDYV1GKTZorGJQivK6XLCoGwpnyJFbJVK/aTBQUxOCaa/GlFAAN3OTDFcb7h5tiFG+YXCO2By+riZw==
 
 "@types/node@^10.17.60":
   version "10.17.60"
@@ -826,9 +826,9 @@
   integrity sha512-F0KIgDJfy2nA3zMLmWGKxcH2ZVEtCZXHHdOQs2gSaQ27+lNeEfGxzkIw90aXswATX7AZ33tahPbzy6KAfUreVw==
 
 "@types/node@^14.17.0":
-  version "14.18.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.2.tgz#00fe4d1686d5f6cf3a2f2e9a0eef42594d06abfc"
-  integrity sha512-fqtSN5xn/bBzDxMT77C1rJg6CsH/R49E7qsGuvdPJa20HtV5zSTuLJPNfnlyVH3wauKnkHdLggTVkOW/xP9oQg==
+  version "14.18.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.3.tgz#b3682cfd9d5542b025df13233d073cb4347f63f3"
+  integrity sha512-GtTH2crF4MtOIrrAa+jgTV9JX/PfoUCYr6MiZw7O/dkZu5b6gm5dc1nAL0jwGo4ortSBBtGyeVaxdC8X6V+pLg==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -1642,9 +1642,9 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^10.0.0:
-  version "10.0.13"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.13.tgz#81f5badc32365ec7c2f38c1ba49adbacfba6aac7"
-  integrity sha512-DWL96FNvVInYIINNdC11XaVKW9TGoU2i+H+RUuBf+LrJBZr2TZi8r1enloEL3zDoJ258nm9DlczeCl7Id+lDbA==
+  version "10.0.14"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.14.tgz#d4775ca312cb4e681add872006df283b17362501"
+  integrity sha512-KdfVv4s66maPo5DZ/hldkbTxci8oXdnz7ztc6hHbaZMeuoVP8/p/qJrmah9jJrGan6TYQ2t2ujV0j1K8//Q22Q==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -3956,10 +3956,10 @@ jsii-diff@^1.50.0:
     typescript "~3.9.10"
     yargs "^16.2.0"
 
-jsii-docgen@^4.2.20:
-  version "4.2.20"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-4.2.20.tgz#808d205ab9d67a3fdc60cc7da811c3eb6b187966"
-  integrity sha512-aH2A8Gru4a9J8+zGvJbRTsocljY1wdso1jQUFY0IjpWYtCB0+2as3LdJKBKohjBfY4wcVaktbYvbyhRoLlctAg==
+jsii-docgen@^4.2.21:
+  version "4.2.21"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-4.2.21.tgz#aa60244a2c14d054d80add5617289258ccd0bd8d"
+  integrity sha512-Lu/12Wf/fGBhSvFKR0j5CrzWKkO3q4Ro07uSTPgBm0OkOvPWxB1hjLyaFIJqbkJK5T+EGLeNz+p07elxjtxMfw==
   dependencies:
     "@jsii/spec" "^1.50.0"
     case "^1.6.3"
