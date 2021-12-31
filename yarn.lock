@@ -674,17 +674,17 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@renovosolutions/cdk-aspects-library-security-group@^2.0.1":
-  version "2.0.25"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.25.tgz#8749a668428597fb24f7e530c72bb4d85e969e8d"
-  integrity sha512-d3fA2YQtYbxeVPpeTg+VECzxyey7Vqqc91r5miE5pHjdgmqF0iP7Gfpo1N1vfv3G5QDR6rJiZhVXJ5rfWGgYIw==
+  version "2.0.26"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.26.tgz#5cbe58b78493632627f665cb855c68e1c061b422"
+  integrity sha512-BBccnpcrDepcaIz5CddorpBtCUcFSNUQfJRivWxqWBmY4lmCT8G77ugHZ7Pvn0CZz2T05lB6WGhtKUKEqhR1rQ==
   dependencies:
     aws-cdk-lib "^2.0.0"
     constructs "^10.0.0"
 
 "@renovosolutions/cdk-library-managed-instance-role@^2.1.0":
-  version "2.1.23"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.1.23.tgz#cf63cff0f29d0b3325a97d40259ea6936e99b049"
-  integrity sha512-wfd7jSeudVvQoAdPWXrJMNBz9tFTRQePXJ71uAymsLVAkiIVgkO+6gJ6uSQTVA+GHrMNn9+sgH/n3Qqyw29G8w==
+  version "2.1.24"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.1.24.tgz#d9ec2a5a7e25dbbe4dd3ea517036274712436e07"
+  integrity sha512-gsfTn/z5K8R8styHgiHKxiX83esZ+z+F2r3A/yTu23mYSj8uJfesEFdAxSRKX04CF/dflXkAM0RlVuv/Yok3KA==
   dependencies:
     aws-cdk-lib "^2.0.0"
     constructs "^10.0.0"
@@ -788,9 +788,9 @@
     "@types/istanbul-lib-report" "*"
 
 "@types/jest@*":
-  version "27.0.3"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-27.0.3.tgz#0cf9dfe9009e467f70a342f0f94ead19842a783a"
-  integrity sha512-cmmwv9t7gBYt7hNKH5Spu7Kuu/DotGa+Ff+JGRKZ4db5eh8PnKS4LuebJ3YLUoyOyIHraTGyULn23YtEAm0VSg==
+  version "27.4.0"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-27.4.0.tgz#037ab8b872067cae842a320841693080f9cb84ed"
+  integrity sha512-gHl8XuC1RZ8H2j5sHv/JqsaxXkDDM9iDOgu0Wp8sjs4u/snb2PVehyWXJPr+ORA0RPpgw231mnutWI1+0hgjIQ==
   dependencies:
     jest-diff "^27.0.0"
     pretty-format "^27.0.0"
@@ -1642,9 +1642,9 @@ console-control-strings@^1.0.0, console-control-strings@~1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^10.0.0:
-  version "10.0.17"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.17.tgz#c71d82003435bac36a33abe15910a7db1596310a"
-  integrity sha512-mO9tUB/zaoYzVDjspro9TqZg3eSR0iL27WYiUIpMSPKpRaYVyJnP/Be60P1tGGAJfNb48mMMytw7XhfF+bYpTw==
+  version "10.0.19"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-10.0.19.tgz#8f4b6fec095894d27c7e51d17c73275255660ee0"
+  integrity sha512-+rqNGi8W/oSr9G/AJTbnvMWlDo6D/A1X6Qx1EhQjDWmKxXUpcs1BvK85ColF1h64DyNBuuoO5P/W6ZobdatyeQ==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -3956,10 +3956,10 @@ jsii-diff@^1.50.0:
     typescript "~3.9.10"
     yargs "^16.2.0"
 
-jsii-docgen@^4.2.24:
-  version "4.2.24"
-  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-4.2.24.tgz#a4b26baa61b1d4d393b81511217b7d7774fd9bc3"
-  integrity sha512-a31nJfkIfDqJk7tp8kqDceVgLiLpxsx0xjjkL2d+jakkvGaAmb92D0KfnW3Z3oMzcijZBDC7qVnFZyKlSis0RA==
+jsii-docgen@^4.2.25:
+  version "4.2.25"
+  resolved "https://registry.yarnpkg.com/jsii-docgen/-/jsii-docgen-4.2.25.tgz#135e66ac5c6a04b1445eac9827ac73f2a8abb9ce"
+  integrity sha512-eDPlgVHefgPXuyVFIcuZjxgnjrX0Cc52r/tmWh9ajAgSdilh+uFeH1MUepIYPh4tBaMHOrLaGSucTsaZrW1xCQ==
   dependencies:
     "@jsii/spec" "^1.50.0"
     case "^1.6.3"
