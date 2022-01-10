@@ -1,5 +1,5 @@
-import { countResources, expect as expectCDK, haveResourceLike, SynthUtils } from '@aws-cdk/assert';
 import { App, Stack, aws_ec2 as ec2 } from 'aws-cdk-lib';
+import { Template } from 'aws-cdk-lib/assertions';
 import { ec2ImageToOsString, InstanceService, ManagedLoggingPolicy } from '../src/index';
 
 
@@ -48,7 +48,7 @@ test('Snapshot', () => {
 
   addTestSgRule(instance.securityGroup);
 
-  expect(SynthUtils.toCloudFormation(stack)).toMatchSnapshot();
+  expect(Template.fromStack(stack)).toMatchSnapshot();
 });
 
 test('DefaultLinuxService', () => {
@@ -70,20 +70,26 @@ test('DefaultLinuxService', () => {
 
   addTestSgRule(instance.securityGroup);
 
-  expectCDK(stack).to(haveResourceLike('AWS::IAM::ManagedPolicy', {
+  Template.fromStack(stack).hasResourceProperties('AWS::IAM::ManagedPolicy', {
     PolicyDocument: {
       Statement: [{
+        Action: [
+          'logs:PutLogEvents',
+          'logs:CreateLogGroup',
+          'logs:CreateLogStream',
+        ],
+        Effect: 'Allow',
         Resource: [
           `${ logString }/linux/logs`,
           `${ logString }/linux/logs/*`,
         ],
       }],
     },
-  }));
+  });
 
   // Expect a single egress rule with outbound to all by default
-  expectCDK(stack).to(countResources('AWS::EC2::SecurityGroup', 1));
-  expectCDK(stack).to(haveResourceLike('AWS::EC2::SecurityGroup', {
+  Template.fromStack(stack).resourceCountIs('AWS::EC2::SecurityGroup', 1);
+  Template.fromStack(stack).hasResourceProperties('AWS::EC2::SecurityGroup', {
     SecurityGroupEgress: [
       {
         CidrIp: '0.0.0.0/0',
@@ -100,7 +106,7 @@ test('DefaultLinuxService', () => {
         ToPort: 80,
       },
     ],
-  }));
+  });
 });
 
 test('DefaultWindowsService', () => {
@@ -121,20 +127,26 @@ test('DefaultWindowsService', () => {
 
   addTestSgRule(instance.securityGroup);
 
-  expectCDK(stack).to(haveResourceLike('AWS::IAM::ManagedPolicy', {
+  Template.fromStack(stack).hasResourceProperties('AWS::IAM::ManagedPolicy', {
     PolicyDocument: {
       Statement: [{
+        Action: [
+          'logs:PutLogEvents',
+          'logs:CreateLogGroup',
+          'logs:CreateLogStream',
+        ],
+        Effect: 'Allow',
         Resource: [
           `${ logString }/windows/logs`,
           `${ logString }/windows/logs/*`,
         ],
       }],
     },
-  }));
+  });
 
   // Expect a single egress rule with outbound to all by default
-  expectCDK(stack).to(countResources('AWS::EC2::SecurityGroup', 1));
-  expectCDK(stack).to(haveResourceLike('AWS::EC2::SecurityGroup', {
+  Template.fromStack(stack).resourceCountIs('AWS::EC2::SecurityGroup', 1);
+  Template.fromStack(stack).hasResourceProperties('AWS::EC2::SecurityGroup', {
     SecurityGroupEgress: [
       {
         CidrIp: '0.0.0.0/0',
@@ -151,7 +163,7 @@ test('DefaultWindowsService', () => {
         ToPort: 80,
       },
     ],
-  }));
+  });
 });
 
 test('Logging policy construct can be used independently of an instance', () => {
@@ -172,27 +184,39 @@ test('Logging policy construct can be used independently of an instance', () => 
     os: ec2ImageToOsString(stack, amiLinux),
   });
 
-  expectCDK(stack).to(haveResourceLike('AWS::IAM::ManagedPolicy', {
+  Template.fromStack(stack).hasResourceProperties('AWS::IAM::ManagedPolicy', {
     PolicyDocument: {
       Statement: [{
+        Action: [
+          'logs:PutLogEvents',
+          'logs:CreateLogGroup',
+          'logs:CreateLogStream',
+        ],
+        Effect: 'Allow',
         Resource: [
           `${ logString }/windows/logs`,
           `${ logString }/windows/logs/*`,
         ],
       }],
     },
-  }));
+  });
 
-  expectCDK(stack).to(haveResourceLike('AWS::IAM::ManagedPolicy', {
+  Template.fromStack(stack).hasResourceProperties('AWS::IAM::ManagedPolicy', {
     PolicyDocument: {
       Statement: [{
+        Action: [
+          'logs:PutLogEvents',
+          'logs:CreateLogGroup',
+          'logs:CreateLogStream',
+        ],
+        Effect: 'Allow',
         Resource: [
           `${ logString }/linux/logs`,
           `${ logString }/linux/logs/*`,
         ],
       }],
     },
-  }));
+  });
 });
 
 test('Error when os is not windows or linux for managed logging policy creation', () => {
@@ -223,16 +247,7 @@ test('Setting enableCloudwatchLogs to false does NOT create the logging IAM poli
     enableCloudwatchLogs: false,
   });
 
-  expectCDK(stack).notTo(haveResourceLike('AWS::IAM::ManagedPolicy', {
-    PolicyDocument: {
-      Statement: [{
-        Resource: [
-          `${ logString }/windows/logs`,
-          `${ logString }/windows/logs/*`,
-        ],
-      }],
-    },
-  }));
+  Template.fromStack(stack).resourceCountIs('AWS::IAM::ManagedPolicy', 0);
 });
 
 test('Rules are separate element when inline rules are disabled', () => {
@@ -257,21 +272,21 @@ test('Rules are separate element when inline rules are disabled', () => {
   addTestSgRule(instance.securityGroup);
 
   // Expect a single egress rule with outbound to only the VPC cidr
-  expectCDK(stack).to(countResources('AWS::EC2::SecurityGroup', 1));
-  expectCDK(stack).to(countResources('AWS::EC2::SecurityGroupEgress', 1));
-  expectCDK(stack).to(haveResourceLike('AWS::EC2::SecurityGroupEgress', {
+  Template.fromStack(stack).resourceCountIs('AWS::EC2::SecurityGroup', 1);
+  Template.fromStack(stack).resourceCountIs('AWS::EC2::SecurityGroupEgress', 1);
+  Template.fromStack(stack).hasResourceProperties('AWS::EC2::SecurityGroupEgress', {
     IpProtocol: 'icmp',
     Description: 'Disallow all traffic',
     CidrIp: '255.255.255.255/32',
     FromPort: 252,
     ToPort: 86,
-  }));
-  expectCDK(stack).to(countResources('AWS::EC2::SecurityGroupIngress', 1));
-  expectCDK(stack).to(haveResourceLike('AWS::EC2::SecurityGroupIngress', {
+  });
+  Template.fromStack(stack).resourceCountIs('AWS::EC2::SecurityGroupIngress', 1);
+  Template.fromStack(stack).hasResourceProperties('AWS::EC2::SecurityGroupIngress', {
     IpProtocol: 'tcp',
     Description: 'HTTP',
     CidrIp: '10.0.0.1/32',
     FromPort: 80,
     ToPort: 80,
-  }));
+  });
 });

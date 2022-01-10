@@ -1,8 +1,8 @@
-const { AwsCdkConstructLibrary, NpmAccess } = require('projen');
-const project = new AwsCdkConstructLibrary({
+const { awscdk, javascript } = require('projen');
+const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Renovo Solutions',
   authorAddress: 'webmaster+cdk@renovo1.com',
-  cdkVersion: '2.0.0',
+  cdkVersion: '2.5.0',
   defaultReleaseBranch: 'master',
   majorVersion: '2',
   releaseBranches: {
@@ -13,19 +13,15 @@ const project = new AwsCdkConstructLibrary({
   name: '@renovosolutions/cdk-library-renovo-instance-service',
   description: 'CDK Construct Library to create instance based services utilizing default configurations for Renovo Solutions.',
   repositoryUrl: 'https://github.com/RenovoSolutions/cdk-library-renovo-instance-service.git',
-  cdkDependencies: [
-    'aws-cdk-lib',
-  ],
-  deps: [
-    'constructs@^10.0.0',
-    '@renovosolutions/cdk-library-managed-instance-role@^2.1.0',
-    '@renovosolutions/cdk-aspects-library-security-group@^2.0.1',
-  ],
   keywords: [
     'cdk',
     'aws-cdk',
     'aws-cdk-construct',
     'projen',
+  ],
+  deps: [
+    '@renovosolutions/cdk-library-managed-instance-role@^2.1.35',
+    '@renovosolutions/cdk-aspects-library-security-group@^2.0.37',
   ],
   depsUpgrade: true,
   depsUpgradeOptions: {
@@ -72,9 +68,8 @@ const project = new AwsCdkConstructLibrary({
     },
   },
   releaseToNpm: true,
-  releaseWorkflow: true,
-  npmAccess: NpmAccess.PUBLIC,
-  cdkAssert: true,
+  release: true,
+  npmAccess: javascript.NpmAccess.PUBLIC,
   docgen: true,
   eslint: true,
   publishToPypi: {
