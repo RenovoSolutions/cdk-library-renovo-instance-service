@@ -2,7 +2,7 @@ const { awscdk, javascript } = require('projen');
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Renovo Solutions',
   authorAddress: 'webmaster+cdk@renovo1.com',
-  cdkVersion: '2.5.0',
+  cdkVersion: '2.7.0',
   defaultReleaseBranch: 'master',
   majorVersion: '2',
   releaseBranches: {
@@ -20,8 +20,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
     'projen',
   ],
   deps: [
-    '@renovosolutions/cdk-library-managed-instance-role@^2.1.35',
-    '@renovosolutions/cdk-aspects-library-security-group@^2.0.37',
+    '@renovosolutions/cdk-library-managed-instance-role@^2.1.36',
+    '@renovosolutions/cdk-aspects-library-security-group@^2.0.38',
   ],
   depsUpgrade: true,
   depsUpgradeOptions: {
