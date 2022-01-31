@@ -837,17 +837,17 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@renovosolutions/cdk-aspects-library-security-group@^1.0.36":
-  version "1.0.40"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.40.tgz#235c4a18f91d01362fee97dab37eeaac3d69f370"
-  integrity sha512-0XSuD6RhhRznVpv+IbKKi/5XHuEnDCsybDuE6gILl0KEv/QvOaEIbXHRT8vLltGMNMI+F+0uagNG1JE3vNrwhA==
+  version "1.0.41"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.41.tgz#7e231e7db84725a2840635ea40a917e258a2735d"
+  integrity sha512-tKP1b1ip6jDHo8lX9HeTsJ/HSddcRDVNgVOCGHn98lFetju+TcOoTXmAwxwQG8ZHcgHwUTyOc1N2R9SzW2IlEA==
   dependencies:
     "@aws-cdk/aws-ec2" "^1.142.0"
     "@aws-cdk/core" "^1.142.0"
 
 "@renovosolutions/cdk-library-managed-instance-role@^1.0.35":
-  version "1.0.39"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.39.tgz#af2db59531cf64ddf6b2fbde4f3f14b47f39bea0"
-  integrity sha512-aowXsrvAWCn6CyteFlm+XkDaAEN+BB1ePdh0aXpJP0yG5g8R3NQUUKpEouCmLq4TzgFVFo7FfJeut3F2VkfPsw==
+  version "1.0.40"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.40.tgz#9a096d22b19501682288f0fa213830c237ea25d0"
+  integrity sha512-pvmX4jJu1tUSAvt/iUbeW67x2FitSyuFp8WDgUaJ5/kiUVLT7PIyjwKWs7MWFY8xIhXY97Bx6FBCavlbQ+/SLw==
   dependencies:
     "@aws-cdk/aws-iam" "^1.142.0"
     "@aws-cdk/core" "^1.142.0"
@@ -1742,9 +1742,9 @@ console-control-strings@^1.0.0, console-control-strings@^1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^3.3.69:
-  version "3.3.203"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.3.203.tgz#405c5611ec69db42b3c735a6f75f348bf6d03c6c"
-  integrity sha512-9OVe84Ei5obY7yhnkMgmSg0moLHnCp+uprzCuUFBj6/tascetHqo1yKgjyTZ+W+TdVGV0JN6peMkQ9QGSN2Y8w==
+  version "3.3.204"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.3.204.tgz#2b487fdc44ff01ca2bc2e4362362d28df34ec3f8"
+  integrity sha512-+m9G6Se/knusaRbS2KUfmu3DhNCSL6OdSs2Vy4bPd3M5oTwdAx4JOamfmnn8wJRePtVX8+5cFiaKYqCVOdqOow==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
