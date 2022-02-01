@@ -42,8 +42,10 @@ test('Snapshot', () => {
 
   const instance = new InstanceService(stack, 'instanceService', {
     name: 'snapshot',
-    ami,
+    machineImage: ami,
     vpc,
+    parentDomain: 'example.com',
+    instanceType: ec2.InstanceType.of(ec2.InstanceClass.T3, ec2.InstanceSize.MICRO),
   });
 
   addTestSgRule(instance.securityGroup);
@@ -64,8 +66,10 @@ test('DefaultLinuxService', () => {
 
   const instance = new InstanceService(stack, 'instanceService', {
     name: 'linux',
-    ami,
+    machineImage: ami,
     vpc,
+    parentDomain: 'example.com',
+    instanceType: ec2.InstanceType.of(ec2.InstanceClass.T3, ec2.InstanceSize.MICRO),
   });
 
   addTestSgRule(instance.securityGroup);
@@ -121,8 +125,10 @@ test('DefaultWindowsService', () => {
 
   const instance = new InstanceService(stack, 'instanceService', {
     name: 'windows',
-    ami: ami,
+    machineImage: ami,
     vpc,
+    parentDomain: 'example.com',
+    instanceType: ec2.InstanceType.of(ec2.InstanceClass.T3, ec2.InstanceSize.MICRO),
   });
 
   addTestSgRule(instance.securityGroup);
@@ -242,8 +248,10 @@ test('Setting enableCloudwatchLogs to false does NOT create the logging IAM poli
 
   new InstanceService(stack, 'instanceService', {
     name: 'windows',
-    ami: ami,
+    machineImage: ami,
     vpc,
+    parentDomain: 'example.com',
+    instanceType: ec2.InstanceType.of(ec2.InstanceClass.T3, ec2.InstanceSize.MICRO),
     enableCloudwatchLogs: false,
   });
 
@@ -262,8 +270,10 @@ test('Rules are separate element when inline rules are disabled', () => {
 
   const instance = new InstanceService(stack, 'instanceService', {
     name: 'windows',
-    ami: ami,
+    machineImage: ami,
     vpc,
+    parentDomain: 'example.com',
+    instanceType: ec2.InstanceType.of(ec2.InstanceClass.T3, ec2.InstanceSize.MICRO),
     enableCloudwatchLogs: false,
     allowAllOutbound: false,
     disableInlineRules: true,

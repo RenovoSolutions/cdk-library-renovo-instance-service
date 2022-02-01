@@ -10,6 +10,111 @@ Object {
     },
   },
   "Resources": Object {
+    "instanceServiceACD550C60": Object {
+      "Properties": Object {
+        "HostedZoneId": "DUMMY",
+        "Name": "snapshot.example.com.",
+        "ResourceRecords": Array [
+          Object {
+            "Fn::GetAtt": Array [
+              "instanceServiceinstanceBB291B7B",
+              "PrivateIp",
+            ],
+          },
+        ],
+        "TTL": "1800",
+        "Type": "A",
+      },
+      "Type": "AWS::Route53::RecordSet",
+    },
+    "instanceServiceinstanceBB291B7B": Object {
+      "DependsOn": Array [
+        "instanceServiceinstanceInstanceRole1F4C1765",
+      ],
+      "Properties": Object {
+        "AvailabilityZone": "dummy1a",
+        "IamInstanceProfile": Object {
+          "Ref": "instanceServiceinstanceRoleinstanceProfile95F55675",
+        },
+        "ImageId": "ami-1234",
+        "InstanceType": "t3.micro",
+        "LaunchTemplate": Object {
+          "LaunchTemplateName": "instanceLaunchTemplate",
+          "Version": Object {
+            "Fn::GetAtt": Array [
+              "instanceServiceinstanceLaunchTemplate1A9ECACA",
+              "LatestVersionNumber",
+            ],
+          },
+        },
+        "PropagateTagsToVolumeOnCreation": true,
+        "SecurityGroupIds": Array [
+          Object {
+            "Fn::GetAtt": Array [
+              "instanceServicesecurityGroup842FC3F0",
+              "GroupId",
+            ],
+          },
+        ],
+        "SubnetId": Object {
+          "Ref": "vpcPrivateSubnet1Subnet934893E8",
+        },
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "snapshot.example.com",
+          },
+        ],
+        "UserData": Object {
+          "Fn::Base64": "<powershell></powershell>",
+        },
+      },
+      "Type": "AWS::EC2::Instance",
+    },
+    "instanceServiceinstanceInstanceProfile1C790C5B": Object {
+      "Properties": Object {
+        "Roles": Array [
+          Object {
+            "Ref": "instanceServiceinstanceInstanceRole1F4C1765",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::InstanceProfile",
+    },
+    "instanceServiceinstanceInstanceRole1F4C1765": Object {
+      "Properties": Object {
+        "AssumeRolePolicyDocument": Object {
+          "Statement": Array [
+            Object {
+              "Action": "sts:AssumeRole",
+              "Effect": "Allow",
+              "Principal": Object {
+                "Service": "ec2.amazonaws.com",
+              },
+            },
+          ],
+          "Version": "2012-10-17",
+        },
+        "Tags": Array [
+          Object {
+            "Key": "Name",
+            "Value": "TestStack/instanceService/instance",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::Role",
+    },
+    "instanceServiceinstanceLaunchTemplate1A9ECACA": Object {
+      "Properties": Object {
+        "LaunchTemplateData": Object {
+          "MetadataOptions": Object {
+            "HttpTokens": "required",
+          },
+        },
+        "LaunchTemplateName": "instanceLaunchTemplate",
+      },
+      "Type": "AWS::EC2::LaunchTemplate",
+    },
     "instanceServiceinstanceRoleinstanceProfile95F55675": Object {
       "Properties": Object {
         "Roles": Array [
