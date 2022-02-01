@@ -66,8 +66,8 @@
     "constructs": "^10.0.5"
   },
   "dependencies": {
-    "@renovosolutions/cdk-aspects-library-security-group": "^2.0.38",
-    "@renovosolutions/cdk-library-managed-instance-role": "^2.1.36"
+    "@renovosolutions/cdk-aspects-library-security-group": "^2.0.43",
+    "@renovosolutions/cdk-library-managed-instance-role": "^2.1.42"
   },
   "keywords": [
     "aws-cdk",

@@ -4,29 +4,60 @@ import {
   NoIngressCommonRelationalDBPortsAspect,
 } from '@renovosolutions/cdk-aspects-library-security-group';
 import { ManagedInstanceRole } from '@renovosolutions/cdk-library-managed-instance-role';
-import { aws_ec2 as ec2, aws_iam as iam, Stack, Aspects } from 'aws-cdk-lib';
+import {
+  aws_ec2 as ec2,
+  aws_iam as iam,
+  Stack,
+  Aspects,
+  aws_route53 as route53,
+  Tags,
+} from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 
 export interface InstanceServiceProps {
   /**
-   * The name of the service this instance service will host
+   * The type of instance to launch.
+   */
+  readonly instanceType: ec2.InstanceType;
+  /**
+   * AMI to launch
+   */
+  readonly machineImage: ec2.IMachineImage;
+  /**
+   * The name of the service the instance is for.
    */
   readonly name: string;
   /**
-   * The VPC to launch this service in
+   * The VPC to launch the instance in.
    */
-  readonly vpc: ec2.Vpc;
+  readonly vpc: ec2.IVpc;
+  /**
+   * Whether the instance could initiate connections to anywhere by default.
+   */
+  readonly allowAllOutbound?: boolean;
+  /**
+   * Specifies how block devices are exposed to the instance. You can specify virtual devices and EBS volumes
+   */
+  readonly blockDevices?: ec2.BlockDevice[];
+  /**
+   * Name of the SSH keypair to grant access to the instance.
+   */
+  readonly keyName?: string;
+  /**
+   * Defines a private IP address to associate with the instance.
+   */
+  readonly privateIpAddress?: string;
   /**
    * The subnet type to launch this service in
    *
    *
-   * @default ec2.SubnetType.PRIVATE
+   * @default ec2.SubnetType.PRIVATE_WITH_NAT
    */
   readonly subnetType?: ec2.SubnetType;
   /**
-   * The Amazon Machine Image (AMI) to launch the target instance with
+   * Select subnets only in the given AZs
    */
-  readonly ami: ec2.IMachineImage;
+  readonly availabilityZones?: string[];
   /**
    * Whether or not to enable logging to Cloudwatch Logs
    *
@@ -34,13 +65,6 @@ export interface InstanceServiceProps {
    * @default true
    */
   readonly enableCloudwatchLogs?: boolean;
-  /**
-   * Allow all outbound traffic for the instances security group
-   *
-   *
-   * @default true
-   */
-  readonly allowAllOutbound?: boolean;
   /**
    * Whether to disable inline ingress and egress rule optimization for the instances security group.
    *
@@ -50,8 +74,6 @@ export interface InstanceServiceProps {
    * Sometimes this is not desirable, for example when security group access is managed via tags.
    *
    * The default value can be overriden globally by setting the context variable '@aws-cdk/aws-ec2.securityGroupDisableInlineRules'.
-   *
-   *
    * @default false
    */
   readonly disableInlineRules?: boolean;
@@ -82,6 +104,10 @@ export interface InstanceServiceProps {
    * If these sources are used when this is enabled and error will be added to CDK metadata and deployment and synth will fail.
    */
   readonly enabledNoPublicIngressAspect?: boolean;
+  /**
+   * The parent domain of the service.
+   */
+  readonly parentDomain: string;
 }
 
 export interface ManagedLoggingPolicyProps {
@@ -151,9 +177,50 @@ export class ManagedLoggingPolicy extends Construct {
 
 export class InstanceService extends Construct {
 
+  /**
+   * The instance profile associated with this instance.
+   */
   public readonly instanceProfile: ManagedInstanceRole;
-
+  /**
+   * The security group associated with this instance.
+   */
   public readonly securityGroup: ec2.SecurityGroup;
+  /**
+   * The underlying instance resource
+   */
+  public readonly instance: ec2.Instance;
+  /**
+   * The underlying CfnInstance resource
+   */
+  public readonly instanceCfn: ec2.CfnInstance;
+  /**
+   * The availability zone of the instance
+   */
+  public readonly instanceAvailabilityZone: string;
+  /**
+   * The instance's ID
+   */
+  public readonly instanceId: string;
+  /**
+   * Private DNS name for this instance assigned by EC2
+   */
+  public readonly instanceEc2PrivateDnsName: string;
+  /**
+   * Private IP for this instance
+   */
+  public readonly instancePrivateIp: string;
+  /**
+   * Public DNS name for this instance assigned by EC2
+   */
+  public readonly instanceEc2PublicDnsName: string;
+  /**
+   * DNS record for this instance created in Route53
+   */
+  public readonly instanceDnsName: route53.ARecord;
+  /**
+   * The type of OS the instance is running
+   */
+  public readonly osType: ec2.OperatingSystemType;
 
   constructor(scope: Construct, id: string, props: InstanceServiceProps) {
     super(scope, id);
@@ -173,7 +240,7 @@ export class InstanceService extends Construct {
 
     if (enableCloudwatchLogs) {
       managedPolicies.push(new ManagedLoggingPolicy(this, 'loggingPolicy', {
-        os: ec2ImageToOsString(this, props.ami),
+        os: ec2ImageToOsString(this, props.machineImage),
       }).policy);
     }
 
@@ -191,6 +258,46 @@ export class InstanceService extends Construct {
       vpc: props.vpc,
       description: `The security group applied to the instance service for ${ props.name }`,
       disableInlineRules: disableInlineRules,
+    });
+
+    this.instance = new ec2.Instance(this, 'instance', {
+      instanceType: props.instanceType,
+      machineImage: props.machineImage,
+      vpc: props.vpc,
+      allowAllOutbound: allowAllOutbound,
+      blockDevices: props.blockDevices,
+      keyName: props.keyName,
+      privateIpAddress: props.privateIpAddress,
+      propagateTagsToVolumeOnCreation: true,
+      requireImdsv2: true,
+      securityGroup: this.securityGroup,
+      // userData: props.userData,
+      userDataCausesReplacement: false,
+      vpcSubnets: {
+        subnetType: props.subnetType ?? ec2.SubnetType.PRIVATE_WITH_NAT,
+        onePerAz: true,
+        availabilityZones: props.availabilityZones,
+      },
+    });
+
+    this.instance.instance.addPropertyOverride('IamInstanceProfile', this.instanceProfile.instanceProfile.ref);
+
+    this.instanceCfn = this.instance.instance;
+    this.instanceAvailabilityZone = this.instance.instanceAvailabilityZone;
+    this.instanceId = this.instance.instanceId;
+    this.instanceEc2PrivateDnsName = this.instance.instancePrivateDnsName;
+    this.instancePrivateIp = this.instance.instancePrivateIp;
+    this.instanceEc2PublicDnsName = this.instance.instancePublicDnsName;
+    this.osType = this.instance.osType;
+
+    Tags.of(this.instance.instance).add('Name', props.name + '.' + props.parentDomain);
+
+    this.instanceDnsName = new route53.ARecord(this, 'A', {
+      recordName: props.name + '.' + props.parentDomain,
+      zone: route53.HostedZone.fromLookup(this, 'zone', {
+        domainName: props.parentDomain,
+      }),
+      target: route53.RecordTarget.fromIpAddresses(this.instance.instancePrivateIp),
     });
   }
 }
