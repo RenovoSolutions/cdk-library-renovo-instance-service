@@ -336,6 +336,7 @@ const instanceServiceProps: InstanceServiceProps = { ... }
 | [`keyName`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertykeyname) | `string` | Name of the SSH keypair to grant access to the instance. |
 | [`privateIpAddress`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyprivateipaddress) | `string` | Defines a private IP address to associate with the instance. |
 | [`subnetType`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertysubnettype) | [`aws-cdk-lib.aws_ec2.SubnetType`](#aws-cdk-lib.aws_ec2.SubnetType) | The subnet type to launch this service in. |
+| [`userData`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyuserdata) | [`aws-cdk-lib.aws_ec2.UserData`](#aws-cdk-lib.aws_ec2.UserData) | The user data to apply to the instance. |
 
 ---
 
@@ -543,6 +544,18 @@ public readonly subnetType: SubnetType;
 - *Default:* ec2.SubnetType.PRIVATE_WITH_NAT
 
 The subnet type to launch this service in.
+
+---
+
+##### `userData`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.userData" id="renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyuserdata"></a>
+
+```typescript
+public readonly userData: UserData;
+```
+
+- *Type:* [`aws-cdk-lib.aws_ec2.UserData`](#aws-cdk-lib.aws_ec2.UserData)
+
+The user data to apply to the instance.
 
 ---
 
