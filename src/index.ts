@@ -108,6 +108,10 @@ export interface InstanceServiceProps {
    * The parent domain of the service.
    */
   readonly parentDomain: string;
+  /**
+   * The user data to apply to the instance.
+   */
+  readonly userData?: ec2.UserData;
 }
 
 export interface ManagedLoggingPolicyProps {
@@ -271,7 +275,7 @@ export class InstanceService extends Construct {
       propagateTagsToVolumeOnCreation: true,
       requireImdsv2: true,
       securityGroup: this.securityGroup,
-      // userData: props.userData,
+      userData: props.userData,
       userDataCausesReplacement: false,
       vpcSubnets: {
         subnetType: props.subnetType ?? ec2.SubnetType.PRIVATE_WITH_NAT,
