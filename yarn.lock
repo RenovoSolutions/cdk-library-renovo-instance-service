@@ -862,17 +862,17 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@renovosolutions/cdk-aspects-library-security-group@^1.0.36":
-  version "1.0.52"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.52.tgz#985ffb11b7c3240556ddcf8ec12b20b22a304c6f"
-  integrity sha512-aV+8zgVco0FRT8UhrsVxfc66Tv8knjavEEBGz9/beZB3QJV1Mab3i0VycxY1yg0IEGODZZN6Fek14FpWa7t1VA==
+  version "1.0.53"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.53.tgz#6d7756c78a1abb15bdbc03ed2f677f50d8b0aabb"
+  integrity sha512-EkygLmd9AC2GMyPeCVyrjViroS+cw23l8cmw4cYWim328t8NTjwtiLU7nQBcaS6KyvN3V1Z/4ALClazvklEGYQ==
   dependencies:
     "@aws-cdk/aws-ec2" "^1.144.0"
     "@aws-cdk/core" "^1.144.0"
 
 "@renovosolutions/cdk-library-managed-instance-role@^1.0.35":
-  version "1.0.50"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.50.tgz#288e3023a1447995e4400acc9a561f734df8eb54"
-  integrity sha512-iRTheUHiaFOWMLw8c1+VdI/VhPMbj4S0RBV0wEe/zwYfnrtE0RfqqFqHTAptGIsVW/BjkDhGVtQHBflCJ7UJcg==
+  version "1.0.51"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.51.tgz#965fc156b7f04b2c1eb9fcb2a550b769e75ac5dd"
+  integrity sha512-UuYyPQzV+fyMgshhn2AvK0ZDL8H8z6b9Koxkn+vbSmL4noJkC2TWwj4Fgt604Nby+D5yypIzTnLM87j7Bnny+g==
   dependencies:
     "@aws-cdk/aws-iam" "^1.144.0"
     "@aws-cdk/core" "^1.144.0"
@@ -1561,9 +1561,9 @@ camelcase@^6.2.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001286:
-  version "1.0.30001311"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001311.tgz#682ef3f4e617f1a177ad943de59775ed3032e511"
-  integrity sha512-mleTFtFKfykEeW34EyfhGIFjGCqzhh38Y0LhdQ9aWF+HorZTtdgKV/1hEE0NlFkG2ubvisPV6l400tlbPys98A==
+  version "1.0.30001312"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001312.tgz#e11eba4b87e24d22697dae05455d5aea28550d5f"
+  integrity sha512-Wiz1Psk2MEK0pX3rUzWaunLTZzqS2JYZFzNKqAiJGiuxIjRPLgV6+VDPOg6lQOUxmDwhTlh198JsTTi8Hzw6aQ==
 
 case@^1.6.3:
   version "1.6.3"
@@ -1762,9 +1762,9 @@ console-control-strings@^1.0.0, console-control-strings@^1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^3.3.69:
-  version "3.3.215"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.3.215.tgz#032b6d639eb41fa547d79b53e8bfce2b10f847e7"
-  integrity sha512-KuXjNMKL1Vmswl+7v/PE00OU+A0Esk/ZsfhCo7aaCtib0BbvuYk9cG/Hh6yVDys2XEcwwkfs5r0zEZps9f223Q==
+  version "3.3.216"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.3.216.tgz#bc707513be498f62a2fa0fbfc3fc3d2e8c9cef49"
+  integrity sha512-jOisJ05axrNmDLYjwcoz1gmR6EdsEgFWV2KkjI68c6EJHi19obWrTX4EByMpf3bAp4MbjNAL0MRu07EJl8g+Dw==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -4395,9 +4395,9 @@ min-indent@^1.0.0:
   integrity sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==
 
 minimatch@^3.0.4, minimatch@^3.0.5:
-  version "3.0.6"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.6.tgz#4a2cab247c5f4cc03b85813ebbde7ae23a6406a2"
-  integrity sha512-dpxq1Q5/wIfWZjlpjEZMpHWLDIEGKAzfxdWG/vDJs6sX2mtpm0vuysXd9bD/XnMrGc/O14D116bYXsSDBJK2lQ==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.1.1.tgz#879ad447200773912898b46cd516a7abbb5e50b0"
+  integrity sha512-reLxBcKUPNBnc/sVtAbxgRVFSegoGeLaSjmphNhcwcolhYLRgtJscn5mRl6YRZNQv40Y7P6JM2YhSIsbL9OB5A==
   dependencies:
     brace-expansion "^1.1.7"
 
