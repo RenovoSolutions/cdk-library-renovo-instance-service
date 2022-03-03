@@ -112,6 +112,12 @@ export interface InstanceServiceProps {
    * The user data to apply to the instance.
    */
   readonly userData?: ec2.UserData;
+  /**
+   * The role to use for this instance
+   *
+   * @default ManagedInstanceRole
+   */
+  readonly instanceRole?: iam.Role;
 }
 
 export interface ManagedLoggingPolicyProps {
@@ -180,11 +186,14 @@ export class ManagedLoggingPolicy extends Construct {
 }
 
 export class InstanceService extends Construct {
-
   /**
    * The instance profile associated with this instance.
    */
-  public readonly instanceProfile: ManagedInstanceRole;
+  public readonly instanceProfile: iam.CfnInstanceProfile;
+  /**
+   * The instance role associated with this instance.
+   */
+  public readonly instanceRole: ManagedInstanceRole;
   /**
    * The security group associated with this instance.
    */
@@ -248,10 +257,11 @@ export class InstanceService extends Construct {
       }).policy);
     }
 
-    this.instanceProfile = new ManagedInstanceRole(this, 'instanceRole', {
+    this.instanceRole = new ManagedInstanceRole(this, 'instanceRole', {
       domainJoinEnabled: false,
       ssmManagementEnabled: true,
       managedPolicies,
+      createInstanceProfile: false,
     });
 
     let allowAllOutbound: boolean = (props.allowAllOutbound === undefined) ? true : props.allowAllOutbound;
@@ -282,10 +292,10 @@ export class InstanceService extends Construct {
         onePerAz: true,
         availabilityZones: props.availabilityZones,
       },
+      role: this.instanceRole.role,
     });
 
-    this.instance.instance.addPropertyOverride('IamInstanceProfile', this.instanceProfile.instanceProfile.ref);
-
+    this.instanceProfile = this.instance.node.tryFindChild('InstanceProfile') as iam.CfnInstanceProfile;
     this.instanceCfn = this.instance.instance;
     this.instanceAvailabilityZone = this.instance.instanceAvailabilityZone;
     this.instanceId = this.instance.instanceId;

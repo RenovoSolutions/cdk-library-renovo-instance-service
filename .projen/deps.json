@@ -110,7 +110,7 @@
     },
     {
       "name": "@renovosolutions/cdk-library-managed-instance-role",
-      "version": "^2.1.42",
+      "version": "^2.2.0",
       "type": "runtime"
     }
   ],

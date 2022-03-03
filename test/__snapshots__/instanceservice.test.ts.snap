@@ -29,12 +29,12 @@ Object {
     },
     "instanceServiceinstanceBB291B7B": Object {
       "DependsOn": Array [
-        "instanceServiceinstanceInstanceRole1F4C1765",
+        "instanceServiceinstanceRoleroleC95CA18D",
       ],
       "Properties": Object {
         "AvailabilityZone": "dummy1a",
         "IamInstanceProfile": Object {
-          "Ref": "instanceServiceinstanceRoleinstanceProfile95F55675",
+          "Ref": "instanceServiceinstanceInstanceProfile1C790C5B",
         },
         "ImageId": "ami-1234",
         "InstanceType": "t3.micro",
@@ -75,34 +75,11 @@ Object {
       "Properties": Object {
         "Roles": Array [
           Object {
-            "Ref": "instanceServiceinstanceInstanceRole1F4C1765",
+            "Ref": "instanceServiceinstanceRoleroleC95CA18D",
           },
         ],
       },
       "Type": "AWS::IAM::InstanceProfile",
-    },
-    "instanceServiceinstanceInstanceRole1F4C1765": Object {
-      "Properties": Object {
-        "AssumeRolePolicyDocument": Object {
-          "Statement": Array [
-            Object {
-              "Action": "sts:AssumeRole",
-              "Effect": "Allow",
-              "Principal": Object {
-                "Service": "ec2.amazonaws.com",
-              },
-            },
-          ],
-          "Version": "2012-10-17",
-        },
-        "Tags": Array [
-          Object {
-            "Key": "Name",
-            "Value": "TestStack/instanceService/instance",
-          },
-        ],
-      },
-      "Type": "AWS::IAM::Role",
     },
     "instanceServiceinstanceLaunchTemplate1A9ECACA": Object {
       "Properties": Object {
@@ -114,16 +91,6 @@ Object {
         "LaunchTemplateName": "instanceLaunchTemplate",
       },
       "Type": "AWS::EC2::LaunchTemplate",
-    },
-    "instanceServiceinstanceRoleinstanceProfile95F55675": Object {
-      "Properties": Object {
-        "Roles": Array [
-          Object {
-            "Ref": "instanceServiceinstanceRoleroleC95CA18D",
-          },
-        ],
-      },
-      "Type": "AWS::IAM::InstanceProfile",
     },
     "instanceServiceinstanceRoleroleC95CA18D": Object {
       "Properties": Object {
