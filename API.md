@@ -53,7 +53,7 @@ new InstanceService(scope: Construct, id: string, props: InstanceServiceProps)
 | [`instanceId`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstanceid)<span title="Required">*</span> | `string` | The instance's ID. |
 | [`instancePrivateIp`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstanceprivateip)<span title="Required">*</span> | `string` | Private IP for this instance. |
 | [`instanceProfile`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstanceprofile)<span title="Required">*</span> | [`aws-cdk-lib.aws_iam.CfnInstanceProfile`](#aws-cdk-lib.aws_iam.CfnInstanceProfile) | The instance profile associated with this instance. |
-| [`instanceRole`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstancerole)<span title="Required">*</span> | [`@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole`](#@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole) | The instance role associated with this instance. |
+| [`instanceRole`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstancerole)<span title="Required">*</span> | [`aws-cdk-lib.aws_iam.Role`](#aws-cdk-lib.aws_iam.Role) | The instance role associated with this instance. |
 | [`osType`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyostype)<span title="Required">*</span> | [`aws-cdk-lib.aws_ec2.OperatingSystemType`](#aws-cdk-lib.aws_ec2.OperatingSystemType) | The type of OS the instance is running. |
 | [`securityGroup`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertysecuritygroup)<span title="Required">*</span> | [`aws-cdk-lib.aws_ec2.SecurityGroup`](#aws-cdk-lib.aws_ec2.SecurityGroup) | The security group associated with this instance. |
 
@@ -170,10 +170,10 @@ The instance profile associated with this instance.
 ##### `instanceRole`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceService.property.instanceRole" id="renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstancerole"></a>
 
 ```typescript
-public readonly instanceRole: ManagedInstanceRole;
+public readonly instanceRole: Role;
 ```
 
-- *Type:* [`@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole`](#@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole)
+- *Type:* [`aws-cdk-lib.aws_iam.Role`](#aws-cdk-lib.aws_iam.Role)
 
 The instance role associated with this instance.
 

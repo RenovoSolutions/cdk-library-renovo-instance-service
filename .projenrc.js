@@ -20,7 +20,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     'projen',
   ],
   deps: [
-    '@renovosolutions/cdk-library-managed-instance-role@^2.2.0',
+    '@renovosolutions/cdk-library-managed-instance-role@^2.2.3',
     '@renovosolutions/cdk-aspects-library-security-group@^2.0.43',
   ],
   depsUpgrade: true,

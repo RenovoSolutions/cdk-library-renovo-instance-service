@@ -193,7 +193,7 @@ export class InstanceService extends Construct {
   /**
    * The instance role associated with this instance.
    */
-  public readonly instanceRole: ManagedInstanceRole;
+  public readonly instanceRole: iam.Role;
   /**
    * The security group associated with this instance.
    */
@@ -257,12 +257,16 @@ export class InstanceService extends Construct {
       }).policy);
     }
 
-    this.instanceRole = new ManagedInstanceRole(this, 'instanceRole', {
-      domainJoinEnabled: false,
-      ssmManagementEnabled: true,
-      managedPolicies,
-      createInstanceProfile: false,
-    });
+    if (props.instanceRole) {
+      this.instanceRole = props.instanceRole;
+    } else {
+      this.instanceRole = new ManagedInstanceRole(this, 'instanceRole', {
+        domainJoinEnabled: false,
+        ssmManagementEnabled: true,
+        managedPolicies,
+        createInstanceProfile: false,
+      }).role;
+    }
 
     let allowAllOutbound: boolean = (props.allowAllOutbound === undefined) ? true : props.allowAllOutbound;
     let disableInlineRules: boolean = (props.disableInlineRules === undefined) ? false : props.disableInlineRules;
@@ -292,7 +296,7 @@ export class InstanceService extends Construct {
         onePerAz: true,
         availabilityZones: props.availabilityZones,
       },
-      role: this.instanceRole.role,
+      role: this.instanceRole,
     });
 
     this.instanceProfile = this.instance.node.tryFindChild('InstanceProfile') as iam.CfnInstanceProfile;
