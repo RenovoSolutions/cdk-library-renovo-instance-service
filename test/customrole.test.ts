@@ -1,4 +1,5 @@
-import { App, Stack, aws_ec2 as ec2, aws_iam as iam } from 'aws-cdk-lib';
+import { ManagedInstanceRole } from '@renovosolutions/cdk-library-managed-instance-role';
+import { App, Stack, aws_ec2 as ec2 } from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
 import { InstanceService } from '../src/index';
 
@@ -30,9 +31,7 @@ test('Snapshot', () => {
     windows: true,
   });
 
-  const role = new iam.Role(stack, 'role', {
-    assumedBy: new iam.ServicePrincipal('ec2.amazonaws.com'),
-  });
+  const role = new ManagedInstanceRole(stack, 'role', {});
 
   new InstanceService(stack, 'instanceService', {
     name: 'snapshot',

@@ -29,7 +29,7 @@ Object {
     },
     "instanceServiceinstanceBB291B7B": Object {
       "DependsOn": Array [
-        "roleC7B7E775",
+        "role08402BCB",
       ],
       "Properties": Object {
         "AvailabilityZone": "dummy1a",
@@ -75,7 +75,7 @@ Object {
       "Properties": Object {
         "Roles": Array [
           Object {
-            "Ref": "roleC7B7E775",
+            "Ref": "role08402BCB",
           },
         ],
       },
@@ -132,7 +132,7 @@ Object {
       },
       "Type": "AWS::EC2::SecurityGroup",
     },
-    "roleC7B7E775": Object {
+    "role08402BCB": Object {
       "Properties": Object {
         "AssumeRolePolicyDocument": Object {
           "Statement": Array [
@@ -146,8 +146,44 @@ Object {
           ],
           "Version": "2012-10-17",
         },
+        "ManagedPolicyArns": Array [
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/AmazonSSMManagedInstanceCore",
+              ],
+            ],
+          },
+          Object {
+            "Fn::Join": Array [
+              "",
+              Array [
+                "arn:",
+                Object {
+                  "Ref": "AWS::Partition",
+                },
+                ":iam::aws:policy/AmazonSSMDirectoryServiceAccess",
+              ],
+            ],
+          },
+        ],
       },
       "Type": "AWS::IAM::Role",
+    },
+    "roleinstanceProfileFF411810": Object {
+      "Properties": Object {
+        "Roles": Array [
+          Object {
+            "Ref": "role08402BCB",
+          },
+        ],
+      },
+      "Type": "AWS::IAM::InstanceProfile",
     },
     "vpcA2121C38": Object {
       "Properties": Object {
