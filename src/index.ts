@@ -115,9 +115,9 @@ export interface InstanceServiceProps {
   /**
    * The role to use for this instance
    *
-   * @default ManagedInstanceRole
+   * @default - A new ManagedInstanceRole will be created for this instance
    */
-  readonly instanceRole?: iam.Role;
+  readonly instanceRole?: ManagedInstanceRole;
 }
 
 export interface ManagedLoggingPolicyProps {
@@ -193,7 +193,7 @@ export class InstanceService extends Construct {
   /**
    * The instance role associated with this instance.
    */
-  public readonly instanceRole: iam.Role;
+  public readonly instanceRole: ManagedInstanceRole;
   /**
    * The security group associated with this instance.
    */
@@ -265,7 +265,7 @@ export class InstanceService extends Construct {
         ssmManagementEnabled: true,
         managedPolicies,
         createInstanceProfile: false,
-      }).role;
+      });
     }
 
     let allowAllOutbound: boolean = (props.allowAllOutbound === undefined) ? true : props.allowAllOutbound;
@@ -296,7 +296,7 @@ export class InstanceService extends Construct {
         onePerAz: true,
         availabilityZones: props.availabilityZones,
       },
-      role: this.instanceRole,
+      role: this.instanceRole.role,
     });
 
     this.instanceProfile = this.instance.node.tryFindChild('InstanceProfile') as iam.CfnInstanceProfile;

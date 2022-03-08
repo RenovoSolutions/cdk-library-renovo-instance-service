@@ -53,7 +53,7 @@ new InstanceService(scope: Construct, id: string, props: InstanceServiceProps)
 | [`instanceId`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstanceid)<span title="Required">*</span> | `string` | The instance's ID. |
 | [`instancePrivateIp`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstanceprivateip)<span title="Required">*</span> | `string` | Private IP for this instance. |
 | [`instanceProfile`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstanceprofile)<span title="Required">*</span> | [`aws-cdk-lib.aws_iam.CfnInstanceProfile`](#aws-cdk-lib.aws_iam.CfnInstanceProfile) | The instance profile associated with this instance. |
-| [`instanceRole`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstancerole)<span title="Required">*</span> | [`aws-cdk-lib.aws_iam.Role`](#aws-cdk-lib.aws_iam.Role) | The instance role associated with this instance. |
+| [`instanceRole`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstancerole)<span title="Required">*</span> | [`@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole`](#@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole) | The instance role associated with this instance. |
 | [`osType`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyostype)<span title="Required">*</span> | [`aws-cdk-lib.aws_ec2.OperatingSystemType`](#aws-cdk-lib.aws_ec2.OperatingSystemType) | The type of OS the instance is running. |
 | [`securityGroup`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertysecuritygroup)<span title="Required">*</span> | [`aws-cdk-lib.aws_ec2.SecurityGroup`](#aws-cdk-lib.aws_ec2.SecurityGroup) | The security group associated with this instance. |
 
@@ -170,10 +170,10 @@ The instance profile associated with this instance.
 ##### `instanceRole`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceService.property.instanceRole" id="renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstancerole"></a>
 
 ```typescript
-public readonly instanceRole: Role;
+public readonly instanceRole: ManagedInstanceRole;
 ```
 
-- *Type:* [`aws-cdk-lib.aws_iam.Role`](#aws-cdk-lib.aws_iam.Role)
+- *Type:* [`@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole`](#@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole)
 
 The instance role associated with this instance.
 
@@ -346,7 +346,7 @@ const instanceServiceProps: InstanceServiceProps = { ... }
 | [`enabledNoPublicIngressAspect`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyenablednopublicingressaspect) | `boolean` | Whether or not to prevent security group from containing rules that allow access from the public internet: Any rule with a source from 0.0.0.0/0 or ::/0. |
 | [`enableNoDBPortsAspect`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyenablenodbportsaspect) | `boolean` | Whether or not to prevent security group from containing rules that allow access to relational DB ports: MySQL, PostgreSQL, MariaDB, Oracle, SQL Server. |
 | [`enableNoRemoteManagementPortsAspect`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyenablenoremotemanagementportsaspect) | `boolean` | Whether or not to prevent security group from containing rules that allow access to remote management ports: SSH, RDP, WinRM, WinRM over HTTPs. |
-| [`instanceRole`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyinstancerole) | [`aws-cdk-lib.aws_iam.Role`](#aws-cdk-lib.aws_iam.Role) | The role to use for this instance. |
+| [`instanceRole`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyinstancerole) | [`@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole`](#@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole) | The role to use for this instance. |
 | [`keyName`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertykeyname) | `string` | Name of the SSH keypair to grant access to the instance. |
 | [`privateIpAddress`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyprivateipaddress) | `string` | Defines a private IP address to associate with the instance. |
 | [`subnetType`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertysubnettype) | [`aws-cdk-lib.aws_ec2.SubnetType`](#aws-cdk-lib.aws_ec2.SubnetType) | The subnet type to launch this service in. |
@@ -527,11 +527,11 @@ If these ports are opened when this is enabled an error will be added to CDK met
 ##### `instanceRole`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.instanceRole" id="renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyinstancerole"></a>
 
 ```typescript
-public readonly instanceRole: Role;
+public readonly instanceRole: ManagedInstanceRole;
 ```
 
-- *Type:* [`aws-cdk-lib.aws_iam.Role`](#aws-cdk-lib.aws_iam.Role)
-- *Default:* ManagedInstanceRole
+- *Type:* [`@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole`](#@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole)
+- *Default:* A new ManagedInstanceRole will be created for this instance
 
 The role to use for this instance.
 
