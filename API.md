@@ -349,6 +349,7 @@ const instanceServiceProps: InstanceServiceProps = { ... }
 | [`instanceRole`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyinstancerole) | [`@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole`](#@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole) | The role to use for this instance. |
 | [`keyName`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertykeyname) | `string` | Name of the SSH keypair to grant access to the instance. |
 | [`privateIpAddress`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyprivateipaddress) | `string` | Defines a private IP address to associate with the instance. |
+| [`securityGroup`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertysecuritygroup) | [`aws-cdk-lib.aws_ec2.SecurityGroup`](#aws-cdk-lib.aws_ec2.SecurityGroup) | The security group to use for this instance. |
 | [`subnetType`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertysubnettype) | [`aws-cdk-lib.aws_ec2.SubnetType`](#aws-cdk-lib.aws_ec2.SubnetType) | The subnet type to launch this service in. |
 | [`userData`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyuserdata) | [`aws-cdk-lib.aws_ec2.UserData`](#aws-cdk-lib.aws_ec2.UserData) | The user data to apply to the instance. |
 
@@ -558,6 +559,19 @@ public readonly privateIpAddress: string;
 - *Type:* `string`
 
 Defines a private IP address to associate with the instance.
+
+---
+
+##### `securityGroup`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.securityGroup" id="renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertysecuritygroup"></a>
+
+```typescript
+public readonly securityGroup: SecurityGroup;
+```
+
+- *Type:* [`aws-cdk-lib.aws_ec2.SecurityGroup`](#aws-cdk-lib.aws_ec2.SecurityGroup)
+- *Default:* A new SecurityGroup will be created for this instance
+
+The security group to use for this instance.
 
 ---
 
