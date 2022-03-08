@@ -118,6 +118,12 @@ export interface InstanceServiceProps {
    * @default - A new ManagedInstanceRole will be created for this instance
    */
   readonly instanceRole?: ManagedInstanceRole;
+  /**
+   * The security group to use for this instance
+   *
+   * @default - A new SecurityGroup will be created for this instance
+   */
+  readonly securityGroup?: ec2.SecurityGroup;
 }
 
 export interface ManagedLoggingPolicyProps {
@@ -271,12 +277,16 @@ export class InstanceService extends Construct {
     let allowAllOutbound: boolean = (props.allowAllOutbound === undefined) ? true : props.allowAllOutbound;
     let disableInlineRules: boolean = (props.disableInlineRules === undefined) ? false : props.disableInlineRules;
 
-    this.securityGroup = new ec2.SecurityGroup(this, 'securityGroup', {
-      allowAllOutbound: allowAllOutbound,
-      vpc: props.vpc,
-      description: `The security group applied to the instance service for ${ props.name }`,
-      disableInlineRules: disableInlineRules,
-    });
+    if (props.securityGroup) {
+      this.securityGroup = props.securityGroup;
+    } else {
+      this.securityGroup = new ec2.SecurityGroup(this, 'securityGroup', {
+        allowAllOutbound: allowAllOutbound,
+        vpc: props.vpc,
+        description: `The security group applied to the instance service for ${ props.name }`,
+        disableInlineRules: disableInlineRules,
+      });
+    }
 
     this.instance = new ec2.Instance(this, 'instance', {
       instanceType: props.instanceType,
