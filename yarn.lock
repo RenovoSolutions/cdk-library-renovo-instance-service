@@ -672,14 +672,14 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@renovosolutions/cdk-aspects-library-security-group@^2.0.43":
-  version "2.0.71"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.71.tgz#36960ba91884956ca711c67d5b1b00665e8da8c2"
-  integrity sha512-A7xxI6g2f1sgtbwVl2kNI0ZWXFL4qc5H8iqsEanE467NbYxHfdpAqtumwUNIZHsnc5DxErIV1yFpgiNHrw2O8Q==
+  version "2.0.72"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.72.tgz#1007ef34591fa03582fd5981dbb2b5158f583ca6"
+  integrity sha512-zuE6xoZyFqzR7WaUZzoU0JW/L5PTgs12jIpV0GqZk//iuus299nfn26gLzgga7IVYg+aQ9Vl2msMXQNGmbtmwg==
 
 "@renovosolutions/cdk-library-managed-instance-role@^2.2.3":
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.2.4.tgz#0a8fa6d3795f4b95f562b1a195a651f2fe9ebcc0"
-  integrity sha512-3UCWnUdx3ebA+rkQNGnLTsROQ3B4gOSpx8SSkFU8QbkrTT9BkkQTTDoE89e15ZC59ALf3LHuDXzabFS6kjPChA==
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.2.5.tgz#56d7ee48ac61cc7e41a8be62b3d2465a9f731ba6"
+  integrity sha512-elOAM6z5GDSkkAk1tcu5AdvMEMlDUYUaj9OlxVpEUMhFxfo2T+1xiJX8JwJZoOy6lxxfDgl4GS2O2tI73PiWTg==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
@@ -1994,9 +1994,9 @@ duplexer3@^0.1.4:
   integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
 
 electron-to-chromium@^1.4.76:
-  version "1.4.77"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.77.tgz#c26e454cb8721d4ebdae3e276c57cd32e51c32ed"
-  integrity sha512-fiDxw8mO9Ph1Z0bjX2sFTPpi0J0QkOiwOJF+5Q0J0baNc/F9lLePAvDPlnoxvbUYYMizqrKPeotRRkJ9LtxAew==
+  version "1.4.79"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.79.tgz#02b504e1e6039b2e61edfc5f856895a0927925f5"
+  integrity sha512-nWfAxof87mGHkbORCwVRPst4FlSVdprOKS6dBMrcwn3sjwf8iHXEhsu1+FU5Psd7Ps3KKeBufAdfsPK5BmbSUg==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -4017,9 +4017,9 @@ lru-cache@^6.0.0:
     yallist "^4.0.0"
 
 lru-cache@^7.3.1, lru-cache@^7.4.1:
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.4.1.tgz#afe07e885ef0cd5bf99f62f4fa7545d48746d779"
-  integrity sha512-NCD7/WRlFmADccuHjsRUYqdluYBr//n/O0fesCb/n52FoGcgKh8o4Dpm7YIbZwVcDs8rPBQbCZLmWWsp6m+xGQ==
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.4.2.tgz#92f7b5afe82759f51b216a96fae3bc1828df9712"
+  integrity sha512-Xs3+hFPDSKQmL05Gs6NhvAADol1u9TmLoNoE03ZjszX6a5iYIO3rPUM4jIjoBUJeTaWEBMozjjmV70gvdRfIdw==
 
 make-dir@^3.0.0:
   version "3.1.0"
