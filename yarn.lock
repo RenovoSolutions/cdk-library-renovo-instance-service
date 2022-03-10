@@ -863,17 +863,17 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@renovosolutions/cdk-aspects-library-security-group@^1.0.36":
-  version "1.0.66"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.66.tgz#a24ec24d7f63be6ccc0b40d76e87d4f253e1ef20"
-  integrity sha512-+PgV7SJAJiSsm7bXC2DztEkRDUbWSrAMhLsrBP9BJ3Kf+51E4iRkG2PiuyNpn6IYqS6PQ2tVOSQtlymBru00jQ==
+  version "1.0.67"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.67.tgz#ea4b0955f126831205dc4d6e480b3570e8ff6d03"
+  integrity sha512-gspFdqZ9D4rHs9VGHH8pijoInKVN1skUQu3jYrb6LS7hJdqhLvIcsIZATfkeVO2WAZZsR3t912RopoSOXGds9A==
   dependencies:
     "@aws-cdk/aws-ec2" "^1.147.0"
     "@aws-cdk/core" "^1.147.0"
 
 "@renovosolutions/cdk-library-managed-instance-role@^1.0.35":
-  version "1.0.65"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.65.tgz#a7649cd81c0f90f9b9c4b5d48360c34455e77f43"
-  integrity sha512-/WEvFgbF2Wko2kkdU2zBdINQvR95KyVDS6NcrgduOQJTafyaycOz2tyrcMznmDxmHrnYf+cQ/l8p0OKiJn/B6g==
+  version "1.0.66"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.66.tgz#d89c09b608aa15ec98a0041ac53a995727483e39"
+  integrity sha512-PEOY6Dcu/9Ooa9wXAtISbIyAQLJMTo2Nw49gH//oWXpulh5n1FIsxV5pg+NZgjh4XD9UflK0Fkc6fKsYuHfZYA==
   dependencies:
     "@aws-cdk/aws-iam" "^1.147.0"
     "@aws-cdk/core" "^1.147.0"
@@ -1770,9 +1770,9 @@ console-control-strings@^1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^3.3.69:
-  version "3.3.236"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.3.236.tgz#f70b58d97a43219abefc275850c479e5f386f9d4"
-  integrity sha512-tYYAn8XtPOMa24KEBtIYeHwi5OxVQGKu19Ie9NhojOLlQsCgP+6knjEVfuZ0Hgn1T8nMRqMriwAgM19GiwCjDg==
+  version "3.3.237"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.3.237.tgz#a4827c6ff652cb7c65322a5451c0a79e701bbf8d"
+  integrity sha512-wOtGAj+93kDk2uaUavF6PYOFMYtSdoeGDXjFM6tTm4L6S19E/AQ3zDGfu+ET1OYiRRkmsJhF7tfzNap7akolXQ==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -2211,9 +2211,9 @@ duplexer3@^0.1.4:
   integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
 
 electron-to-chromium@^1.4.76:
-  version "1.4.77"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.77.tgz#c26e454cb8721d4ebdae3e276c57cd32e51c32ed"
-  integrity sha512-fiDxw8mO9Ph1Z0bjX2sFTPpi0J0QkOiwOJF+5Q0J0baNc/F9lLePAvDPlnoxvbUYYMizqrKPeotRRkJ9LtxAew==
+  version "1.4.79"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.79.tgz#02b504e1e6039b2e61edfc5f856895a0927925f5"
+  integrity sha512-nWfAxof87mGHkbORCwVRPst4FlSVdprOKS6dBMrcwn3sjwf8iHXEhsu1+FU5Psd7Ps3KKeBufAdfsPK5BmbSUg==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -4249,9 +4249,9 @@ lru-cache@^6.0.0:
     yallist "^4.0.0"
 
 lru-cache@^7.3.1, lru-cache@^7.4.1:
-  version "7.4.1"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.4.1.tgz#afe07e885ef0cd5bf99f62f4fa7545d48746d779"
-  integrity sha512-NCD7/WRlFmADccuHjsRUYqdluYBr//n/O0fesCb/n52FoGcgKh8o4Dpm7YIbZwVcDs8rPBQbCZLmWWsp6m+xGQ==
+  version "7.4.2"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-7.4.2.tgz#92f7b5afe82759f51b216a96fae3bc1828df9712"
+  integrity sha512-Xs3+hFPDSKQmL05Gs6NhvAADol1u9TmLoNoE03ZjszX6a5iYIO3rPUM4jIjoBUJeTaWEBMozjjmV70gvdRfIdw==
 
 make-dir@^3.0.0:
   version "3.1.0"
