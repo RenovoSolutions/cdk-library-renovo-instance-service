@@ -672,14 +672,14 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@renovosolutions/cdk-aspects-library-security-group@^2.0.43":
-  version "2.0.86"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.86.tgz#0ae657bcee2be07a5f17028cdff62cc2b8e25576"
-  integrity sha512-Vw62nPPd4bF574REUzFwSA5g/GnBwW5KNTcO7zFUj2ElWGPf59nc94RLeOfO8JbtEKybo5z1Zklv/kVz+2KRSg==
+  version "2.0.87"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.87.tgz#c1bb7c9c87a0ecec28a7b38503d5f8ce0e52db07"
+  integrity sha512-4fU6qkM3wFKW9loXAZxUHXONfQzfJX1PeEjBzvJaloQoMTj9UGHZj652Nx0Ygii89Bg/BSokEjnUhla+Rx+8tg==
 
 "@renovosolutions/cdk-library-managed-instance-role@^2.2.3":
-  version "2.2.18"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.2.18.tgz#76ecd39a5cd661ed1cc97596cb9f440a5a3a2883"
-  integrity sha512-huMqd1fDro1cNDOljlK9Mo9Mm0B3PHCfMQa2ca02b4+G/cIPU/G2ad/NqaDy/2vmJysF2isircKUeGCVAcfQtw==
+  version "2.2.19"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.2.19.tgz#62d195d5a602184135f584d37c5e522fee499d32"
+  integrity sha512-0MJk51mgzYfSZw0pjXBTWneWVJVvWSiiC/sqk9SfdREp9F1UGUZdCHzUSamo2WqnOH2XfIViDIXPcqCUFJ/0JA==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
@@ -1994,9 +1994,9 @@ duplexer3@^0.1.4:
   integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
 
 electron-to-chromium@^1.4.84:
-  version "1.4.95"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.95.tgz#49303dbe037c15e2e0cc851d71c4cb86119a9cd6"
-  integrity sha512-h2VAMV/hPtmAeiDkwA8c5sjS+cWt6GlQL4ERdrOUWu7cRIG5IRk9uwR9f0utP+hPJ9ZZsADTq9HpbuT46eBYAg==
+  version "1.4.96"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.96.tgz#a97438a01d5db1460343fea4a344960b09330990"
+  integrity sha512-DPNjvNGPabv6FcyjzLAN4C0psN/GgD9rSGvMTuv81SeXG/EX3mCz0wiw9N1tUEnfQXYCJi3H8M0oFPRziZh7rw==
 
 emittery@^0.8.1:
   version "0.8.1"
