@@ -672,14 +672,14 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@renovosolutions/cdk-aspects-library-security-group@^2.0.43":
-  version "2.0.92"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.92.tgz#0e7e1a56ca2ac8c4fa7aa3d26937da57cc61e613"
-  integrity sha512-p77Bvx7hiA3U2cJzemcr9jwsB0dR1LZmbOXm8rRpmxC33xM1C+jFYVKnuUnI1LiYRjM/js9MaRPv+9E38jX4fg==
+  version "2.0.94"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.94.tgz#4cd126c10b5b00cef5bc1064dcae3a730bcf37d4"
+  integrity sha512-WbsZjCkh6qhZlipjE3AQyQlzqnEeIzntaaaAZm4FLObUdRORj6mAeQe/qqj0i2NR+bibVq4cN6us+3DH+MksEA==
 
 "@renovosolutions/cdk-library-managed-instance-role@^2.2.3":
-  version "2.2.25"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.2.25.tgz#8e4bee28f0ed46efaa28de760886c9a3155e4be6"
-  integrity sha512-+vmIDHhAk+JakebL8MMJEXLWQruLumOHGjGz9nGWL7YHnN5gxaOfPTVnUk0wO5W4RCzW8qwCyhKMP26aatmT4g==
+  version "2.2.27"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.2.27.tgz#0f79a652fdb97bc456da4e349c548d934beac926"
+  integrity sha512-KKteYN5L3ygVPB2vbuLNsWLZlEOB+sRMd93je76nXA91HlV6tk1zFdqykRrDsLyXSd/G7UeTlR7RZEBdDR3V9w==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
