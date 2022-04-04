@@ -11,8 +11,37 @@ import {
   Aspects,
   aws_route53 as route53,
   Tags,
+  IAspect,
+  Names,
+  Annotations,
 } from 'aws-cdk-lib';
-import { Construct } from 'constructs';
+import { Construct, IConstruct } from 'constructs';
+
+class IMDSv2Aspect implements IAspect {
+  public visit(node: IConstruct) {
+    if (!(node instanceof ec2.Instance)) {
+      return;
+    }
+
+    if (node.instance.launchTemplate !== undefined) {
+      Annotations.of(node).addWarning('Instance associated with an existing launch template, cant fix template name');
+    }
+
+    const launchTemplate = new ec2.CfnLaunchTemplate(node, 'LaunchTemplate', {
+      launchTemplateData: {
+        metadataOptions: {
+          httpTokens: 'required',
+        },
+      },
+    });
+
+    launchTemplate.launchTemplateName = Names.uniqueId(launchTemplate);
+    node.instance.launchTemplate = {
+      launchTemplateName: launchTemplate.launchTemplateName,
+      version: launchTemplate.getAtt('LatestVersionNumber').toString(),
+    };
+  }
+}
 
 export interface InstanceServiceProps {
   /**
@@ -124,6 +153,23 @@ export interface InstanceServiceProps {
    * @default - A new SecurityGroup will be created for this instance
    */
   readonly securityGroup?: ec2.SecurityGroup;
+  /**
+   * Whether IMDSv2 should be required on this instance.
+   *
+   * @default true
+   */
+  readonly requireImdsv2?: boolean;
+  /**
+   * Whether to use th IMDSv2 custom aspect provided by this library or the default one provided by AWS.
+   *
+   * Turned on by default otherwise we need to apply a feature flag to every project using an instance or
+   * apply a breaking change to instance construct ids.
+   *
+   * @see https://github.com/jericht/aws-cdk/blob/56c01aedc4f745eec79409c99b749f516ffc39e1/packages/%40aws-cdk/aws-ec2/lib/aspects/require-imdsv2-aspect.ts#L95
+   *
+   * @default true
+   */
+  readonly useImdsv2CustomAspect?: boolean;
 }
 
 export interface ManagedLoggingPolicyProps {
@@ -288,6 +334,8 @@ export class InstanceService extends Construct {
       });
     }
 
+    const useImdsv2CustomAspect = props.useImdsv2CustomAspect ?? true;
+
     this.instance = new ec2.Instance(this, 'instance', {
       instanceType: props.instanceType,
       machineImage: props.machineImage,
@@ -297,7 +345,7 @@ export class InstanceService extends Construct {
       keyName: props.keyName,
       privateIpAddress: props.privateIpAddress,
       propagateTagsToVolumeOnCreation: true,
-      requireImdsv2: true,
+      requireImdsv2: useImdsv2CustomAspect === false ?? props.requireImdsv2,
       securityGroup: this.securityGroup,
       userData: props.userData,
       userDataCausesReplacement: false,
@@ -308,6 +356,14 @@ export class InstanceService extends Construct {
       },
       role: this.instanceRole.role,
     });
+
+    if (useImdsv2CustomAspect === true) {
+      const requireImdsv2 = props.requireImdsv2 ?? true;
+
+      if (requireImdsv2) {
+        Aspects.of(this.instance).add(new IMDSv2Aspect);
+      }
+    }
 
     this.instanceProfile = this.instance.node.tryFindChild('InstanceProfile') as iam.CfnInstanceProfile;
     this.instanceCfn = this.instance.instance;

@@ -349,8 +349,10 @@ const instanceServiceProps: InstanceServiceProps = { ... }
 | [`instanceRole`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyinstancerole) | [`@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole`](#@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole) | The role to use for this instance. |
 | [`keyName`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertykeyname) | `string` | Name of the SSH keypair to grant access to the instance. |
 | [`privateIpAddress`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyprivateipaddress) | `string` | Defines a private IP address to associate with the instance. |
+| [`requireImdsv2`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyrequireimdsv2) | `boolean` | Whether IMDSv2 should be required on this instance. |
 | [`securityGroup`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertysecuritygroup) | [`aws-cdk-lib.aws_ec2.SecurityGroup`](#aws-cdk-lib.aws_ec2.SecurityGroup) | The security group to use for this instance. |
 | [`subnetType`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertysubnettype) | [`aws-cdk-lib.aws_ec2.SubnetType`](#aws-cdk-lib.aws_ec2.SubnetType) | The subnet type to launch this service in. |
+| [`useImdsv2CustomAspect`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyuseimdsv2customaspect) | `boolean` | Whether to use th IMDSv2 custom aspect provided by this library or the default one provided by AWS. |
 | [`userData`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyuserdata) | [`aws-cdk-lib.aws_ec2.UserData`](#aws-cdk-lib.aws_ec2.UserData) | The user data to apply to the instance. |
 
 ---
@@ -562,6 +564,19 @@ Defines a private IP address to associate with the instance.
 
 ---
 
+##### `requireImdsv2`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.requireImdsv2" id="renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyrequireimdsv2"></a>
+
+```typescript
+public readonly requireImdsv2: boolean;
+```
+
+- *Type:* `boolean`
+- *Default:* true
+
+Whether IMDSv2 should be required on this instance.
+
+---
+
 ##### `securityGroup`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.securityGroup" id="renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertysecuritygroup"></a>
 
 ```typescript
@@ -585,6 +600,23 @@ public readonly subnetType: SubnetType;
 - *Default:* ec2.SubnetType.PRIVATE_WITH_NAT
 
 The subnet type to launch this service in.
+
+---
+
+##### `useImdsv2CustomAspect`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.useImdsv2CustomAspect" id="renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyuseimdsv2customaspect"></a>
+
+```typescript
+public readonly useImdsv2CustomAspect: boolean;
+```
+
+- *Type:* `boolean`
+- *Default:* true
+
+Whether to use th IMDSv2 custom aspect provided by this library or the default one provided by AWS.
+
+Turned on by default otherwise we need to apply a feature flag to every project using an instance or apply a breaking change to instance construct ids.
+
+> https://github.com/jericht/aws-cdk/blob/56c01aedc4f745eec79409c99b749f516ffc39e1/packages/%40aws-cdk/aws-ec2/lib/aspects/require-imdsv2-aspect.ts#L95
 
 ---
 

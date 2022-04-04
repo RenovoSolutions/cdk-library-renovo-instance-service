@@ -300,3 +300,31 @@ test('Rules are separate element when inline rules are disabled', () => {
     ToPort: 80,
   });
 });
+
+test('Launch template has a unique name when using IMDSv2 with custom aspect', () => {
+  let setup = setupStack();
+  let stack = setup.stack;
+  let vpc = setup.vpc;
+
+  let ami = ec2.MachineImage.lookup({
+    name: 'Windows_Server-2022-English-Full-Base',
+    windows: true,
+  });
+
+  new InstanceService(stack, 'instanceService', {
+    name: 'windows',
+    machineImage: ami,
+    vpc,
+    parentDomain: 'example.com',
+    instanceType: ec2.InstanceType.of(ec2.InstanceClass.T3, ec2.InstanceSize.MICRO),
+    enableCloudwatchLogs: false,
+    allowAllOutbound: false,
+    disableInlineRules: true,
+    requireImdsv2: true,
+    useImdsv2CustomAspect: true,
+  });
+
+  Template.fromStack(stack).hasResourceProperties('AWS::EC2::LaunchTemplate', {
+    LaunchTemplateName: 'TestStackinstanceServiceinstanceLaunchTemplateEE619968',
+  });
+});
