@@ -39,7 +39,7 @@ Object {
         "ImageId": "ami-1234",
         "InstanceType": "t3.micro",
         "LaunchTemplate": Object {
-          "LaunchTemplateName": "instanceLaunchTemplate",
+          "LaunchTemplateName": "TestStackinstanceServiceinstanceLaunchTemplateEE619968",
           "Version": Object {
             "Fn::GetAtt": Array [
               "instanceServiceinstanceLaunchTemplate1A9ECACA",
@@ -88,7 +88,7 @@ Object {
             "HttpTokens": "required",
           },
         },
-        "LaunchTemplateName": "instanceLaunchTemplate",
+        "LaunchTemplateName": "TestStackinstanceServiceinstanceLaunchTemplateEE619968",
       },
       "Type": "AWS::EC2::LaunchTemplate",
     },
