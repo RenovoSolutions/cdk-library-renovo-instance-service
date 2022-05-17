@@ -34,6 +34,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
     workflowOptions: {
       labels: ['auto-approve', 'deps-upgrade'],
     },
+    exclude: ['projen'],
   },
   githubOptions: {
     mergify: true,
@@ -88,4 +89,16 @@ const project = new awscdk.AwsCdkConstructLibrary({
     packageId: 'Renovo.AWSCDK.RenovoInstanceService',
   },
 });
+
+new javascript.UpgradeDependencies(project, {
+  include: ['projen'],
+  taskName: 'upgrade-projen',
+  labels: ['projen-upgrade'],
+  workflow: true,
+  workflowOptions: {
+    schedule: javascript.UpgradeDependenciesSchedule.expressions(['0 2 * * 1']),
+  },
+  pullRequestTitle: 'upgrade projen',
+});
+
 project.synth();
