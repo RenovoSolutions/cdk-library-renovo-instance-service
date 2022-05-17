@@ -692,9 +692,9 @@
   integrity sha512-+KySt9NdTxknZUZ9+iRhbAtuDBnmQnpgavoXCGJcu9Qov/fEs0dmmSq6Kig36wGM3wQKwC13GiwWss7IFZ46vQ==
 
 "@renovosolutions/cdk-library-managed-instance-role@^2.2.3":
-  version "2.2.65"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.2.65.tgz#2ef4ed1625701e886423aba74bce7b2213bf8605"
-  integrity sha512-OZXqrDf8J2+lUhbMsTOshZgCLWvqWnqi2vimpCC5tra5HSt1OitAxC4ifL8WugxuI0IyLz/3BoLoUWr9lMVA3Q==
+  version "2.2.66"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.2.66.tgz#4ab6d8e5a516694ea9766ccf6f343bc3f4571310"
+  integrity sha512-8CT+AUnjqDq2GBHmYA26bgmOK1mUPrhOaKKkhPhwiVNUwAKrGcoe0fcbTolfQbUSawE8OBEAve76e3MZ1uys7Q==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
@@ -3781,7 +3781,7 @@ jsesc@^2.5.1:
   resolved "https://registry.yarnpkg.com/jsesc/-/jsesc-2.5.2.tgz#80564d2e483dacf6e8ef209650a67df3f0c283a4"
   integrity sha512-OYu7XEzjkCQ3C5Ps3QIZsQfNpqoJyZZA99wd9aWd05NCtC5pWOkShK2mkL6HXQR6/Cy2lbNdPlZBpuQHXE63gA==
 
-jsii-diff@^1.58.0:
+jsii-diff@^1.59.0:
   version "1.59.0"
   resolved "https://registry.yarnpkg.com/jsii-diff/-/jsii-diff-1.59.0.tgz#ada4a60b6361f1e7b04d4384adf02fe25637628c"
   integrity sha512-9mwJx5HTdgaLEF5vmt0yCLomctnenUYDbxSh0+tyWO+7l1beqkm0tyctdjJXenVO/6b+GhFLgEssZuQjbDJaSg==
@@ -3859,7 +3859,7 @@ jsii-rosetta@^1.52.1, jsii-rosetta@^1.59.0:
     workerpool "^6.2.1"
     yargs "^16.2.0"
 
-jsii@1.59.0, jsii@^1.58.0:
+jsii@1.59.0, jsii@^1.59.0:
   version "1.59.0"
   resolved "https://registry.yarnpkg.com/jsii/-/jsii-1.59.0.tgz#65d3454311f931345b4996177135321f8bfd506d"
   integrity sha512-vTVMRN5ViX1aCe0K7P8ECKi2CseNDEcvIWvw4xyg+nCg9a73XZ16ONOqBAGjKUnJv2gOsecsb1FyuqcRbfs+zQ==
