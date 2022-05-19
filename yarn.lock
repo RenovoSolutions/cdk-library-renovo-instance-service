@@ -879,17 +879,17 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@renovosolutions/cdk-aspects-library-security-group@^1.0.36":
-  version "1.0.128"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.128.tgz#f7151889aedb3dade609266aaa8711b7ef29bf0f"
-  integrity sha512-5p9J9OlfboxCJ0Zl0sPrz7SspeLs2NMe27zYyh0s3wegb8re2xVdad4IbtO/ETLF6V3lRS8iFsF7dUx9l3m8hQ==
+  version "1.0.129"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.129.tgz#b1af7cc63747baa901fe98daa9487600c09f7a11"
+  integrity sha512-E6BssimzbitkL8hY61l3RclYLHGTLtjXHI3Ozdxll8E41UvqIhulbuGyNIl7F2f5zSVYVpG85ggKFF1gjFIrtQ==
   dependencies:
     "@aws-cdk/aws-ec2" "^1.156.1"
     "@aws-cdk/core" "^1.156.1"
 
 "@renovosolutions/cdk-library-managed-instance-role@^1.0.35":
-  version "1.0.127"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.127.tgz#1353353c109d75e0cd134f0c6e15223ec8db03f3"
-  integrity sha512-vGT2kjrdRLIPE+kCIz+v/bS6SafCVb7it70GnPCZ6ZoNlqvW3/bAPHuEhfQLNK27uALoR4IhQJNjGvYCqn2YHg==
+  version "1.0.128"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.128.tgz#51cd57e295eb67b0a6794cde8fea916e99ad138f"
+  integrity sha512-i1f8/mXkcN1znD4OIMyjvPm0qM2cU1huvlDMV1samcWEz3NWsUP6nWxRhxtfDtBIX1VstArmUNQd1IzDo3vG0A==
   dependencies:
     "@aws-cdk/aws-iam" "^1.156.1"
     "@aws-cdk/core" "^1.156.1"
@@ -1518,7 +1518,7 @@ builtins@^5.0.0:
   dependencies:
     semver "^7.0.0"
 
-cacache@^16.0.0, cacache@^16.0.2:
+cacache@^16.0.0, cacache@^16.1.0:
   version "16.1.0"
   resolved "https://registry.yarnpkg.com/cacache/-/cacache-16.1.0.tgz#87a6bae558a511c9cb2a13768073e240ca76153a"
   integrity sha512-Pk4aQkwCW82A4jGKFvcGkQFqZcMspfP9YWq9Pr87/ldDvlWf718zeI6KWCdKt/jeihu6BytHRUicJPB1K2k8EQ==
@@ -1803,9 +1803,9 @@ console-control-strings@^1.1.0:
   integrity sha1-PXz0Rk22RG6mRL9LOVB/mFEAjo4=
 
 constructs@^3.3.69:
-  version "3.4.9"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.4.9.tgz#fa17fab34467aabb0745aac09e4fe40b04c0c30e"
-  integrity sha512-GzAAPEvTIQS9LhybpbodeeUUTMl/KEu309jb8Ed3BIwPLMu+wbLCZpoYKJQtb7rkcosj80Cr7EDvYQ8uQKF5qQ==
+  version "3.4.10"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.4.10.tgz#4754e1ceb771a37dff65327f834e125b83e1291e"
+  integrity sha512-SAl+0oq6GxrgF+YVn9NV5ZbVK5vDyFCL4bCEPIhx61jYIH/npP/MFTBm0RO8Agf2it8iZTE0QtzOoOzuxk8tRA==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -4354,12 +4354,12 @@ make-error@1.x:
   integrity sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==
 
 make-fetch-happen@^10.0.3, make-fetch-happen@^10.0.6:
-  version "10.1.3"
-  resolved "https://registry.yarnpkg.com/make-fetch-happen/-/make-fetch-happen-10.1.3.tgz#d7ecd4a22563b2c05b74735eda46569da26a46f6"
-  integrity sha512-s/UjmGjUHn9m52cctFhN2ITObbT+axoUhgeir8xGrOlPbKDyJsdhQzb8PGncPQQ28uduHybFJ6Iumy2OZnreXw==
+  version "10.1.4"
+  resolved "https://registry.yarnpkg.com/make-fetch-happen/-/make-fetch-happen-10.1.4.tgz#b68a64367d2c402f24edc48308ff193d11fc2618"
+  integrity sha512-hU1w68PqfH7FdMgjbiziJoACY0edlbIZ0CyKnpcEruVdCjsUrN+qoenOCIayNqVBK7toSWwbDxvQlrhH0gjRdg==
   dependencies:
     agentkeepalive "^4.2.1"
-    cacache "^16.0.2"
+    cacache "^16.1.0"
     http-cache-semantics "^4.1.0"
     http-proxy-agent "^5.0.0"
     https-proxy-agent "^5.0.0"
@@ -5953,9 +5953,9 @@ trim-newlines@^3.0.0:
   integrity sha512-c1PTsA3tYrIsLGkJkzHF+w9F2EyxfXGo4UyJc4pFL++FMjnq0HJS69T3M7d//gKrFKwy429bouPescbjecU+Zw==
 
 ts-jest@^27:
-  version "27.1.4"
-  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-27.1.4.tgz#84d42cf0f4e7157a52e7c64b1492c46330943e00"
-  integrity sha512-qjkZlVPWVctAezwsOD1OPzbZ+k7zA5z3oxII4dGdZo5ggX/PL7kvwTM0pXTr10fAtbiVpJaL3bWd502zAhpgSQ==
+  version "27.1.5"
+  resolved "https://registry.yarnpkg.com/ts-jest/-/ts-jest-27.1.5.tgz#0ddf1b163fbaae3d5b7504a1e65c914a95cff297"
+  integrity sha512-Xv6jBQPoBEvBq/5i2TeSG9tt/nqkbpcurrEG1b+2yfBrcJelOZF9Ml6dmyMh7bcW9JyFbRYpR5rxROSlBLTZHA==
   dependencies:
     bs-logger "0.x"
     fast-json-stable-stringify "2.x"
