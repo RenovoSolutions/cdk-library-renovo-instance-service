@@ -701,14 +701,14 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@renovosolutions/cdk-aspects-library-security-group@^2.0.43":
-  version "2.0.154"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.154.tgz#3d83a3cc8ee906cf1d990e9cbc7ac20ce0c0da89"
-  integrity sha512-P9a8dAUf5RXXcvdQ0zq4tRepwLfI9f4kt5V/zhnnweT/4djzdYSYurR4ClIE9ewyblvnuQR2hymssPwKPGcIUg==
+  version "2.0.156"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.156.tgz#7a7058ee818f2917d4adef9f2dd19db3f4a40ba2"
+  integrity sha512-ceeKqu994AmZlrLgjVLUSsIimPqyC8wV1I9cBLbBQwR5h2GKOlYBzgGMQ4oEQoH3fwi3FEDAbdkgcicEsFIjqg==
 
 "@renovosolutions/cdk-library-managed-instance-role@^2.2.3":
-  version "2.2.87"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.2.87.tgz#16817d25ad57c364dc72409a99e1283d61b5792a"
-  integrity sha512-SO7pXKSgMacuISt4AgM3a4rwJYzsPcMoRNf8zQe758JQGXhmzDWj2Br+Cu8RvzNRhzO+HC7fHLcY1VJqfBtzhA==
+  version "2.2.88"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.2.88.tgz#662d9c450bcac7a2e00428db9d1259423371ae6d"
+  integrity sha512-Z0TbdXGIuMtXJGTj27KXB5BaHuMs18DYbouaSC5JB4l1VoBMEnRNH4FwkL2JNVOsejHViPyKDYytAi+JCg7pCg==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
@@ -5880,9 +5880,9 @@ typescript@~3.9.10:
   integrity sha512-w6fIxVE/H1PkLKcCPsFqKE7Kv7QUwhU8qQY2MueZXWx5cPZdwFupLgKK3vntcK98BtNHZtAF4LA/yl2a7k8R6Q==
 
 uglify-js@^3.1.4:
-  version "3.15.5"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.15.5.tgz#2b10f9e0bfb3f5c15a8e8404393b6361eaeb33b3"
-  integrity sha512-hNM5q5GbBRB5xB+PMqVRcgYe4c8jbyZ1pzZhS6jbq54/4F2gFK869ZheiE5A8/t+W5jtTNpWef/5Q9zk639FNQ==
+  version "3.16.0"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.16.0.tgz#b778ba0831ca102c1d8ecbdec2d2bdfcc7353190"
+  integrity sha512-FEikl6bR30n0T3amyBh3LoiBdqHRy/f4H80+My34HOesOKyHfOsxAPAxOoqC0JUnC1amnO0IwkYC3sko51caSw==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
