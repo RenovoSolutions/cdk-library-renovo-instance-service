@@ -686,14 +686,14 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@renovosolutions/cdk-aspects-library-security-group@^2.0.43":
-  version "2.0.195"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.195.tgz#e61cc87370f4069cc31302f11bb6c2e3b04db241"
-  integrity sha512-BokIXXXyr6SGNLpXP4M+o+2BQSSqRxjCaBTwOWB5LeQE/uvbRM2CXpG60qe8rarQdSIT8ZSmm93GeiRYZ/qOxg==
+  version "2.0.196"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.196.tgz#b945b821b86e346b7467ab47fa8b6cf8639ce73c"
+  integrity sha512-g34y5L7tg9VpolD44eSYh9ZxupFD7SNcO2F3pDU3bd5NJf8LwZsnEVyEVbPeGk2FwtEphR9eiPVEFWq6R41bng==
 
 "@renovosolutions/cdk-library-managed-instance-role@^2.2.3":
-  version "2.2.129"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.2.129.tgz#c28008c9231f135a2595a958cd4c8d6371ecc4c0"
-  integrity sha512-n/R6EnnWGxcwSnKfWPMkeRBQq9RRIgNYt1Uc21/40srCRcPlrB0BPd3ZifHEl72sX2Ak5ymnODLmgXk/pxIhSQ==
+  version "2.2.130"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.2.130.tgz#9ea7e234e20da8224066035e0cd6a546da739e0d"
+  integrity sha512-R95JXiC1Saxabn5rEyivRusOonZCkutZj27Hz6momkipQSfpjCHjezyqrbZJ7FwgtM4U8e9hSx/13RrdTppqZA==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
@@ -2005,9 +2005,9 @@ duplexer3@^0.1.4:
   integrity sha512-1A8za6ws41LQgv9HrE/66jyC5yuSjQ3L/KOpFtoBilsAK2iA2wuS5rTt1OCzIvtS2V7nVmedsUU+DGRcjBmOYA==
 
 electron-to-chromium@^1.4.188:
-  version "1.4.193"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.193.tgz#8e760b9d9a7b92fe472664fd61811b307f3de39b"
-  integrity sha512-tBqbgRv0yFIYBLBQKW6kHzI81rjvO1CRy+K8+XHTZtkVPkAZayI/CxTqBiy6Q1+tYAxby8bq/6yOiuNkTvfxmw==
+  version "1.4.195"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.195.tgz#139b2d95a42a3f17df217589723a1deac71d1473"
+  integrity sha512-vefjEh0sk871xNmR5whJf9TEngX+KTKS3hOHpjoMpauKkwlGwtMz1H8IaIjAT/GNnX0TbGwAdmVoXCAzXf+PPg==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -4039,9 +4039,9 @@ make-error@1.x:
   integrity sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==
 
 make-fetch-happen@^10.0.3, make-fetch-happen@^10.0.6:
-  version "10.1.8"
-  resolved "https://registry.yarnpkg.com/make-fetch-happen/-/make-fetch-happen-10.1.8.tgz#3b6e93dd8d8fdb76c0d7bf32e617f37c3108435a"
-  integrity sha512-0ASJbG12Au6+N5I84W+8FhGS6iM8MyzvZady+zaQAu+6IOaESFzCLLD0AR1sAFF3Jufi8bxm586ABN6hWd3k7g==
+  version "10.2.0"
+  resolved "https://registry.yarnpkg.com/make-fetch-happen/-/make-fetch-happen-10.2.0.tgz#0bde3914f2f82750b5d48c6d2294d2c74f985e5b"
+  integrity sha512-OnEfCLofQVJ5zgKwGk55GaqosqKjaR6khQlJY3dBAA+hM25Bc5CmX5rKUfVut+rYA3uidA7zb7AvcglU87rPRg==
   dependencies:
     agentkeepalive "^4.2.1"
     cacache "^16.1.0"
