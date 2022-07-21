@@ -595,9 +595,9 @@
     fastq "^1.6.0"
 
 "@npmcli/fs@^2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@npmcli/fs/-/fs-2.1.0.tgz#f2a21c28386e299d1a9fae8051d35ad180e33109"
-  integrity sha512-DmfBvNXGaetMxj9LTp8NAN9vEidXURrf5ZTslQzEAi/6GbW+4yjaLFQc6Tue5cpZ9Frlk4OBo/Snf1Bh/S7qTQ==
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@npmcli/fs/-/fs-2.1.1.tgz#c0c480b03450d8b9fc086816a50cb682668a48bf"
+  integrity sha512-1Q0uzx6c/NVNGszePbr5Gc2riSU1zLpNlo/1YWntH+eaPmMgBssAW0qXofCVkpdj3ce4swZtlDYQu+NKiYcptg==
   dependencies:
     "@gar/promisify" "^1.1.3"
     semver "^7.3.5"
@@ -686,14 +686,14 @@
   integrity sha512-T8TbSnGsxo6TDBJx/Sgv/BlVJL3tshxZP7Aq5R1mSnM5OcHY2dQaxLMu2+E8u3gN0MLOzdjurqN4ZRVuzQycOQ==
 
 "@renovosolutions/cdk-aspects-library-security-group@^2.0.43":
-  version "2.0.196"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.196.tgz#b945b821b86e346b7467ab47fa8b6cf8639ce73c"
-  integrity sha512-g34y5L7tg9VpolD44eSYh9ZxupFD7SNcO2F3pDU3bd5NJf8LwZsnEVyEVbPeGk2FwtEphR9eiPVEFWq6R41bng==
+  version "2.0.198"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.0.198.tgz#b3015fb72648e23d8ca60fd8f645ab9ef6970866"
+  integrity sha512-iYKF3V6f1i/NJ6loaURX1rRlVKGDN3N0poo0M46vvROhLQO3FDfieHDmnObU3hJIdDgsPbRxUQiiGMDvoBtQ4g==
 
 "@renovosolutions/cdk-library-managed-instance-role@^2.2.3":
-  version "2.2.130"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.2.130.tgz#9ea7e234e20da8224066035e0cd6a546da739e0d"
-  integrity sha512-R95JXiC1Saxabn5rEyivRusOonZCkutZj27Hz6momkipQSfpjCHjezyqrbZJ7FwgtM4U8e9hSx/13RrdTppqZA==
+  version "2.2.132"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.2.132.tgz#c0ec8f9dd1fe471510536f685ee0a460e9dd6425"
+  integrity sha512-gVNDjVcCqC/um4CkG9pRYF8PsWCjCu4xg6J1acZu0ehETYSTajuAQqN9QX69BuL5ag8ceehRG9gvJ1cZzDk/lA==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
