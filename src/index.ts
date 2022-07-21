@@ -136,7 +136,7 @@ export interface InstanceServiceProps {
   /**
    * The parent domain of the service.
    */
-  readonly parentDomain: string;
+  readonly parentDomain?: string;
   /**
    * The user data to apply to the instance.
    */
@@ -281,7 +281,7 @@ export class InstanceService extends Construct {
   /**
    * DNS record for this instance created in Route53
    */
-  public readonly instanceDnsName: route53.ARecord;
+  public readonly instanceDnsName?: route53.ARecord;
   /**
    * The type of OS the instance is running
    */
@@ -374,14 +374,18 @@ export class InstanceService extends Construct {
     this.instanceEc2PublicDnsName = this.instance.instancePublicDnsName;
     this.osType = this.instance.osType;
 
-    Tags.of(this.instance.instance).add('Name', props.name + '.' + props.parentDomain);
+    if (props.parentDomain) {
+      Tags.of(this.instance.instance).add('Name', props.name + '.' + props.parentDomain);
 
-    this.instanceDnsName = new route53.ARecord(this, 'A', {
-      recordName: props.name + '.' + props.parentDomain,
-      zone: route53.HostedZone.fromLookup(this, 'zone', {
-        domainName: props.parentDomain,
-      }),
-      target: route53.RecordTarget.fromIpAddresses(this.instance.instancePrivateIp),
-    });
+      this.instanceDnsName = new route53.ARecord(this, 'A', {
+        recordName: props.name + '.' + props.parentDomain,
+        zone: route53.HostedZone.fromLookup(this, 'zone', {
+          domainName: props.parentDomain,
+        }),
+        target: route53.RecordTarget.fromIpAddresses(this.instance.instancePrivateIp),
+      });
+    } else {
+      Tags.of(this.instance.instance).add('Name', props.name);
+    }
   }
 }

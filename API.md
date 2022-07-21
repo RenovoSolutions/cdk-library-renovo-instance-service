@@ -47,7 +47,6 @@ new InstanceService(scope: Construct, id: string, props: InstanceServiceProps)
 | [`instance`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstance)<span title="Required">*</span> | [`aws-cdk-lib.aws_ec2.Instance`](#aws-cdk-lib.aws_ec2.Instance) | The underlying instance resource. |
 | [`instanceAvailabilityZone`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstanceavailabilityzone)<span title="Required">*</span> | `string` | The availability zone of the instance. |
 | [`instanceCfn`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstancecfn)<span title="Required">*</span> | [`aws-cdk-lib.aws_ec2.CfnInstance`](#aws-cdk-lib.aws_ec2.CfnInstance) | The underlying CfnInstance resource. |
-| [`instanceDnsName`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstancednsname)<span title="Required">*</span> | [`aws-cdk-lib.aws_route53.ARecord`](#aws-cdk-lib.aws_route53.ARecord) | DNS record for this instance created in Route53. |
 | [`instanceEc2PrivateDnsName`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstanceec2privatednsname)<span title="Required">*</span> | `string` | Private DNS name for this instance assigned by EC2. |
 | [`instanceEc2PublicDnsName`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstanceec2publicdnsname)<span title="Required">*</span> | `string` | Public DNS name for this instance assigned by EC2. |
 | [`instanceId`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstanceid)<span title="Required">*</span> | `string` | The instance's ID. |
@@ -56,6 +55,7 @@ new InstanceService(scope: Construct, id: string, props: InstanceServiceProps)
 | [`instanceRole`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstancerole)<span title="Required">*</span> | [`@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole`](#@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole) | The instance role associated with this instance. |
 | [`osType`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyostype)<span title="Required">*</span> | [`aws-cdk-lib.aws_ec2.OperatingSystemType`](#aws-cdk-lib.aws_ec2.OperatingSystemType) | The type of OS the instance is running. |
 | [`securityGroup`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertysecuritygroup)<span title="Required">*</span> | [`aws-cdk-lib.aws_ec2.SecurityGroup`](#aws-cdk-lib.aws_ec2.SecurityGroup) | The security group associated with this instance. |
+| [`instanceDnsName`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstancednsname) | [`aws-cdk-lib.aws_route53.ARecord`](#aws-cdk-lib.aws_route53.ARecord) | DNS record for this instance created in Route53. |
 
 ---
 
@@ -92,18 +92,6 @@ public readonly instanceCfn: CfnInstance;
 - *Type:* [`aws-cdk-lib.aws_ec2.CfnInstance`](#aws-cdk-lib.aws_ec2.CfnInstance)
 
 The underlying CfnInstance resource.
-
----
-
-##### `instanceDnsName`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceService.property.instanceDnsName" id="renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstancednsname"></a>
-
-```typescript
-public readonly instanceDnsName: ARecord;
-```
-
-- *Type:* [`aws-cdk-lib.aws_route53.ARecord`](#aws-cdk-lib.aws_route53.ARecord)
-
-DNS record for this instance created in Route53.
 
 ---
 
@@ -200,6 +188,18 @@ public readonly securityGroup: SecurityGroup;
 - *Type:* [`aws-cdk-lib.aws_ec2.SecurityGroup`](#aws-cdk-lib.aws_ec2.SecurityGroup)
 
 The security group associated with this instance.
+
+---
+
+##### `instanceDnsName`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceService.property.instanceDnsName" id="renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropertyinstancednsname"></a>
+
+```typescript
+public readonly instanceDnsName: ARecord;
+```
+
+- *Type:* [`aws-cdk-lib.aws_route53.ARecord`](#aws-cdk-lib.aws_route53.ARecord)
+
+DNS record for this instance created in Route53.
 
 ---
 
@@ -336,7 +336,6 @@ const instanceServiceProps: InstanceServiceProps = { ... }
 | [`instanceType`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyinstancetype)<span title="Required">*</span> | [`aws-cdk-lib.aws_ec2.InstanceType`](#aws-cdk-lib.aws_ec2.InstanceType) | The type of instance to launch. |
 | [`machineImage`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertymachineimage)<span title="Required">*</span> | [`aws-cdk-lib.aws_ec2.IMachineImage`](#aws-cdk-lib.aws_ec2.IMachineImage) | AMI to launch. |
 | [`name`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyname)<span title="Required">*</span> | `string` | The name of the service the instance is for. |
-| [`parentDomain`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyparentdomain)<span title="Required">*</span> | `string` | The parent domain of the service. |
 | [`vpc`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyvpc)<span title="Required">*</span> | [`aws-cdk-lib.aws_ec2.IVpc`](#aws-cdk-lib.aws_ec2.IVpc) | The VPC to launch the instance in. |
 | [`allowAllOutbound`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyallowalloutbound) | `boolean` | Whether the instance could initiate connections to anywhere by default. |
 | [`availabilityZones`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyavailabilityzones) | `string`[] | Select subnets only in the given AZs. |
@@ -348,6 +347,7 @@ const instanceServiceProps: InstanceServiceProps = { ... }
 | [`enableNoRemoteManagementPortsAspect`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyenablenoremotemanagementportsaspect) | `boolean` | Whether or not to prevent security group from containing rules that allow access to remote management ports: SSH, RDP, WinRM, WinRM over HTTPs. |
 | [`instanceRole`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyinstancerole) | [`@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole`](#@renovosolutions/cdk-library-managed-instance-role.ManagedInstanceRole) | The role to use for this instance. |
 | [`keyName`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertykeyname) | `string` | Name of the SSH keypair to grant access to the instance. |
+| [`parentDomain`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyparentdomain) | `string` | The parent domain of the service. |
 | [`privateIpAddress`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyprivateipaddress) | `string` | Defines a private IP address to associate with the instance. |
 | [`requireImdsv2`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyrequireimdsv2) | `boolean` | Whether IMDSv2 should be required on this instance. |
 | [`securityGroup`](#renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertysecuritygroup) | [`aws-cdk-lib.aws_ec2.SecurityGroup`](#aws-cdk-lib.aws_ec2.SecurityGroup) | The security group to use for this instance. |
@@ -390,18 +390,6 @@ public readonly name: string;
 - *Type:* `string`
 
 The name of the service the instance is for.
-
----
-
-##### `parentDomain`<sup>Required</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.parentDomain" id="renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyparentdomain"></a>
-
-```typescript
-public readonly parentDomain: string;
-```
-
-- *Type:* `string`
-
-The parent domain of the service.
 
 ---
 
@@ -549,6 +537,18 @@ public readonly keyName: string;
 - *Type:* `string`
 
 Name of the SSH keypair to grant access to the instance.
+
+---
+
+##### `parentDomain`<sup>Optional</sup> <a name="@renovosolutions/cdk-library-renovo-instance-service.InstanceServiceProps.property.parentDomain" id="renovosolutionscdklibraryrenovoinstanceserviceinstanceservicepropspropertyparentdomain"></a>
+
+```typescript
+public readonly parentDomain: string;
+```
+
+- *Type:* `string`
+
+The parent domain of the service.
 
 ---
 
