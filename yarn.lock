@@ -49,7 +49,7 @@
     "@aws-cdk/core" "1.169.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-ec2@^1.168.0", "@aws-cdk/aws-ec2@^1.169.0":
+"@aws-cdk/aws-ec2@^1.169.0":
   version "1.169.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-ec2/-/aws-ec2-1.169.0.tgz#25173f95a336ae6b3af0e261881d52982867a3c5"
   integrity sha512-8b6onVadoQZR6lc9Zr5UlagbgEennxtduFzpfTzHSnuMm4yDNXMPYyKw9D8MNCDcMAjH1uJuqTRGaxXnsfrGRg==
@@ -175,7 +175,7 @@
     string-width "^4.2.3"
     table "^6.8.0"
 
-"@aws-cdk/core@1.169.0", "@aws-cdk/core@^1.168.0", "@aws-cdk/core@^1.169.0":
+"@aws-cdk/core@1.169.0", "@aws-cdk/core@^1.169.0":
   version "1.169.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/core/-/core-1.169.0.tgz#6c5ac02946771920252cc51796d248a5d9b4838d"
   integrity sha512-IzDUQPEMI79QxONJRCtVRJOF3NOUDH0mTK1ETM+Di8KsNBrvksVJ8vixwz4p0IEQ5wKf9PrJGmA2RUrC5/C25Q==
@@ -904,17 +904,17 @@
     config-chain "^1.1.11"
 
 "@renovosolutions/cdk-aspects-library-security-group@^1.0.36":
-  version "1.0.205"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.205.tgz#d5e96421636f57bfa3d6f1acdb067cd5f4fb05fb"
-  integrity sha512-FH6ltfqdFROGD9yXCBhzHwBWvAk85pyAYlvj63Kwjxofj7wDniPgDuPUONzAh9FvfE1uNNJYyezFmGgVR30z1Q==
+  version "1.0.207"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.207.tgz#7868d9a65f8d4d28bb6141736ee003d5e516c094"
+  integrity sha512-qNANs4KAzlLgHg8hY93DlDCMdpJjMvyofkPQXpEHPbwyZT/FF/B31Njb3iqv33kIQ851MFy0EL7UHocaQGp6DA==
   dependencies:
-    "@aws-cdk/aws-ec2" "^1.168.0"
-    "@aws-cdk/core" "^1.168.0"
+    "@aws-cdk/aws-ec2" "^1.169.0"
+    "@aws-cdk/core" "^1.169.0"
 
 "@renovosolutions/cdk-library-managed-instance-role@^1.0.35":
-  version "1.0.205"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.205.tgz#19344ef6367b640cc27ba7a22cd87141cfb3becd"
-  integrity sha512-eIfS0e+KBihNgH5v+2Ov4+vMQxdlDFgz2NWldS52nLwOR566HrHu3mhepNUwRvvuKl6Q+qI0mlclwe8X2LP8Hg==
+  version "1.0.206"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.206.tgz#ff6abf5f603f3beebbcf66daee00e1ff3d348849"
+  integrity sha512-IpMQQ5Q9aWRuWlFdFM6A3qbuBB7+PTqnrx8lrz6dKyoiAS6uMIkkVCNWziZyhpUH4+XS/4hxbWzVudAbTf4TPA==
   dependencies:
     "@aws-cdk/aws-iam" "^1.169.0"
     "@aws-cdk/core" "^1.169.0"
@@ -1088,9 +1088,9 @@
   integrity sha512-F0KIgDJfy2nA3zMLmWGKxcH2ZVEtCZXHHdOQs2gSaQ27+lNeEfGxzkIw90aXswATX7AZ33tahPbzy6KAfUreVw==
 
 "@types/node@^14":
-  version "14.18.24"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.24.tgz#406b220dc748947e1959d8a38a75979e87166704"
-  integrity sha512-aJdn8XErcSrfr7k8ZDDfU6/2OgjZcB2Fu9d+ESK8D7Oa5mtsv8Fa8GpcwTA0v60kuZBaalKPzuzun4Ov1YWO/w==
+  version "14.18.25"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.18.25.tgz#57c72455af0a658da5b59aa062b2f89e73df0a61"
+  integrity sha512-9pLfceRSrKIsv/MISN6RoFWTIzka36Uk2Uuf5a8cHyDYhEgl5Hm5dXoe621KULeBjt+cFsY18mILsWWtJeG80w==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -1661,9 +1661,9 @@ camelcase@^7.0.0:
   integrity sha512-JToIvOmz6nhGsUhAYScbo2d6Py5wojjNfoxoc2mEVLUdJ70gJK2gnd+ABY1Tc3sVMyK7QDPtN0T/XdlCQWITyQ==
 
 caniuse-lite@^1.0.30001370:
-  version "1.0.30001378"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001378.tgz#3d2159bf5a8f9ca093275b0d3ecc717b00f27b67"
-  integrity sha512-JVQnfoO7FK7WvU4ZkBRbPjaot4+YqxogSDosHv0Hv5mWpUESmN+UubMU6L/hGz8QlQ2aY5U0vR6MOs6j/CXpNA==
+  version "1.0.30001381"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001381.tgz#e62955310e6e69cdf4b40bc5bc0895aa24bc4b8b"
+  integrity sha512-fEnkDOKpvp6qc+olg7+NzE1SqyfiyKf4uci7fAU38M3zxs0YOyKOxW/nMZ2l9sJbt7KZHcDIxUnbI0Iime7V4w==
 
 case@^1.6.3:
   version "1.6.3"
@@ -1886,9 +1886,9 @@ console-control-strings@^1.1.0:
   integrity sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==
 
 constructs@^3.3.69:
-  version "3.4.73"
-  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.4.73.tgz#a49c2ff92c65da0366038a9e26001b883eb247d5"
-  integrity sha512-3wffr6I+SwNrgK2R3RYa6qY8JyQyqfpvp6HeJWKv5kT1bK+jXi9wn/mQtVbpeIkWwUZCpFqdfDvZyVBEii1PQg==
+  version "3.4.76"
+  resolved "https://registry.yarnpkg.com/constructs/-/constructs-3.4.76.tgz#9520009360f0a2425ab8a666b71f39cb4e06c0cd"
+  integrity sha512-RD7gOjXmgwCTXat/+t3XfUHHjGspjE0752jw3A7b9Z+nPspGIHkYGaZklSRsiHCQAlJmQOuXYB4TZyOnXZAAxw==
 
 conventional-changelog-angular@^5.0.12:
   version "5.0.13"
@@ -2755,9 +2755,9 @@ flat-cache@^3.0.4:
     rimraf "^3.0.2"
 
 flatted@^3.1.0, flatted@^3.2.6:
-  version "3.2.6"
-  resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.6.tgz#022e9218c637f9f3fc9c35ab9c9193f05add60b2"
-  integrity sha512-0sQoMh9s0BYsm+12Huy/rkKxVu4R1+r96YX5cG44rHV0pQ6iC3Q+mkoMFaGWObMFYQxCVT+ssG1ksneA2MI9KQ==
+  version "3.2.7"
+  resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
+  integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
 form-data-encoder@^2.0.1:
   version "2.1.0"
