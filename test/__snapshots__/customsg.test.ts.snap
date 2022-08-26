@@ -406,6 +406,10 @@ Object {
       "Type": "AWS::EC2::EIP",
     },
     "vpcPublicSubnet1NATGateway9C16659E": Object {
+      "DependsOn": Array [
+        "vpcPublicSubnet1DefaultRoute10708846",
+        "vpcPublicSubnet1RouteTableAssociation5D3F4579",
+      ],
       "Properties": Object {
         "AllocationId": Object {
           "Fn::GetAtt": Array [
@@ -503,6 +507,10 @@ Object {
       "Type": "AWS::EC2::EIP",
     },
     "vpcPublicSubnet2NATGateway9B8AE11A": Object {
+      "DependsOn": Array [
+        "vpcPublicSubnet2DefaultRouteA1EC0F60",
+        "vpcPublicSubnet2RouteTableAssociation21F81B59",
+      ],
       "Properties": Object {
         "AllocationId": Object {
           "Fn::GetAtt": Array [
@@ -600,6 +608,10 @@ Object {
       "Type": "AWS::EC2::EIP",
     },
     "vpcPublicSubnet3NATGateway82F6CA9E": Object {
+      "DependsOn": Array [
+        "vpcPublicSubnet3DefaultRoute3F356A11",
+        "vpcPublicSubnet3RouteTableAssociationD102D1C4",
+      ],
       "Properties": Object {
         "AllocationId": Object {
           "Fn::GetAtt": Array [
