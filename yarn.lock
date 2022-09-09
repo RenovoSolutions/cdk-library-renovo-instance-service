@@ -49,7 +49,7 @@
     "@aws-cdk/core" "1.172.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-ec2@^1.171.0", "@aws-cdk/aws-ec2@^1.172.0":
+"@aws-cdk/aws-ec2@^1.172.0":
   version "1.172.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-ec2/-/aws-ec2-1.172.0.tgz#e10ed2cc050d2ab03ad23ba705349cf89693b7f2"
   integrity sha512-rBDxpCDm9m9Fuq6+o7Bblkhj2hVEzlh1NDt8tAV/cVncy+ywZGOx7kjELjAFoj2h4e+XS8QS4QLfQT/mFUYccA==
@@ -175,7 +175,7 @@
     string-width "^4.2.3"
     table "^6.8.0"
 
-"@aws-cdk/core@1.172.0", "@aws-cdk/core@^1.171.0", "@aws-cdk/core@^1.172.0":
+"@aws-cdk/core@1.172.0", "@aws-cdk/core@^1.172.0":
   version "1.172.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/core/-/core-1.172.0.tgz#f47bdbd71648d45900780257ee62276ddbc9b0d5"
   integrity sha512-Hy7jNNzkNSf+oCmhhXnTcybunejTtCuGmfEFNZXsizcWBUjm0zD0K1X3kjD7Fqs0p+4xbaorCTgIB3Cu9qrF1Q==
@@ -909,17 +909,17 @@
     config-chain "^1.1.11"
 
 "@renovosolutions/cdk-aspects-library-security-group@^1.0.36":
-  version "1.0.223"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.223.tgz#cea3bcf7818fce156867b8507443c8320fcef79e"
-  integrity sha512-Bpuc6XPsRu6XSrnn5GjyJM9TUt08p66XfLQpmRQ4tPzHp6yHBih89Uqx7Ffv1Uam35FNrxtpMnrYqGq5esu92A==
+  version "1.0.225"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.225.tgz#d710551ca56cc8a81c64e2af2bbb99aa5c7cc0de"
+  integrity sha512-EglGbpCzHzDs1/R1KC7/lTpbBFJzCFncFP0SFD/rOGmDnleZD6C6Hi3wLPolJqipLYEU6G4NGllphBdr4cT8fQ==
   dependencies:
-    "@aws-cdk/aws-ec2" "^1.171.0"
-    "@aws-cdk/core" "^1.171.0"
+    "@aws-cdk/aws-ec2" "^1.172.0"
+    "@aws-cdk/core" "^1.172.0"
 
 "@renovosolutions/cdk-library-managed-instance-role@^1.0.35":
-  version "1.0.223"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.223.tgz#f408dc718314cae55fb5bb15decbe2c44023c6ed"
-  integrity sha512-fcGL/3bSEPliMquyOt3PQrrtVirYA6JSQMb69ZnIVf/wwzghc0odvv8Nho/wk1pG4C3ZA1tWcj81v5xqUKm5kA==
+  version "1.0.224"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.224.tgz#879615262130f50b31be37deee554f7dea2bdaf7"
+  integrity sha512-N5WqhyMtokMjY14KGgHq7NxWwOCJp4WrzpF4ELLxp0gArzLUtMu+NMWeHgg2MM9Wcp8NF87MUs91RnJy/BNDtw==
   dependencies:
     "@aws-cdk/aws-iam" "^1.172.0"
     "@aws-cdk/core" "^1.172.0"
@@ -2305,9 +2305,9 @@ eastasianwidth@^0.2.0:
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
 electron-to-chromium@^1.4.202:
-  version "1.4.244"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.244.tgz#ae9b56ed4ae2107e3a860dad80ed662c936e369e"
-  integrity sha512-E21saXLt2eTDaTxgUtiJtBUqanF9A32wZasAwDZ8gvrqXoxrBrbwtDCx7c/PQTLp81wj4X0OLDeoGQg7eMo3+w==
+  version "1.4.245"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.245.tgz#a065d4af1ab0ab5803d7531759556ab366b46000"
+  integrity sha512-kUN8QXmqHAN8phxjF3QpHeX7CbXGXadSngx9r1O/S9jt+uC0O/vjPi/9+8/Mk3sKewLLMrjpBJZMfVpPCdkG3g==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -6130,10 +6130,10 @@ typedarray@^0.0.6:
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==
 
-typescript@^4.8.2:
-  version "4.8.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.8.2.tgz#e3b33d5ccfb5914e4eeab6699cf208adee3fd790"
-  integrity sha512-C0I1UsrrDHo2fYI5oaCGbSejwX4ch+9Y5jTQELvovfmFkK3HHSZJB8MSJcWLmCUBzQBchCrZ9rMRV6GuNrvGtw==
+typescript@^4.8.3:
+  version "4.8.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.8.3.tgz#d59344522c4bc464a65a730ac695007fdb66dd88"
+  integrity sha512-goMHfm00nWPa8UvR/CPSvykqf6dVV8x/dp0c5mFTMTIu0u0FlGWRioyy7Nn0PGAdHxpJZnuO/ut+PpQ8UiHAig==
 
 typescript@~3.9.10:
   version "3.9.10"
