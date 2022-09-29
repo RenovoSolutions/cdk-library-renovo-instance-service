@@ -508,9 +508,9 @@
   integrity sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==
 
 "@humanwhocodes/config-array@^0.10.5":
-  version "0.10.5"
-  resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.10.5.tgz#bb679745224745fff1e9a41961c1d45a49f81c04"
-  integrity sha512-XVVDtp+dVvRxMoxSiSfasYaG02VEe1qH5cKgMQJWhol6HwzbcqoCMJi8dAGoYAO57jhUyhI6cWuRiTcRaDaYug==
+  version "0.10.6"
+  resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.10.6.tgz#70b53559baf544dc2cc5eea6082bf90467ccb1dc"
+  integrity sha512-U/piU+VwXZsIgwnl+N+nRK12jCpHdc3s0UAc6zc1+HUgiESJxClpvYao/x9JwaN7onNeVb7kTlxlAvuEoaJ3ig==
   dependencies:
     "@humanwhocodes/object-schema" "^1.2.1"
     debug "^4.1.1"
@@ -909,17 +909,17 @@
     config-chain "^1.1.11"
 
 "@renovosolutions/cdk-aspects-library-security-group@^1.0.36":
-  version "1.0.236"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.236.tgz#2fd7fe17c71cca1c44ec2229683cc9d3671b6e3b"
-  integrity sha512-XcBCEeGemshJBP9s/1NkXEF71HxqUCprOMkQnh5lK2b19cLEB7uunMDd38SS6wZpHMdrxbpUYjkUskT6Un7aiA==
+  version "1.0.237"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.237.tgz#13e9180086c992d74c6ed66871bc29c6755634f6"
+  integrity sha512-S+iaH0o0xnCdOIa9QET0tVg/47Q1j+9z8XdUwXMT4y3SgxoBCG6w6YI298EtJSrep3NLtwH2X7FgcQuvFr9mXg==
   dependencies:
     "@aws-cdk/aws-ec2" "^1.174.0"
     "@aws-cdk/core" "^1.174.0"
 
 "@renovosolutions/cdk-library-managed-instance-role@^1.0.35":
-  version "1.0.237"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.237.tgz#08fd48ebfcdd5b056f8d7674aaca434776723373"
-  integrity sha512-YzJmBpO/u1K3MzLcmembW6CzwtLYGh6+EqLpe83VqzgEyZ5yqC/15TAbPugittXicX7rFmW1gxtwDD/ilrdm5w==
+  version "1.0.238"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.238.tgz#0b4a0c04e44f78276d06beea4ccaf7d983588c86"
+  integrity sha512-BtJLvgF7pQcJ9MB6E7WQmw6gFBlQHZOr5MEzhhIyxZ0Cz3nHP7EUWaEzOlYn0LwFLbQNMlnUiw+mgK/lypSxfw==
   dependencies:
     "@aws-cdk/aws-iam" "^1.174.0"
     "@aws-cdk/core" "^1.174.0"
@@ -2304,9 +2304,9 @@ eastasianwidth@^0.2.0:
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
 electron-to-chromium@^1.4.251:
-  version "1.4.265"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.265.tgz#45630ae190228f945ff79c060b99574b1347e5a7"
-  integrity sha512-38KaYBNs0oCzWCpr6j7fY/W9vF0vSp4tKFIshQTgdZMhUpkxgotkQgjJP6iGMdmlsgMs3i0/Hkko4UXLTrkYVQ==
+  version "1.4.267"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.267.tgz#77d7de2b92806e3e1df8882a982aece815d6b6ea"
+  integrity sha512-ik4QnU3vFRsVgwt0vsn7og28++2cGnsdgqYagaE3ur1f3wj5AzmWu+1k3//SOc6CwkP2xfu46PNfVP6X+SRepg==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -4767,9 +4767,9 @@ npm-normalize-package-bin@^2.0.0:
   integrity sha512-awzfKUO7v0FscrSpRoogyNm0sajikhBWpU0QMrW09AMi9n1PoKU6WaIqUzuJSQnpciZZmJ/jMZ2Egfmb/9LiWQ==
 
 npm-package-arg@^9.0.0, npm-package-arg@^9.0.1:
-  version "9.1.0"
-  resolved "https://registry.yarnpkg.com/npm-package-arg/-/npm-package-arg-9.1.0.tgz#a60e9f1e7c03e4e3e4e994ea87fff8b90b522987"
-  integrity sha512-4J0GL+u2Nh6OnhvUKXRr2ZMG4lR8qtLp+kv7UiV00Y+nGiSxtttCyIRHCt5L5BNkXQld/RceYItau3MDOoGiBw==
+  version "9.1.2"
+  resolved "https://registry.yarnpkg.com/npm-package-arg/-/npm-package-arg-9.1.2.tgz#fc8acecb00235f42270dda446f36926ddd9ac2bc"
+  integrity sha512-pzd9rLEx4TfNJkovvlBSLGhq31gGu2QDexFPWT19yCDh0JgnRhlBLNo5759N0AJmBk+kQ9Y/hXoLnlgFD+ukmg==
   dependencies:
     hosted-git-info "^5.0.0"
     proc-log "^2.0.1"
