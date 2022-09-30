@@ -92,22 +92,22 @@
     },
     {
       "name": "@aws-cdk/aws-ec2",
-      "version": "^1.174.0",
+      "version": "^1.175.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "^1.174.0",
+      "version": "^1.175.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/cloud-assembly-schema",
-      "version": "^1.174.0",
+      "version": "^1.175.0",
       "type": "peer"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.174.0",
+      "version": "^1.175.0",
       "type": "peer"
     },
     {
@@ -117,22 +117,22 @@
     },
     {
       "name": "@aws-cdk/aws-ec2",
-      "version": "^1.174.0",
+      "version": "^1.175.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/aws-iam",
-      "version": "^1.174.0",
+      "version": "^1.175.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/cloud-assembly-schema",
-      "version": "^1.174.0",
+      "version": "^1.175.0",
       "type": "runtime"
     },
     {
       "name": "@aws-cdk/core",
-      "version": "^1.174.0",
+      "version": "^1.175.0",
       "type": "runtime"
     },
     {
@@ -147,12 +147,12 @@
     },
     {
       "name": "@aws-cdk/assert",
-      "version": "^1.174.0",
+      "version": "^1.175.0",
       "type": "test"
     },
     {
       "name": "@aws-cdk/assertions",
-      "version": "^1.174.0",
+      "version": "^1.175.0",
       "type": "test"
     }
   ],
