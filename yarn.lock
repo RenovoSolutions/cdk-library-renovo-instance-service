@@ -49,7 +49,7 @@
     "@aws-cdk/core" "1.176.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-ec2@^1.175.0", "@aws-cdk/aws-ec2@^1.176.0":
+"@aws-cdk/aws-ec2@^1.176.0":
   version "1.176.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-ec2/-/aws-ec2-1.176.0.tgz#c4a0a5f100b738df99296ab9fdebfdc0dd20b162"
   integrity sha512-bHorCSLLcfmq3eEkJjnqSXa9wYkeAkHP+zpjA6NF+zttDKHi3nnS0CYc0d5ixu6f/8AIEJexrfi2FXBI6mh0+w==
@@ -175,7 +175,7 @@
     string-width "^4.2.3"
     table "^6.8.0"
 
-"@aws-cdk/core@1.176.0", "@aws-cdk/core@^1.175.0", "@aws-cdk/core@^1.176.0":
+"@aws-cdk/core@1.176.0", "@aws-cdk/core@^1.176.0":
   version "1.176.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/core/-/core-1.176.0.tgz#0da9b8bd2f1b76eabc7bbf7cda56bb361ac2ec02"
   integrity sha512-5ou6aUqeFihacDREM0VWCN1n0SglNxKY/Xs+bUMPgrOc99vuU8am+XC4VZLaSZbH/MnXWodmJX69YZL8xBfwtQ==
@@ -487,10 +487,10 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@eslint/eslintrc@^1.3.2":
-  version "1.3.2"
-  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-1.3.2.tgz#58b69582f3b7271d8fa67fe5251767a5b38ea356"
-  integrity sha512-AXYd23w1S/bv3fTs3Lz0vjiYemS08jWkI3hYyS9I1ry+0f+Yjs1wm+sU0BS8qDOPrBIkp4qHYC16I8uVtpLajQ==
+"@eslint/eslintrc@^1.3.3":
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-1.3.3.tgz#2b044ab39fdfa75b4688184f9e573ce3c5b0ff95"
+  integrity sha512-uj3pT6Mg+3t39fvLrj8iuCIJ38zKO9FpGtJ4BBJebJhEwjoT+KLVNCcHT5QC9NGRIEi7fZ0ZR8YRb884auB4Lg==
   dependencies:
     ajv "^6.12.4"
     debug "^4.3.2"
@@ -515,11 +515,6 @@
     "@humanwhocodes/object-schema" "^1.2.1"
     debug "^4.1.1"
     minimatch "^3.0.4"
-
-"@humanwhocodes/gitignore-to-minimatch@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@humanwhocodes/gitignore-to-minimatch/-/gitignore-to-minimatch-1.0.2.tgz#316b0a63b91c10e53f242efb4ace5c3b34e8728d"
-  integrity sha512-rSqmMJDdLFUsyxR6FMtD00nfQKKLFb1kv+qBbOVKqErvloEIJLo5bDTJTQNTYgeyp78JsA7u/NPi5jT1GR/MuA==
 
 "@humanwhocodes/module-importer@^1.0.1":
   version "1.0.1"
@@ -909,17 +904,17 @@
     config-chain "^1.1.11"
 
 "@renovosolutions/cdk-aspects-library-security-group@^1.0.36":
-  version "1.0.242"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.242.tgz#349dd8214e8d32db005d6bc13855ecfdb3fea5c6"
-  integrity sha512-cZ0wCt+sSq+f9LiWAi3mIG/4PSat6lagZQ42ykk4KQ+NwwVjPRuZnaRqmITgdT8sBsQ1Z5hiohaTLTMOUcLhbg==
+  version "1.0.244"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.244.tgz#3f84dc13910d9eed2da3b09904cc28f2aa540740"
+  integrity sha512-ZGbMmd1aHHt66YRX0m5UEkiZTHGpfVxddOqfjc29x4oL89lNCIWAbRYtTKczey2aEMKrh7Dneu2T9JH5Ofx8/w==
   dependencies:
-    "@aws-cdk/aws-ec2" "^1.175.0"
-    "@aws-cdk/core" "^1.175.0"
+    "@aws-cdk/aws-ec2" "^1.176.0"
+    "@aws-cdk/core" "^1.176.0"
 
 "@renovosolutions/cdk-library-managed-instance-role@^1.0.35":
-  version "1.0.244"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.244.tgz#4f054cad3b24d866dc29871bdcefa2899f4d7103"
-  integrity sha512-tU2p3+l+pehyq1Gavvuk7mqYozYrkcVDacoCiFiITtp4aR+EYLjXC/pBp163e+mnK/jOvTPa/wCE0LvOmSSUpA==
+  version "1.0.245"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.245.tgz#eba05f9eb8b1dd49e3a14cc0bb2d494128edc543"
+  integrity sha512-QM5fuOd+uW2I34Y5CsB/DiliyQN92YwpbwW3QCP46T3NCY0NsBLZaybQQBaz5fZGLqjqgp1xrgPFwLdAGHb6QA==
   dependencies:
     "@aws-cdk/aws-iam" "^1.176.0"
     "@aws-cdk/core" "^1.176.0"
@@ -2304,9 +2299,9 @@ eastasianwidth@^0.2.0:
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
 electron-to-chromium@^1.4.251:
-  version "1.4.275"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.275.tgz#db25c8e39c9cc910a996d1ec9b73eee834cb0ac1"
-  integrity sha512-aJeQQ+Hl9Jyyzv4chBqYJwmVRY46N5i2BEX5Cuyk/5gFCUZ5F3i7Hnba6snZftWla7Gglwc5pIgcd+E7cW+rPg==
+  version "1.4.276"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.276.tgz#17837b19dafcc43aba885c4689358b298c19b520"
+  integrity sha512-EpuHPqu8YhonqLBXHoU6hDJCD98FCe6KDoet3/gY1qsQ6usjJoHqBH2YIVs8FXaAtHwVL8Uqa/fsYao/vq9VWQ==
 
 emittery@^0.8.1:
   version "0.8.1"
@@ -2521,13 +2516,12 @@ eslint-visitor-keys@^3.3.0:
   integrity sha512-mQ+suqKJVyeuwGYHAdjMFqjCyfl8+Ldnxuyp3ldiMBFKkvytrXUZWaiPCEav8qDHKty44bD+qV1IP4T+w+xXRA==
 
 eslint@^8:
-  version "8.24.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.24.0.tgz#489516c927a5da11b3979dbfb2679394523383c8"
-  integrity sha512-dWFaPhGhTAiPcCgm3f6LI2MBWbogMnTJzFBbhXVRQDJPkr9pGZvVjlVfXd+vyDcWPA2Ic9L2AXPIQM0+vk/cSQ==
+  version "8.25.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-8.25.0.tgz#00eb962f50962165d0c4ee3327708315eaa8058b"
+  integrity sha512-DVlJOZ4Pn50zcKW5bYH7GQK/9MsoQG2d5eDH0ebEkE8PbgzTTmtt/VTH9GGJ4BfeZCpBLqFfvsjX35UacUL83A==
   dependencies:
-    "@eslint/eslintrc" "^1.3.2"
+    "@eslint/eslintrc" "^1.3.3"
     "@humanwhocodes/config-array" "^0.10.5"
-    "@humanwhocodes/gitignore-to-minimatch" "^1.0.2"
     "@humanwhocodes/module-importer" "^1.0.1"
     ajv "^6.10.0"
     chalk "^4.0.0"
