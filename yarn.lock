@@ -734,14 +734,14 @@
     config-chain "^1.1.11"
 
 "@renovosolutions/cdk-aspects-library-security-group@^2.0.43":
-  version "2.1.23"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.1.23.tgz#a691fc77d724008c2e2557a47f799f5bb4d08022"
-  integrity sha512-OZzBf2SwOd+8W7vjQxAL4M7dk5vwJEmMG5d/qPSh7nBh7n73Ep+dYZIUEq8T++5SCfRqwZqIBldkQ7biI/NT2Q==
+  version "2.1.26"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.1.26.tgz#4c7d943942ab9ac0f70aa20c4dec065515cf5696"
+  integrity sha512-lCIZbaTuDPckgzDG9IcaxsG4Y480ZDsKrnN3P65ezcrJQo8w0jWkkQgSu8aB/SAmyltMF8BE+eB0uoDhMQIinQ==
 
 "@renovosolutions/cdk-library-managed-instance-role@^2.2.3":
-  version "2.3.23"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.3.23.tgz#3dde3a4a42bc66cdb60bf67451cc73b71aa9343b"
-  integrity sha512-qhra233kce4Ln0YcHAUf7h5MNhf6DCHKq1uJUalJcwcyiErTTu3vOt0jb8ItVHmfnnQeupUe+bMzL9c2eW9oRA==
+  version "2.3.25"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.3.25.tgz#8f4930b05ade53b6e377953eefda4823afaa23e3"
+  integrity sha512-evl9lBfR2d11goO7ogeE8BX/xd3cIalwmtajJDMeYfPE14BLuuwOvbR9J3Js++qigugEHbsn8xyiOvyGpKqhCQ==
 
 "@sindresorhus/is@^5.2.0":
   version "5.3.0"
@@ -1536,9 +1536,9 @@ camelcase@^7.0.0:
   integrity sha512-JToIvOmz6nhGsUhAYScbo2d6Py5wojjNfoxoc2mEVLUdJ70gJK2gnd+ABY1Tc3sVMyK7QDPtN0T/XdlCQWITyQ==
 
 caniuse-lite@^1.0.30001400:
-  version "1.0.30001419"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001419.tgz#3542722d57d567c8210d5e4d0f9f17336b776457"
-  integrity sha512-aFO1r+g6R7TW+PNQxKzjITwLOyDhVRLjW0LcwS/HCZGUUKTGNp9+IwLC4xyDSZBygVL/mxaFR3HIV6wEKQuSzw==
+  version "1.0.30001420"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001420.tgz#f62f35f051e0b6d25532cf376776d41e45b47ef6"
+  integrity sha512-OnyeJ9ascFA9roEj72ok2Ikp7PHJTKubtEJIQ/VK3fdsS50q4KWy+Z5X0A1/GswEItKX0ctAp8n4SYDE7wTu6A==
 
 case@1.6.3, case@^1.6.3:
   version "1.6.3"
@@ -2172,9 +2172,9 @@ eastasianwidth@^0.2.0:
   integrity sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==
 
 electron-to-chromium@^1.4.251:
-  version "1.4.282"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.282.tgz#02af3fd6051e97ac3388a4b11d455bc1ca49838f"
-  integrity sha512-Dki0WhHNh/br/Xi1vAkueU5mtIc9XLHcMKB6tNfQKk+kPG0TEUjRh5QEMAUbRp30/rYNMFD1zKKvbVzwq/4wmg==
+  version "1.4.283"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.283.tgz#d4f263f5df402fd799c0a06255d580dcf8aa9a8e"
+  integrity sha512-g6RQ9zCOV+U5QVHW9OpFR7rdk/V7xfopNXnyAamdpFgCHgZ1sjI8VuR1+zG2YG/TZk+tQ8mpNkug4P8FU0fuOA==
 
 emittery@^0.8.1:
   version "0.8.1"
