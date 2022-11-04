@@ -629,9 +629,9 @@
     semver "^7.3.5"
 
 "@npmcli/fs@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@npmcli/fs/-/fs-3.0.0.tgz#00d13fd40d9144fb0ca40faf04f755625856ccd2"
-  integrity sha512-GdeVD+dnBxzMslTFvnctLX5yIqV4ZNZBWNbo1OejQ++bZpnFNQ1AjOn9Sboi+LzheQbCBU1ts1mhEVduHrcZOQ==
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/@npmcli/fs/-/fs-3.1.0.tgz#233d43a25a91d68c3a863ba0da6a3f00924a173e"
+  integrity sha512-7kZUAaLscfgbwBQRbvdMYaZOWyMEcPTH/tJjnyAWJ/dvvs9Ef+CERx/qJb9GExJpl1qipaDGn7KqHnFGGixd0w==
   dependencies:
     semver "^7.3.5"
 
@@ -742,14 +742,14 @@
     config-chain "^1.1.11"
 
 "@renovosolutions/cdk-aspects-library-security-group@^2.0.43":
-  version "2.1.44"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.1.44.tgz#406cfb4b146d423f1a2edc76c2d96608f3f2a17e"
-  integrity sha512-+GLORsC3hhe7qfbF1tw/IzzhPu7BrpIR6D+iOE3UJUQqY9JctR3HTR8DtBSxZ4U0daHLx2OM64DGPMwNcZACcQ==
+  version "2.1.45"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.1.45.tgz#a0d6146be898669e0cec62d46212a92861de6d78"
+  integrity sha512-pu/Y+G5BPXOd/Ub/UU5/M1JxfWdWV4Dbo/8W7QCdAT+zy9eVQ4pip+WXZB2J0itVQnEM4ijM1CKzn1zZ5+2djg==
 
 "@renovosolutions/cdk-library-managed-instance-role@^2.2.3":
-  version "2.3.44"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.3.44.tgz#6293e87448d2300a950c2f3e0db6fa44f990111c"
-  integrity sha512-OYjm+xWDAgDeW9biUTWXMZMZJ6FK/Qm9oDTOl3gSe4HVXoJQfurOAV7JmJ/Ne7odhahaOuZhzYBuBJSpJVV4Pg==
+  version "2.3.45"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.3.45.tgz#8a219ed4cd280baff10ed80641602c7ccc370968"
+  integrity sha512-dmq0hjkSkYs1DgFFkF2p5asZKJyIR7dyobwoGSzSFOGheNhVjlA0fH5/5uvTGxgVbiNGqu7zumOXriJ6Jj1Iyg==
 
 "@sindresorhus/is@^5.2.0":
   version "5.3.0"
@@ -1269,13 +1269,13 @@ array-union@^2.1.0:
   integrity sha512-HGyxoOTYUyCM6stUe6EJgnd4EoewAI7zMdfqO+kGjnlZmBDz/cR5pf8r/cR4Wq60sL/p0IkcjUEEPwS3GFrIyw==
 
 array.prototype.flat@^1.2.5:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/array.prototype.flat/-/array.prototype.flat-1.3.0.tgz#0b0c1567bf57b38b56b4c97b8aa72ab45e4adc7b"
-  integrity sha512-12IUEkHsAhA4DY5s0FPgNXIdc8VRSqD9Zp78a5au9abH/SOBrsp082JOWFNTjkMozh8mqcdiKuaLGhPeYztxSw==
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/array.prototype.flat/-/array.prototype.flat-1.3.1.tgz#ffc6576a7ca3efc2f46a143b9d1dda9b4b3cf5e2"
+  integrity sha512-roTU0KWIOmJ4DRLmwKd19Otg0/mT3qPNt0Qb3GWW8iObuZXxrjB/pzn0R3hqpRSWg4HCwqx+0vwOnWnvlOyeIA==
   dependencies:
     call-bind "^1.0.2"
-    define-properties "^1.1.3"
-    es-abstract "^1.19.2"
+    define-properties "^1.1.4"
+    es-abstract "^1.20.4"
     es-shim-unscopables "^1.0.0"
 
 arrify@^1.0.1:
@@ -2242,7 +2242,7 @@ error-ex@^1.3.1:
   dependencies:
     is-arrayish "^0.2.1"
 
-es-abstract@^1.19.0, es-abstract@^1.19.1, es-abstract@^1.19.2, es-abstract@^1.19.5:
+es-abstract@^1.19.0, es-abstract@^1.19.1, es-abstract@^1.19.5, es-abstract@^1.20.4:
   version "1.20.4"
   resolved "https://registry.yarnpkg.com/es-abstract/-/es-abstract-1.20.4.tgz#1d103f9f8d78d4cf0713edcd6d0ed1a46eed5861"
   integrity sha512-0UtvRN79eMe2L+UNEF1BwRe364sj/DXhQ/k5FmivgoSdpM90b8Jc0mDzKMGo7QS0BVbOP/bTwBKNnDc9rNzaPA==
