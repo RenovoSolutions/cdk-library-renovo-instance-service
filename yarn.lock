@@ -49,7 +49,7 @@
     "@aws-cdk/core" "1.182.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-ec2@^1.181.1", "@aws-cdk/aws-ec2@^1.182.0":
+"@aws-cdk/aws-ec2@^1.182.0":
   version "1.182.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-ec2/-/aws-ec2-1.182.0.tgz#969ecfed98b168cd93ee33fd7adfe5902c944a3b"
   integrity sha512-H6rfGRHJHSFAXXfn8F/jofYlo4gvediXktIULSQKbWsJeyhdms/EyIvmzmLu47uGGiR9029sb38CXXqoXHPC0Q==
@@ -175,7 +175,7 @@
     string-width "^4.2.3"
     table "^6.8.1"
 
-"@aws-cdk/core@1.182.0", "@aws-cdk/core@^1.181.1", "@aws-cdk/core@^1.182.0":
+"@aws-cdk/core@1.182.0", "@aws-cdk/core@^1.182.0":
   version "1.182.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/core/-/core-1.182.0.tgz#94accbd11a13d84d2d9214a7117dd96eb6cd855b"
   integrity sha512-tZh7Cn2d913A6I4V7f6MLCQEnVCIiNWlhvNJqLtHkuetN1d/a+riyqRIS68NvJVljENIjUVFOAY+ePpIKltqQg==
@@ -911,17 +911,17 @@
     config-chain "^1.1.11"
 
 "@renovosolutions/cdk-aspects-library-security-group@^1.0.36":
-  version "1.0.290"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.290.tgz#df39fd2e877eb7154988859e9011605e25b75c92"
-  integrity sha512-2VbMz5Cxl8yZitlIGJ573IfK2MXBtyy2934l1Bi9vH9DrvdmXDRy4IdIJv6TsKDmw0BxbRijFz/jQfJUSajFLg==
+  version "1.0.292"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.292.tgz#6c647ba614e406f87426e16d040babc07ac589f1"
+  integrity sha512-Kjh03+9o2cZCl8K4vMGAKV8+WUBd8l7fKWQPe0L1kO7ZHbgdNT0BvanJDzqghCjF3oHxwFAtm3jpNw0N6Y4oPQ==
   dependencies:
-    "@aws-cdk/aws-ec2" "^1.181.1"
-    "@aws-cdk/core" "^1.181.1"
+    "@aws-cdk/aws-ec2" "^1.182.0"
+    "@aws-cdk/core" "^1.182.0"
 
 "@renovosolutions/cdk-library-managed-instance-role@^1.0.35":
-  version "1.0.291"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.291.tgz#63210cb8b224871220f9d98690c1ae7933b7e2df"
-  integrity sha512-LF7oQMBDQtM+B2UM8ZfRJDEhTsJHJiFvhFm78eKq146RjxsY18krr6N0P+PFqNj/fDZASXZW4z4DeqvPuTY7JQ==
+  version "1.0.292"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-1.0.292.tgz#b763c014f35a2ccfcb6a377c1e1c1257ea7333e0"
+  integrity sha512-GKqodg+UoFtSCborPrdc7iPXMwO72wAChPJXd6njo4VUviqr2iJXa2dJaY8OFec+G/LbCaJfiO41qFt0Bh3hiA==
   dependencies:
     "@aws-cdk/aws-iam" "^1.182.0"
     "@aws-cdk/core" "^1.182.0"
