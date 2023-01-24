@@ -49,7 +49,7 @@
     "@aws-cdk/core" "1.189.0"
     constructs "^3.3.69"
 
-"@aws-cdk/aws-ec2@^1.188.0", "@aws-cdk/aws-ec2@^1.189.0":
+"@aws-cdk/aws-ec2@^1.189.0":
   version "1.189.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/aws-ec2/-/aws-ec2-1.189.0.tgz#e4b3285a181d7072d8b5c72c5e0437b1a5a1b788"
   integrity sha512-AVA04sfAscPqWsaG3NvMaa04pIZDeeTGDLsD2xd0GJRpXl3upgk33raQX6bhQbWk2jetGoldGYTiNulD9iDSjw==
@@ -175,7 +175,7 @@
     string-width "^4.2.3"
     table "^6.8.1"
 
-"@aws-cdk/core@1.189.0", "@aws-cdk/core@^1.188.0", "@aws-cdk/core@^1.189.0":
+"@aws-cdk/core@1.189.0", "@aws-cdk/core@^1.189.0":
   version "1.189.0"
   resolved "https://registry.yarnpkg.com/@aws-cdk/core/-/core-1.189.0.tgz#75f4a590174639a645002a53d2a22d619fff17dd"
   integrity sha512-8my0nghmvGVEG0o74RHueEr79wQSi5vGDgEd9tHsgG9B+A+kJiToXWi2WE+PJE73AQrvnoXlwembuZC8f3ERBg==
@@ -912,12 +912,12 @@
     config-chain "^1.1.11"
 
 "@renovosolutions/cdk-aspects-library-security-group@^1.0.36":
-  version "1.0.312"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.312.tgz#e4d768f482d9da073bf4e46451eb7386506d04f8"
-  integrity sha512-J9iDCqc9v2D8/j6V5pLXkUu8XgDgdY2aYFvhIiZ0Xq2gcT/3hgP/h3mHLl5Oa3g4NfxQ7dAt2QQaWFhp1sj7Cg==
+  version "1.0.314"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-1.0.314.tgz#ead01446b8d2b980863a6c3e19792c95e0b6e84d"
+  integrity sha512-WnKTwOiaLyNfdlkfsIEoNfyzi1ji5V/U5ydeu2zgMqM9NkMg2UzgPlNL6kpEwnqFASs8zO8KhWp3c9AdJQsiBQ==
   dependencies:
-    "@aws-cdk/aws-ec2" "^1.188.0"
-    "@aws-cdk/core" "^1.188.0"
+    "@aws-cdk/aws-ec2" "^1.189.0"
+    "@aws-cdk/core" "^1.189.0"
 
 "@renovosolutions/cdk-library-managed-instance-role@^1.0.35":
   version "1.0.313"
