@@ -750,9 +750,9 @@
     config-chain "^1.1.11"
 
 "@renovosolutions/cdk-aspects-library-security-group@^2.0.43":
-  version "2.1.87"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.1.87.tgz#090a3aa8faab005f07801aea0af2a03907c5900b"
-  integrity sha512-hOyqiAY+nsxhzYvXFkOhEc/NFR1OkbgGHrfcYZgLgBA8EuofgkvGGzIzivHxjWRda7H5qzx/j2C7m0/ENPa30w==
+  version "2.1.88"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.1.88.tgz#cced003dc272162cc174bb38b2de0e04a9ebeabe"
+  integrity sha512-4iKp7P3LlHG1ix0k8v+tgdYxAekb3yIXp/8Lypb+a+HRWlCJkaQqlxMoMog+hcDkZyv6yrUHMbh37+BUJ8kE6Q==
 
 "@renovosolutions/cdk-library-managed-instance-role@^2.2.3":
   version "2.3.82"
