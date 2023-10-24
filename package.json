@@ -68,7 +68,7 @@
   },
   "dependencies": {
     "@renovosolutions/cdk-aspects-library-security-group": "^2.0.43",
-    "@renovosolutions/cdk-library-managed-instance-role": "^2.2.3"
+    "@renovosolutions/cdk-library-managed-instance-role": "^2.3.111"
   },
   "resolutions": {
     "@types/babel__traverse": "7.18.2",
