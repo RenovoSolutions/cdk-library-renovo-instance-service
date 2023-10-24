@@ -775,10 +775,10 @@
     "@pnpm/network.ca-file" "^1.0.1"
     config-chain "^1.1.11"
 
-"@renovosolutions/cdk-aspects-library-security-group@^2.0.43":
-  version "2.1.112"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.1.112.tgz#b0ce1879b8ff9898469ab344918467e43bcb572b"
-  integrity sha512-M8DkDanOmvsRQg8YA16+NOGnp/GIOUxgQwAcOCxPtO6n+hg+InYhYUmn/X/kVLJxPzbha+jN9lFcnqFhbSy7mQ==
+"@renovosolutions/cdk-aspects-library-security-group@^2.1.115":
+  version "2.1.115"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.1.115.tgz#86fef90d7d6c0f24fe770c7de7cf4f902331a41c"
+  integrity sha512-FpWoC8g0o7FtpzgycbFBSmp7Im336WHBgl4NQY6a7VwL/0hZbt/IF0UAU+merbjMNIsHlc5wm9vC4Nj/I2x7HQ==
 
 "@renovosolutions/cdk-library-managed-instance-role@^2.2.3":
   version "2.3.106"
