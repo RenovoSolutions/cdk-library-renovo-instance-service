@@ -780,10 +780,10 @@
   resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-aspects-library-security-group/-/cdk-aspects-library-security-group-2.1.112.tgz#b0ce1879b8ff9898469ab344918467e43bcb572b"
   integrity sha512-M8DkDanOmvsRQg8YA16+NOGnp/GIOUxgQwAcOCxPtO6n+hg+InYhYUmn/X/kVLJxPzbha+jN9lFcnqFhbSy7mQ==
 
-"@renovosolutions/cdk-library-managed-instance-role@^2.2.3":
-  version "2.3.106"
-  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.3.106.tgz#cf11465a524c8de38d218da3bada9028e06dc8d1"
-  integrity sha512-vau0v1xtnK+SfBKv+9vmhV6OGC/6qUnMGQeWYsYDpkaITE7/dVILZXfwECTwUu+DfrV78ybQCDr+BC6WN9h5/Q==
+"@renovosolutions/cdk-library-managed-instance-role@^2.3.111":
+  version "2.3.111"
+  resolved "https://registry.yarnpkg.com/@renovosolutions/cdk-library-managed-instance-role/-/cdk-library-managed-instance-role-2.3.111.tgz#697c9c4ea190881dd042c330cadd733b7648485d"
+  integrity sha512-w80oBSkpyOk0GIZDiYI/RMKxHrl3kJ7UJOGT7xxdTeXYF01luTee4ZeZiF4tvZaeeiFOUiYaC2XXTedl5kUyNA==
 
 "@sigstore/protobuf-specs@^0.1.0":
   version "0.1.0"
