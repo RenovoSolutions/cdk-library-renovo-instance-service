@@ -27,7 +27,7 @@ class IMDSv2Aspect implements IAspect {
       Annotations.of(node).addWarning('Instance associated with an existing launch template, cant fix template name');
     }
 
-    const launchTemplate = new ec2.CfnLaunchTemplate(node, 'LaunchTemplate', {
+    const launchTemplate = new ec2.CfnLaunchTemplate(node, 'LaunchTemplate2', {
       launchTemplateData: {
         metadataOptions: {
           httpTokens: 'required',
