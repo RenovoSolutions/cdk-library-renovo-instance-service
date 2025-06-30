@@ -2,7 +2,8 @@ import { awscdk, javascript } from 'projen';
 const project = new awscdk.AwsCdkConstructLibrary({
   author: 'Renovo Solutions',
   authorAddress: 'webmaster+cdk@renovo1.com',
-  cdkVersion: '2.86.0',
+  cdkVersion: '2.202.0',
+  jsiiVersion: '^5.8.0',
   projenrcTs: true,
   defaultReleaseBranch: 'master',
   majorVersion: 2,
@@ -23,6 +24,12 @@ const project = new awscdk.AwsCdkConstructLibrary({
   deps: [
     '@renovosolutions/cdk-library-managed-instance-role@^2.2.3',
     '@renovosolutions/cdk-aspects-library-security-group@^2.0.43',
+  ],
+  peerDeps: [
+    '@renovosolutions/cdk-library-managed-instance-role@^2.2.3',
+  ],
+  devDeps: [
+    '@renovosolutions/cdk-library-managed-instance-role@^2.2.3',
   ],
   depsUpgrade: true,
   depsUpgradeOptions: {
@@ -76,7 +83,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   eslint: true,
   publishToPypi: {
     distName: 'renovosolutions.aws-cdk-renovo-instance-service',
-    module: 'renovo-instance-service',
+    module: 'renovosolutions_instance_service',
   },
   publishToNuget: {
     dotNetNamespace: 'renovosolutions',
