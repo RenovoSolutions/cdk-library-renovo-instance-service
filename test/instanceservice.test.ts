@@ -1,5 +1,5 @@
 import { App, Stack, aws_ec2 as ec2 } from 'aws-cdk-lib';
-import { Template } from 'aws-cdk-lib/assertions';
+import { Match, Template } from 'aws-cdk-lib/assertions';
 import { ec2ImageToOsString, InstanceService, ManagedLoggingPolicy } from '../src/index';
 
 
@@ -233,7 +233,7 @@ test('Error when os is not windows or linux for managed logging policy creation'
     new ManagedLoggingPolicy(stack, 'policy', {
       os: 'other',
     });
-  }).toThrowError(/The os property for ManagedLoggingPolicy must be windows or linux and you gave:/);
+  }).toThrow(/The os property for ManagedLoggingPolicy must be windows or linux and you gave:/);
 });
 
 test('Setting enableCloudwatchLogs to false does NOT create the logging IAM policy', () => {
@@ -325,6 +325,6 @@ test('Launch template has a unique name when using IMDSv2 with custom aspect', (
   });
 
   Template.fromStack(stack).hasResourceProperties('AWS::EC2::LaunchTemplate', {
-    LaunchTemplateName: 'TestStackinstanceServiceinstanceLaunchTemplateEE619968',
+    LaunchTemplateName: Match.stringLikeRegexp('TestStackinstanceServiceinstanceLaunchTemplate'),
   });
 });

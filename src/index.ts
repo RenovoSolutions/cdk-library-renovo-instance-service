@@ -27,7 +27,7 @@ class IMDSv2Aspect implements IAspect {
       Annotations.of(node).addWarning('Instance associated with an existing launch template, cant fix template name');
     }
 
-    const launchTemplate = new ec2.CfnLaunchTemplate(node, 'LaunchTemplate', {
+    const launchTemplate = new ec2.CfnLaunchTemplate(node, 'LaunchTemplate2', {
       launchTemplateData: {
         metadataOptions: {
           httpTokens: 'required',
@@ -342,15 +342,15 @@ export class InstanceService extends Construct {
       vpc: props.vpc,
       allowAllOutbound: allowAllOutbound,
       blockDevices: props.blockDevices,
-      keyName: props.keyName,
+      keyPair: props.keyName ? ec2.KeyPair.fromKeyPairName(this, 'KeyPair', props.keyName) : undefined,
       privateIpAddress: props.privateIpAddress,
       propagateTagsToVolumeOnCreation: true,
-      requireImdsv2: useImdsv2CustomAspect === false ?? props.requireImdsv2,
+      requireImdsv2: useImdsv2CustomAspect === false ? props.requireImdsv2 : true,
       securityGroup: this.securityGroup,
       userData: props.userData,
       userDataCausesReplacement: false,
       vpcSubnets: {
-        subnetType: props.subnetType ?? ec2.SubnetType.PRIVATE_WITH_NAT,
+        subnetType: props.subnetType ?? ec2.SubnetType.PRIVATE_WITH_EGRESS,
         onePerAz: true,
         availabilityZones: props.availabilityZones,
       },
