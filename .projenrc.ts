@@ -7,11 +7,6 @@ const project = new awscdk.AwsCdkConstructLibrary({
   projenrcTs: true,
   defaultReleaseBranch: 'master',
   majorVersion: 2,
-  releaseBranches: {
-    v1: {
-      majorVersion: 1,
-    },
-  },
   name: '@renovosolutions/cdk-library-renovo-instance-service',
   description: 'CDK Construct Library to create instance based services utilizing default configurations for Renovo Solutions.',
   repositoryUrl: 'https://github.com/RenovoSolutions/cdk-library-renovo-instance-service.git',
@@ -33,13 +28,15 @@ const project = new awscdk.AwsCdkConstructLibrary({
   ],
   depsUpgrade: true,
   depsUpgradeOptions: {
+    workflow: false,
     workflowOptions: {
       labels: ['auto-approve', 'deps-upgrade'],
     },
     exclude: ['projen'],
   },
+  buildWorkflow: false,
   githubOptions: {
-    mergify: true,
+    mergify: false,
     mergifyOptions: {
       rules: [
         {
@@ -62,7 +59,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
       ],
     },
     pullRequestLintOptions: {
-      semanticTitle: true,
+      semanticTitle: false,
       semanticTitleOptions: {
         types: [
           'chore',
@@ -94,11 +91,14 @@ const project = new awscdk.AwsCdkConstructLibrary({
 new javascript.UpgradeDependencies(project, {
   include: ['projen'],
   taskName: 'upgrade-projen',
-  workflow: true,
+  workflow: false,
   workflowOptions: {
     schedule: javascript.UpgradeDependenciesSchedule.expressions(['0 2 * * 1']),
   },
   pullRequestTitle: 'upgrade projen',
 });
+
+project.gitignore.exclude('!/.github/workflows/release.yml');
+project.gitignore.addPatterns('.github/workflows/release.yml');
 
 project.synth();
